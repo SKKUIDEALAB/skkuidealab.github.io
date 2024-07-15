@@ -29,7 +29,6 @@
             display: inline-block;
             font-size: 0.9em;
             cursor: pointer;
-            margin-bottom: 10px;
             margin-right: 5px; /* 간격 추가 */
         }
         .publication-item {
@@ -63,12 +62,6 @@
             color: #666;
             margin-bottom: 10px;
         }
-        .abstract-content {
-            display: none;
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 10px;
-        }
         .large-title {
             font-size: 2em; /* 제목의 크기를 키움 */
             font-weight: bold;
@@ -80,21 +73,6 @@
             border-bottom: 1px solid #ddd;
             margin-bottom: 20px;
         }
-        .show-more {
-            background-color: #4CAF50; /* 초록색 */
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-            font-size: 0.9em;
-            cursor: pointer;
-            margin-top: 10px;
-            text-decoration: none;
-        }
-        .show-more:hover {
-            background-color: #45a049; /* 약간 더 어두운 초록색으로 변경 */
-        }
-        /* 모달 스타일 */
         .modal {
             display: none;
             position: fixed;
@@ -167,16 +145,12 @@
                     <div class="publication-item">
                         <div class="publication-content">
                             <span class="conference-badge">IEEE Access</span> <span class="conference-badge">Computer Architecture</span>
+                            <div class="abstract-badge" onclick="openModal('test.html')">Abstract &#9660;</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/Xplore/home.jsp'">Link</div>
                             <div class="publication-title">Continuous Memory Representation for Anomaly Detection</div>
                             <div class="publication-authors">Joo Chan Lee, Taejune Kim, Eunbyung Park, Simon S. Woo, Jong Hwan Ko</div>
                             <div class="publication-info">IEEE Access, Vol. 12, pp. 49508-49527, Apr. 2024</div>
-                            <div class="abstract-badge" onclick="toggleAbstract()">Abstract &#9660;</div>
-                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/Xplore/home.jsp'">Link</div>
-                            <div class="abstract-content" id="abstract-content">
-                                <p>본 논문은 이상 탐지를 위한 연속 메모리 표현을 제안합니다. 이 연구는 정상 이미지와 이상 이미지를 비교하여, 지역적 및 전역적 특징을 샘플링하고 이를 결합하여 이상 여부를 판별합니다...</p>
-                                <span class="show-more" onclick="openModal('test.html')">Show More</span>
-                            </div>
-                            
+   
                         </div>
                     </div>
 
@@ -243,18 +217,6 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        function toggleAbstract() {
-            var abstractContent = document.getElementById('abstract-content');
-            var abstractBadge = document.querySelector('.abstract-badge');
-            if (abstractContent.style.display === 'none' || abstractContent.style.display === '') {
-                abstractContent.style.display = 'block';
-                abstractBadge.innerHTML = 'Abstract &#9650;'; // 위쪽 화살표로 변경
-            } else {
-                abstractContent.style.display = 'none';
-                abstractBadge.innerHTML = 'Abstract &#9660;'; // 아래쪽 화살표로 변경
-            }
-        }
-
         function openModal(file) {
             document.getElementById('myModal').style.display = "block";
             // AJAX를 사용하여 특정 파일의 내용을 로드
