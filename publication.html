@@ -166,7 +166,7 @@
                 <section id="content">
                     <div class="publication-item">
                         <div class="publication-content">
-                            <span class="conference-badge">ISCA</span> <span class="conference-badge">Computer Architecture</span>
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">Computer Architecture</span>
                             <div class="publication-title">Continuous Memory Representation for Anomaly Detection</div>
                             <div class="publication-authors">Joo Chan Lee, Taejune Kim, Eunbyung Park, Simon S. Woo, Jong Hwan Ko</div>
                             <div class="publication-info">IEEE Access, Vol. 12, pp. 49508-49527, Apr. 2024</div>
@@ -174,9 +174,9 @@
                             <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/Xplore/home.jsp'">Link</div>
                             <div class="abstract-content" id="abstract-content">
                                 <p>본 논문은 이상 탐지를 위한 연속 메모리 표현을 제안합니다. 이 연구는 정상 이미지와 이상 이미지를 비교하여, 지역적 및 전역적 특징을 샘플링하고 이를 결합하여 이상 여부를 판별합니다...</p>
-                                <span class="show-more" onclick="openModal()">Show More</span>
+                                <span class="show-more" onclick="openModal('test.html')">Show More</span>
                             </div>
-                    
+                            
                         </div>
                     </div>
 
@@ -189,8 +189,9 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Full Abstract</h2>
-                <p>여기에 test.html의 내용이 표시됩니다. 본 논문은 이상 탐지를 위한 연속 메모리 표현을 제안합니다. 이 연구는 정상 이미지와 이상 이미지를 비교하여, 지역적 및 전역적 특징을 샘플링하고 이를 결합하여 이상 여부를 판별합니다. 추가적인 논문 초록 내용이 여기에 들어갑니다...</p>
+                <div id="modal-body">
+                    <h2>Loading...</h2>
+                </div>
             </div>
         </div>
 
@@ -254,8 +255,17 @@
             }
         }
 
-        function openModal() {
+        function openModal(file) {
             document.getElementById('myModal').style.display = "block";
+            // AJAX를 사용하여 특정 파일의 내용을 로드
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('modal-body').innerHTML = data;
+                })
+                .catch(error => {
+                    document.getElementById('modal-body').innerHTML = '<h2>Failed to load content</h2>';
+                });
         }
 
         function closeModal() {
