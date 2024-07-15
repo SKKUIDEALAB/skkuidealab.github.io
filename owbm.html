@@ -11,10 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-
         .abstract-content p {
             font-size: 1.4em; /* 글자 크기 증가 */
             line-height: 1.6; /* 줄 간격 추가 */
+            color: black; /* 글자 색상 변경 */
+        }
+
+        .original-size-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
         }
 
         .original-size-image img {
@@ -22,8 +28,6 @@
             height: auto;
             max-width: 100%;
         }
-
-
     </style>
 </head>
 <body class="is-preload">
@@ -63,7 +67,9 @@
 
                 <!-- Content -->
                 <section id="content">
-                    <a><img src="publication-images/OWBM.png" alt="논문 이미지" class="original-size-image" /></a>
+                    <div class="original-size-image">
+                        <img src="publication-images/OWBM.png" alt="논문 이미지" />
+                    </div>
                     <h3>Abstract</h3>
                     <div class="abstract-content">
                         <p>
@@ -85,7 +91,7 @@
                             outperformed conventional tree- and path-based multicast approaches by elevating the average throughput by
                             47.39% and curbing the laser power consumption by up to 35.92% in various convolutional neural network
                             benchmarks. Compared with the existing ONoC wavelength allocation techniques, the OWBM demonstrated
-                            a maximum of 42.46% enhanced wavelength utilization on a 64-core HGC platform
+                            a maximum of 42.46% enhanced wavelength utilization on a 64-core HGC platform.
                         </p>
                     </div>
                 </section>
