@@ -47,14 +47,13 @@
         .publication-image img {
             max-width: 100%;
         }
-        .publication-title a {
+        .publication-title {
             font-size: 1.5em; /* 글자 크기를 원래대로 유지 */
             font-weight: bold;
             color: black; /* 검은색으로 변경 */
             text-decoration: none; /* 밑줄 제거 */
             font-family: 'Arial', sans-serif; /* 글자체를 International Journals / Conferences와 동일하게 설정 */
         }
-
         .publication-authors {
             font-size: 1em;
             color: #666;
@@ -95,6 +94,39 @@
         .show-more:hover {
             background-color: #45a049; /* 약간 더 어두운 초록색으로 변경 */
         }
+        /* 모달 스타일 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -134,25 +166,33 @@
                 <section id="content">
                     <div class="publication-item">
                         <div class="publication-content">
-                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">Computer Architecture</span>
-                            <div class="publication-title"><a>Continuous Memory Representation for Anomaly Detection</a></div>
+                            <span class="conference-badge">ISCA</span> <span class="conference-badge">Computer Architecture</span>
+                            <div class="publication-title">Continuous Memory Representation for Anomaly Detection</div>
                             <div class="publication-authors">Joo Chan Lee, Taejune Kim, Eunbyung Park, Simon S. Woo, Jong Hwan Ko</div>
                             <div class="publication-info">IEEE Access, Vol. 12, pp. 49508-49527, Apr. 2024</div>
                             <div class="abstract-badge" onclick="toggleAbstract()">Abstract &#9660;</div>
                             <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/Xplore/home.jsp'">Link</div>
                             <div class="abstract-content" id="abstract-content">
                                 <p>본 논문은 이상 탐지를 위한 연속 메모리 표현을 제안합니다. 이 연구는 정상 이미지와 이상 이미지를 비교하여, 지역적 및 전역적 특징을 샘플링하고 이를 결합하여 이상 여부를 판별합니다...</p>
-                                <a href="test.html" class="show-more">Show More</a>
+                                <span class="show-more" onclick="openModal()">Show More</span>
                             </div>
-                           
+                    
                         </div>
-
                     </div>
 
                     <!-- Extra -->
                 </section>
             </div>
         </section>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Full Abstract</h2>
+                <p>여기에 test.html의 내용이 표시됩니다. 본 논문은 이상 탐지를 위한 연속 메모리 표현을 제안합니다. 이 연구는 정상 이미지와 이상 이미지를 비교하여, 지역적 및 전역적 특징을 샘플링하고 이를 결합하여 이상 여부를 판별합니다. 추가적인 논문 초록 내용이 여기에 들어갑니다...</p>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer id="footer">
@@ -211,6 +251,21 @@
             } else {
                 abstractContent.style.display = 'none';
                 abstractBadge.innerHTML = 'Abstract &#9660;'; // 아래쪽 화살표로 변경
+            }
+        }
+
+        function openModal() {
+            document.getElementById('myModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        // 클릭 시 모달을 닫음
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('myModal')) {
+                document.getElementById('myModal').style.display = "none";
             }
         }
     </script>
