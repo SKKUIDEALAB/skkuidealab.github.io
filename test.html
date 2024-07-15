@@ -10,6 +10,13 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<style>
+		.image.fit img {
+			width: 100%;
+			height: auto;
+			max-height: 33%; /* 세로 크기를 1/3로 제한 */
+		}
+	</style>
 </head>
 <body class="is-preload">
 	<div id="page-wrapper">
@@ -48,7 +55,7 @@
 
 				<!-- Content -->
 				<section id="content">
-					<a href="논문 URL" class="image fit"><img src="wewantyou.png" alt="논문 이미지" style="max-width: 100%;" /></a>
+					<a href="논문 URL" class="image fit"><img src="wewantyou.png" alt="논문 이미지" /></a>
 					<h3>초록</h3>
 					<p>본 논문은 이상 탐지를 위한 연속 메모리 표현을 제안합니다. 이 연구는 정상 이미지와 이상 이미지를 비교하여, 지역적 및 전역적 특징을 샘플링하고 이를 결합하여 이상 여부를 판별합니다. 연구의 주요 저자들은 Joo Chan Lee, Taejune Kim, Eunbyung Park, Simon S. Woo, Jong Hwan Ko입니다.</p>
 					<p>추가적인 논문 초록 내용이 여기에 들어갑니다...</p>
