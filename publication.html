@@ -36,10 +36,11 @@
             max-width: 100%;
         }
         .publication-title a {
-            font-size: 1.5em;
+            font-size: 1.5em; /* 글자 크기를 원래대로 유지 */
             font-weight: bold;
             color: black; /* 검은색으로 변경 */
             text-decoration: none; /* 밑줄 제거 */
+            font-family: 'Arial', sans-serif; /* 글자체를 International Journals / Conferences와 동일하게 설정 */
         }
         .publication-title a:hover {
             text-decoration: underline; /* 링크에 마우스를 올리면 밑줄 표시 */
@@ -54,6 +55,7 @@
             font-weight: bold;
             margin-top: 20px;
             margin-bottom: 20px;
+            font-family: 'Arial', sans-serif; /* 글자체를 설정 */
         }
         .divider {
             border-bottom: 1px solid #ddd;
@@ -94,7 +96,7 @@
             </header>
             <div class="container">
                 <div class="divider"></div> <!-- 가로줄 추가 -->
-                <h3 class="large-title">International Journals / Conferences</h3>
+                <h3 class="large-title">International Journals / Conferences</h3> <!-- 아래 제목 -->
                 <!-- Content -->
                 <section id="content">
                     <div class="publication-item">
