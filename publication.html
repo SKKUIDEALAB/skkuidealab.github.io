@@ -5,113 +5,152 @@
 	License: pixelarity.com/license
 -->
 <html>
-	<head>
-		<title>Untitled</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
+<head>
+	<title>Untitled</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<style>
+		.conference-badge {
+			background-color: #00AEEF; /* 첨부한 하늘색 색상 */
+			color: white;
+			padding: 5px 10px;
+			border-radius: 5px;
+			display: inline-block;
+			font-size: 0.9em;
+			margin-right: 10px;
+		}
+		.publication-item {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 20px;
+		}
+		.publication-content {
+			flex: 1;
+		}
+		.publication-image {
+			flex: 0 0 300px;
+			margin-left: 20px;
+		}
+		.publication-image img {
+			max-width: 100%;
+		}
+		.publication-title {
+			font-size: 1.5em;
+			font-weight: bold;
+			margin: 10px 0;
+		}
+		.publication-authors {
+			font-size: 1em;
+			color: #666;
+			margin-bottom: 10px;
+		}
+		.large-title {
+			font-size: 2em; /* 제목의 크기를 키움 */
+			font-weight: bold;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body class="is-preload">
+	<div id="page-wrapper">
 
-			<!-- Header -->
-			<header id="header">
-				<h1><a href="index.html">IDEA.L</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="advisor.html">Advisor</a></li>
-						<li>
-							<a href="#">members</a>
-							<ul>
-								<li><a href="phdcandidates.html">Ph.D Candidates</a></li>
-								<li><a href="mastercandidates.html">MS Candidates</a></li>
-								<li><a href="alumni.html">Alumni</a></li>
-							</ul>
-						</li>
-						<li><a href="research.html">Research</a></li>
-						<li><a href="publication.html">Publication</a></li>
-						<li><a href="recruit.html">Recruit</a></li>
-						<li><a href="patent.html">Patent</a></li>
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">IDEA.L</a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="advisor.html">Advisor</a></li>
+					<li>
+						<a href="#">members</a>
+						<ul>
+							<li><a href="phdcandidates.html">Ph.D Candidates</a></li>
+							<li><a href="mastercandidates.html">MS Candidates</a></li>
+							<li><a href="alumni.html">Alumni</a></li>
+						</ul>
+					</li>
+					<li><a href="research.html">Research</a></li>
+					<li><a href="publication.html">Publication</a></li>
+					<li><a href="recruit.html">Recruit</a></li>
+					<li><a href="patent.html">Patent</a></li>
+				</ul>
+			</nav>
+		</header>
 
-					</ul>
-				</nav>
+		<!-- Main -->
+		<section id="main" class="wrapper style2">
+			<header class="major">
+				<h2>Publications</h2>
 			</header>
-
-			<!-- Main -->
-				<section id="main" class="wrapper style2">
-					<header class="major">
-						<h2>Publications</h2>
-					</header>
-					<div class="container">
-
-						<!-- Content -->
-						<section id="content" style="display: flex; align-items: flex-start;">
-							<div style="flex: 1;">
-								<!--<h3><a href="논문 URL">Continuous Memory Representation for Anomaly Detection</a></h3>
-							-->
-								<h3><a href="test.html">Continuous Memory Representation for Anomaly Detection</a></h3>
-								<p>본 논문은 이상 탐지를 위한 연속 메모리 표현을 제안합니다. 이 연구는 정상 이미지와 이상 이미지를 비교하여, 지역적 및 전역적 특징을 샘플링하고 이를 결합하여 이상 여부를 판별합니다. 연구의 주요 저자들은 Joo Chan Lee, Taejune Kim, Eunbyung Park, Simon S. Woo, Jong Hwan Ko입니다.</p>
-							</div>
-							<div style="flex: 0 0 300px; margin-left: 20px;">
-								<a href="논문 URL" class="image fit"><img src="image1" alt="논문 이미지" style="max-width: 100%;" /></a>
-							</div>
-						</section>
-
-						<!-- Extra -->
-					</div>
-				</section>
-
-			<!-- Footer -->
-				<footer id="footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-3 col-6-narrow col-12-mobilep">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
-										Semiconductor Building, No.400525<br />
-										Sungkyunkwan University
-									</li>
-								</ul>
-							</div>
-
-							<div class="col-3 col-6-narrow col-12-mobilep">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-phone"><span class="label">Tel</span></h3>
-										(031) 299-4659
-									</li>
-									
-								</ul>
-							</div>
-
-							<div class="col-3 col-6-narrow col-12-mobilep">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Contact Email</span></h3>
-										jihun5029@g.skku.edu
-									</li>
-								</ul>
-							</div>
+			<div class="container">
+				<h3 class="large-title">International Journals / Conferences</h3>  
+				<!-- Content -->
+				<section id="content">
+					<div class="publication-item">
+						<div class="publication-content">
+							<span class="conference-badge">ISCA</span> <span class="conference-badge">Computer Architecture</span>
+							<div class="publication-title"><a href="test.html">Continuous Memory Representation for Anomaly Detection</a></div>
+							<div class="publication-authors">Joo Chan Lee, Taejune Kim, Eunbyung Park, Simon S. Woo, Jong Hwan Ko</div>
+							<p>본 논문은 이상 탐지를 위한 연속 메모리 표현을 제안합니다. 이 연구는 정상 이미지와 이상 이미지를 비교하여, 지역적 및 전역적 특징을 샘플링하고 이를 결합하여 이상 여부를 판별합니다. 연구의 주요 저자들은 Joo Chan Lee, Taejune Kim, Eunbyung Park, Simon S. Woo, Jong Hwan Ko입니다.</p>
+						</div>
+						<div class="publication-image">
+							<a href="논문 URL" class="image fit"><img src="image1" alt="논문 이미지" /></a>
 						</div>
 					</div>
-					<div class="copyright">
-						&copy; IDEA.L. All rights reserved.
+
+					<!-- Extra -->
+				</section>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-3 col-6-narrow col-12-mobilep">
+						<ul class="labeled-icons">
+							<li>
+								<h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
+								Semiconductor Building, No.400525<br />
+								Sungkyunkwan University
+							</li>
+						</ul>
 					</div>
-				</footer>
 
+					<div class="col-3 col-6-narrow col-12-mobilep">
+						<ul class="labeled-icons">
+							<li>
+								<h3 class="icon solid fa-phone"><span class="label">Tel</span></h3>
+								(031) 299-4659
+							</li>
+						</ul>
+					</div>
 
-		</div>
+					<div class="col-3 col-6-narrow col-12-mobilep">
+						<ul class="labeled-icons">
+							<li>
+								<h3 class="icon solid fa-envelope"><span class="label">Contact Email</span></h3>
+								jihun5029@g.skku.edu
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				&copy; IDEA.L. All rights reserved.
+			</div>
+		</footer>
+	</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
 </html>
