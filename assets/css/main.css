@@ -2521,7 +2521,7 @@ input, select, textarea {
 		background: #ffffff;
 		border-bottom: solid 1px rgba(0, 0, 0, 0.125);
 		box-shadow: 0 0.05em 0.125em 0 rgba(0, 0, 0, 0.075);
-		color: #ffffff; /*원래 색 : #7e8487*/
+		color: #7e8487; /*원래 색 : #7e8487*/
 		cursor: default;
 		height: 3.25em;
 		left: 0;
