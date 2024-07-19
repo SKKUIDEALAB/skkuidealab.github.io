@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<!--
+    Latitude by Pixelarity
+    pixelarity.com | hello@pixelarity.com
+    License: pixelarity.com/license
+-->
+<html>
+<head>
+    <title>IDEA.L</title>
+	<link rel="icon" type="image/png" href="images/logo.PNG" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .conference-badge {
+            background-color: #00AEEF; /* 첨부한 하늘색 색상 */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 0.9em;
+            margin-right: 10px;
+            margin-bottom: 10px; /* 간격 추가 */
+        }
+        .abstract-badge, .link-badge {
+            background-color: #4CAF50; /* 초록색 */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+			cursor: pointer;
+            font-size: 0.9em;
+            margin-right: 5px; /* 간격 추가 */
+        }
+        .publication-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .publication-content {
+            flex: 1;
+        }
+        .publication-image {
+            flex: 0 0 300px;
+            margin-left: 20px;
+        }
+        .publication-image img {
+            max-width: 100%;
+        }
+        .publication-title {
+            font-size: 1.5em; /* 글자 크기를 원래대로 유지 */
+            font-weight: bold;
+            color: black; /* 검은색으로 변경 */
+            text-decoration: none; /* 밑줄 제거 */
+            font-family: 'Arial', sans-serif; /* 글자체를 International Journals / Conferences와 동일하게 설정 */
+        }
+        .publication-authors {
+            font-size: 1.1em;
+            color: #666;
+        }
+        .publication-info {
+            font-size: 1.1em; /* 논문 출처 정보의 글자 크기 */
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .large-title {
+            font-size: 2em; /* 제목의 크기를 키움 */
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: 'Arial', sans-serif; /* 글자체를 설정 */
+        }
+        .divider {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">IDEA.L</a></h1>
+            <link rel="icon" type="image/png" href="images/logo.PNG" />
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advisor.html">Advisor</a></li>
+                    <li>
+                        <a href="#">Members</a>
+                        <ul>
+                            <li><a href="phdcandidates.html">Ph.D Candidates</a></li>
+                            <li><a href="mastercandidates.html">MS Candidates</a></li>
+                            <li><a href="alumni.html">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publication.html">Publication</a></li>
+                    <li><a href="recruit.html">Recruit</a></li>
+                    <li><a href="patent.html">Patent</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="wrapper style2">
+            <header class="major">
+                <h2>Publications</h2>
+            </header>
+            <div class="container">
+                <h3 class="large-title">International Journals / Conferences</h3> <!-- 아래 제목 -->
+                <!-- Content -->
+                <section id="content">
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">NoC</span>
+                            <div class="abstract-badge" onclick="openModal('owbm1.html')">Abstract </div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/10489970'">Link</div>
+                            <div class="publication-title">OWBM: OSNR-Aware Wavelength Allocation and Branching Methods for Multicast Routing in Custom Topology-Based Optical Network-on-Chips</div>
+                            <div class="publication-authors">Yong Wook Kim and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Access, Vol. 12, pp. 49508-49527, Apr. 2024</div>
+   
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">NoC</span>
+                            <div class="abstract-badge" onclick="openModal('owbm1.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/10489970'">Link</div>
+                            <div class="publication-title">OWBM: OSNR-Aware Wavelength Allocation and Branching Methods for Multicast Routing in Custom Topology-Based Optical Network-on-Chips</div>
+                            <div class="publication-authors">Yong Wook Kim and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Access, Vol. 12, pp. 49508-49527, Apr. 2024</div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Extra -->
+                </section>
+            </div>
+        </section>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modal-body">
+                    <h2>Loading...</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
+                                Semiconductor Building, No.400525<br />
+                                Sungkyunkwan University
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-phone"><span class="label">Tel</span></h3>
+                                (031) 299-4659
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-envelope"><span class="label">Contact Email</span></h3>
+                                jihun5029@g.skku.edu
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; IDEA.L. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function openModal(file) {
+            document.getElementById('myModal').style.display = "block";
+            // AJAX를 사용하여 특정 파일의 내용을 로드
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('modal-body').innerHTML = data;
+                })
+                .catch(error => {
+                    document.getElementById('modal-body').innerHTML = '<h2>Failed to load content</h2>';
+                });
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        // 클릭 시 모달을 닫음
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('myModal')) {
+                document.getElementById('myModal').style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
