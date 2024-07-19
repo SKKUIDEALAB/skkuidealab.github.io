@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>OWBM: OSNR-Aware Wavelength Allocation and Branching Methods for Multicast Routing in Custom Topology-Based Optical Network-on-Chips</title>
+    <title>RL-Based Cache Replacement: A Modern Interpretation of Belady’s Algorithm With Bypass Mechanism and Access Type Analysis</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -60,33 +60,34 @@
         <section id="main" class="wrapper style2">
             <div class="container">
                 <header class="major">
-                    <h2>SFAO: Sign-Flipping-Aware Optimization for Early-Stopping of Binarized Neural Networks</h2>
-                    <p>Ju Yeon Kang, Chang Ho Ryu, Suk Bong Kang, and Tae Hee Han</p>
-                    <p>November 2023</p>
+                    <h2>RL-Based Cache Replacement: A Modern Interpretation of Belady’s Algorithm With Bypass Mechanism and Access Type Analysis</h2>
+                    <p>Ho Jung Yoo, Jeong Hun Kim, and Tae Hee Han</p>
+                    <p>December 2023</p>
                 </header>
 
                 <!-- Content -->
                 <section id="content">
                     <div class="original-size-image">
-                        <img src="publication-images/OWBM.png" alt="논문 이미지" />
+                        <img src="publication-images/Rl_cache.PNG" alt="논문 이미지" />
                     </div>
                     <h3>Abstract</h3>
                     <div class="abstract-content">
                         <p>
-                            One of the vital challenges for the binary neural networks (BNNs) is improving their inference
-                            performance by expanding their data representation capabilities for figuring out delicate patterns and
-                            nuances in the data. Addressing the explosive computational demands on neural network training is essential
-                            to guarantee sustainable development and scalable deployment. However, mitigating the increase in the
-                            computational cost during the training phase is critical for ensuring sustainability and scalability during
-                            deployment. In this study, an advanced sign-flipping-aware optimizer (SFAO) that focuses on BNNs was
-                            introduced to diminish the computational burden. SFAO balanced the model performance and computational
-                            cost through sign-flipping-aware updating rules throughout the training of BNNs. SFAO optimizer, tailored
-                            for BNNs with binary weight-specific updating rules, considerably reduced the computing resources needed
-                            for training on the CIFAR-10 dataset. Specifically, it surpassed the conventional full-precision updating rule
-                            by reducing the total instruction count by 21.89%. In contrast, SFAO showed a marginal 0.44% decline in the
-                            image classification accuracy relative to the updating rules for the full-precision parameters. Furthermore,
-                            the implementation of early stopping using the sign flip rate led to a notable reduction of 9.37% in the average
-                            computation time per network for the ImageNet dataset.
+                            Belady’s algorithm is widely known as an optimal cache replacement policy. It has been
+                            the foundation of numerous recent studies on cache replacement policies, and most studies assume this
+                            as an upper limit. Despite its widespread adoption, we discovered opportunities to unleash the headroom by
+                            addressing cache access types and implementing cache bypass. In this study, we propose Stormbird, a cache
+                            replacement policy that synergistically integrates the extensions of Belady’s algorithm and the power of
+                            reinforcement learning. Reinforcement learning is well-suited for cache replacement policy problems owing
+                            to its ability to interact dynamically with the environment, adapt to changing access patterns, and optimize the
+                            maximum cumulative rewards. Stormbird utilizes several selected features from the reinforcement learning
+                            model to enhance the instructions per cycle efficiency while maintaining a low hardware area overhead.
+                            Furthermore, it considers cache access types and integrates dynamic set dueling techniques to improve
+                            the cache performance. For 2 MB last-level cache per core, Stormbird achieves an average instructions
+                            per cycle improvement of 0.13% over the previous state-of-the-art on a single-core system and 0.02% on
+                            a four-core system while simultaneously reducing hardware overhead by 62.5%. Stormbird incurs a low
+                            hardware overhead of only 10.5 KB for 2 MB last-level cache and can be implemented without using program
+                            counter values.
                         </p>
                     </div>
                 </section>

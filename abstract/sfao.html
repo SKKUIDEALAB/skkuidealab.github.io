@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>NCDE: In-Network Caching for Directory Entries to Expedite Data Access in Tiled-chip Multiprocessors</title>
+    <title>SFAO: Sign-Flipping-Aware Optimization for Early-Stopping of Binarized Neural Networks</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -60,31 +60,33 @@
         <section id="main" class="wrapper style2">
             <div class="container">
                 <header class="major">
-                    <h2>NCDE: In-Network Caching for Directory Entries to Expedite Data Access in Tiled-chip Multiprocessors</h2>
-                    <p>Jae Eun Shim, Min Gu Kang, and Tae Hee Han</p>
-                    <p>January 2023</p>
+                    <h2>SFAO: Sign-Flipping-Aware Optimization for Early-Stopping of Binarized Neural Networks</h2>
+                    <p>Ju Yeon Kang, Chang Ho Ryu, Suk Bong Kang, and Tae Hee Han</p>
+                    <p>November 2023</p>
                 </header>
 
                 <!-- Content -->
                 <section id="content">
                     <div class="original-size-image">
-                        <img src="publication-images/ncde.png" alt="논문 이미지" />
+                        <img src="publication-images/OWBM.png" alt="논문 이미지" />
                     </div>
                     <h3>Abstract</h3>
                     <div class="abstract-content">
                         <p>
-                            The processing of data-intensive applications, followed by an unprecedented amount of data
-                            traffic, drives explosive accesses to the memory subsystem. The overloaded memory subsystem experiences
-                            increased data access latency. To expedite data access, a network caching technique that leverages networkon-chip (NoC) virtual channels (VCs) as an expanded memory subsystem has emerged. Previous network
-                            caching studies focused on utilizing VCs on the NoC’s local input port as a victim cache to reduce local data
-                            access latency. In contrast to previous studies, we explore the opportunity of mitigating problems associated
-                            with shared data access via in-network caching for directory entries (NCDE), which can utilize every input
-                            port’s VCs to hold directory entries. NCDE exploits VCs as the victim and prefetch buffers of the directory
-                            entries, each reducing directory eviction-induced invalidations and simplifying the cache-to-cache (C2C)
-                            data transfer. The effectiveness of NCDE was evaluated using a gem5 full-system simulator, and the results
-                            show that the average memory access time (AMAT) and workload execution time were reduced by 7.69%
-                            and 5.82%, respectively. As a cost for accelerating the data access latency, implementing NCDE incurs a
-                            negligible router area overhead of 1.56%
+                            One of the vital challenges for the binary neural networks (BNNs) is improving their inference
+                            performance by expanding their data representation capabilities for figuring out delicate patterns and
+                            nuances in the data. Addressing the explosive computational demands on neural network training is essential
+                            to guarantee sustainable development and scalable deployment. However, mitigating the increase in the
+                            computational cost during the training phase is critical for ensuring sustainability and scalability during
+                            deployment. In this study, an advanced sign-flipping-aware optimizer (SFAO) that focuses on BNNs was
+                            introduced to diminish the computational burden. SFAO balanced the model performance and computational
+                            cost through sign-flipping-aware updating rules throughout the training of BNNs. SFAO optimizer, tailored
+                            for BNNs with binary weight-specific updating rules, considerably reduced the computing resources needed
+                            for training on the CIFAR-10 dataset. Specifically, it surpassed the conventional full-precision updating rule
+                            by reducing the total instruction count by 21.89%. In contrast, SFAO showed a marginal 0.44% decline in the
+                            image classification accuracy relative to the updating rules for the full-precision parameters. Furthermore,
+                            the implementation of early stopping using the sign flip rate led to a notable reduction of 9.37% in the average
+                            computation time per network for the ImageNet dataset.
                         </p>
                     </div>
                 </section>

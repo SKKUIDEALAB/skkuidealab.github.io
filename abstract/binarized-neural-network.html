@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>OWBM: OSNR-Aware Wavelength Allocation and Branching Methods for Multicast Routing in Custom Topology-Based Optical Network-on-Chips</title>
+    <title>Binarized Neural Network with Parameterized Weight Clipping and Quantization Gap Minimization for Online Knowledge Distillation</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -60,33 +60,35 @@
         <section id="main" class="wrapper style2">
             <div class="container">
                 <header class="major">
-                    <h2>SFAO: Sign-Flipping-Aware Optimization for Early-Stopping of Binarized Neural Networks</h2>
-                    <p>Ju Yeon Kang, Chang Ho Ryu, Suk Bong Kang, and Tae Hee Han</p>
-                    <p>November 2023</p>
+                    <h2>Binarized Neural Network with Parameterized Weight Clipping and Quantization Gap Minimization for Online Knowledge Distillation</h2>
+                    <p>Ju Yeon Kang, Chang Ho Ryu, and Tae Hee Han</p>
+                    <p>January 2023</p>
                 </header>
 
                 <!-- Content -->
                 <section id="content">
                     <div class="original-size-image">
-                        <img src="publication-images/OWBM.png" alt="논문 이미지" />
+                        <img src="publication-images/bnn.png" alt="논문 이미지" />
                     </div>
                     <h3>Abstract</h3>
                     <div class="abstract-content">
                         <p>
-                            One of the vital challenges for the binary neural networks (BNNs) is improving their inference
-                            performance by expanding their data representation capabilities for figuring out delicate patterns and
-                            nuances in the data. Addressing the explosive computational demands on neural network training is essential
-                            to guarantee sustainable development and scalable deployment. However, mitigating the increase in the
-                            computational cost during the training phase is critical for ensuring sustainability and scalability during
-                            deployment. In this study, an advanced sign-flipping-aware optimizer (SFAO) that focuses on BNNs was
-                            introduced to diminish the computational burden. SFAO balanced the model performance and computational
-                            cost through sign-flipping-aware updating rules throughout the training of BNNs. SFAO optimizer, tailored
-                            for BNNs with binary weight-specific updating rules, considerably reduced the computing resources needed
-                            for training on the CIFAR-10 dataset. Specifically, it surpassed the conventional full-precision updating rule
-                            by reducing the total instruction count by 21.89%. In contrast, SFAO showed a marginal 0.44% decline in the
-                            image classification accuracy relative to the updating rules for the full-precision parameters. Furthermore,
-                            the implementation of early stopping using the sign flip rate led to a notable reduction of 9.37% in the average
-                            computation time per network for the ImageNet dataset.
+                            As the applications for artificial intelligence are growing rapidly, numerous network
+                            compression algorithms have been developed to restrict computing resources such as smartphones, edge,
+                            and IoT devices. Knowledge distillation (KD) leverages soft labels derived from a teacher model to a less
+                            parameterized model achieving high accuracy with reduced computational burden. Moreover, online KD
+                            provides parallel computing through collaborative learning between teacher and student networks, thus
+                            enhancing the training speed. A binarized neural network (BNN) offers an intriguing opportunity to facilitate
+                            aggressive compression at the expense of drastically degraded accuracy. In this study, two performance
+                            improvements are proposed for online KD when a BNN is applied as a student network: [1] parameterized
+                            weight clipping (PWC) to reduce dead weights in the student network and [2] quantization gap-aware
+                            adaptive temperature scheduling between the teacher and student networks. In contrast to constant weight
+                            clipping (CWC), PWC demonstrates a 3.78% top-1 test accuracy enhancement with trainable weight clipping
+                            by decreasing the gradient mismatch with CIFAR-10 dataset. Furthermore, the quantization gap-aware
+                            temperature scheduling increases the top-1 test accuracy by 0.08% over online KD at a constant temperature.
+                            By aggregating both methodologies, the top-1 test accuracy for CIFAR-10 dataset was 94.60%, and that for
+                            Tiny-ImageNet dataset was comparable to that of the 32-bit full-precision neural network.
+                            
                         </p>
                     </div>
                 </section>
