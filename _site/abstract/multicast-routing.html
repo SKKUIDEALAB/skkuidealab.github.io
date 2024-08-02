@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<!--
+    Latitude by Pixelarity
+    pixelarity.com | hello@pixelarity.com
+    License: pixelarity.com/license
+-->
+<html>
+<head>
+    <title>MRCN: Throughput-Oriented Multicast Routing for Customized Network-on-Chips</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .abstract-content p {
+            font-size: 1.4em; /* 글자 크기 증가 */
+            line-height: 1.6; /* 줄 간격 추가 */
+            color: black; /* 글자 색상 변경 */
+        }
+
+        .original-size-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .original-size-image img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">IDEA.L</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advisor.html">Advisor</a></li>
+                    <li>
+                        <a href="#">Members</a>
+                        <ul>
+                            <li><a href="phdcandidates.html">Ph.D Candidates</a></li>
+                            <li><a href="mastercandidates.html">MS Candidates</a></li>
+                            <li><a href="alumni.html">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publication.html">Publication</a></li>
+                    <li><a href="recruit.html">Recruit</a></li>
+                    <li><a href="patent.html">Patent</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="wrapper style2">
+            <div class="container">
+                <header class="major">
+                    <h2>MRCN: Throughput-Oriented Multicast Routing for Customized Network-on-Chips</h2>
+                    <p>Young Sik Lee, Yong Wook Kim, and Tae Hee Han</p>
+                    <p>January 2023</p>
+                </header>
+
+                <!-- Content -->
+                <section id="content">
+                    <div class="original-size-image">
+                        <img src="publication-images/mrcn.png" alt="논문 이미지" />
+                    </div>
+                    <h3>Abstract</h3>
+                    <div class="abstract-content">
+                        <p>
+                            The relentless proliferation of Big Data and artificial intelligence has compelled computing platform architectures to evolve
+                            into heterogeneous multicores for greater energy efficiency. A customized network-on-chip (NoC) supporting interconnection diversity
+                            is pivotal for the asymmetric data-access traffic requirements of modern heterogeneous multicore system-on-chip (SoC). A significant
+                            portion of on-chip data access comprises single-source multi-destination (SSMD) traffic, which supports barrier synchronization, multithreading, 
+                            cache coherency protocols, and deep neural network (DNN) acceleration. By amortizing SSMD traffic, multicast routing is
+                            essential for effectively utilizing communication bandwidth. One of the primary concerns in supporting multicast routing in NoCs is to
+                            circumvent the additional deadlock conditions caused by branch operations among the active routers. However, it is challenging to
+                            implement the throughput-optimized multicast routing in irregular topology-based NoCs because the deadlock conditions become
+                            highly complicated, and the Hamiltonian path required to apply the labeling rule may not exist. Two important observations were
+                            identified regarding multicast routing in customized NoCs: 1) Even if the NoC lacks a Hamiltonian path, deadlock-freedom can be
+                            guaranteed by restricting branch operations to a specific destination. 2) A variable path diversity in a custom topology can be leveraged
+                            in routing path allocation and branch. Based on these properties, this study proposes a deadlock-free and throughput-enhanced
+                            multicast routing for customized NoC (MRCN). MRCN ensures deadlock freedom by utilizing extended routing and router labeling
+                            rules. Furthermore, destination router partitioning and traffic-aware adaptive branching are incorporated to reduce packet routing hops
+                            and disperse channel traffic. The effectiveness of MRCN was verified using Noxim, a well-known cycle-accurate NoC simulator, under
+                            various topologies and traffic patterns. The simulation revealed that MRCN improved the average latency by 13.98 % and the
+                            throughput by 12.16 % under the saturated traffic conditions over the previous multicast routings in customized NoCs
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
+                                Semiconductor Building, No.400525<br />
+                                Sungkyunkwan University
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-phone"><span class="label">Tel</span></h3>
+                                (031) 299-4659
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-envelope"><span class="label">Contact Email</span></h3>
+                                jihun5029@g.skku.edu
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; IDEA.L. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

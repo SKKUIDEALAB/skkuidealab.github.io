@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+    Latitude by Pixelarity
+    pixelarity.com | hello@pixelarity.com
+    License: pixelarity.com/license
+-->
+<html>
+<head>
+    <title>On-the-fly Lowering Engine: Offloading Data Layout Conversion for Convolutional Neural Networks</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .abstract-content p {
+            font-size: 1.4em; /* 글자 크기 증가 */
+            line-height: 1.6; /* 줄 간격 추가 */
+            color: black; /* 글자 색상 변경 */
+        }
+
+        .original-size-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .original-size-image img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">IDEA.L</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advisor.html">Advisor</a></li>
+                    <li>
+                        <a href="#">Members</a>
+                        <ul>
+                            <li><a href="phdcandidates.html">Ph.D Candidates</a></li>
+                            <li><a href="mastercandidates.html">MS Candidates</a></li>
+                            <li><a href="alumni.html">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publication.html">Publication</a></li>
+                    <li><a href="recruit.html">Recruit</a></li>
+                    <li><a href="patent.html">Patent</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="wrapper style2">
+            <div class="container">
+                <header class="major">
+                    <h2>On-the-fly Lowering Engine: Offloading Data Layout Conversion for Convolutional Neural Networks</h2>
+                    <p>Min Gu Kang, Sang Min Hyun, Tae Hee Han, Seok In Hong, and Jung Rae Kim</p>
+                    <p>July 2022</p>
+                </header>
+
+                <!-- Content -->
+                <section id="content">
+                    <div class="original-size-image">
+                        <img src="publication-images/ofle.PNG" alt="논문 이미지" />
+                    </div>
+                    <h3>Abstract</h3>
+                    <div class="abstract-content">
+                        <p>
+                            Many deep learning frameworks utilize GEneral Matrix Multiplication (GEMM)-based convolution to accelerate CNN execution.
+                            GEMM-based convolution provides faster convolution yet requires
+                            a data conversion process called lowering (i.e., im2col), which incurs significant memory overhead and
+                            diminishes performance. This paper proposes a novel hardware mechanism, called On-the-fly Lowering
+                            Engine (OLE), to eliminate the lowering overheads. Our goal is to offload the lowering overheads from the
+                            GEMM-based convolution. With OLE, the lowered matrix is neither pre-calculated nor stored in the main
+                            memory. Instead, a hardware engine generates lowered matrix on-the-fly from the original input matrix to
+                            reduce memory footprint and bandwidth requirements. Furthermore, the hardware offloading eliminates
+                            CPU cycles for lowering operation and overlaps computation with lowering to hide the performance
+                            overhead. Our evaluation shows that OLE can reduce memory footprint of convolutional layer inputs down
+                            to 1/12.5× and the overall memory footprint by up to 33.5%. Moreover, OLE can reduce the execution time of
+                            convolutional layers by 57.7% on average, resulting in an average speedup of 2.3× for representative CNN
+                            models.
+                            
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
+                                Semiconductor Building, No.400525<br />
+                                Sungkyunkwan University
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-phone"><span class="label">Tel</span></h3>
+                                (031) 299-4659
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-envelope"><span class="label">Contact Email</span></h3>
+                                jihun5029@g.skku.edu
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; IDEA.L. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

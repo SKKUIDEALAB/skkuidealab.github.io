@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+    Latitude by Pixelarity
+    pixelarity.com | hello@pixelarity.com
+    License: pixelarity.com/license
+-->
+<html>
+<head>
+    <title>NCDE: In-Network Caching for Directory Entries to Expedite Data Access in Tiled-chip Multiprocessors</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .abstract-content p {
+            font-size: 1.4em; /* 글자 크기 증가 */
+            line-height: 1.6; /* 줄 간격 추가 */
+            color: black; /* 글자 색상 변경 */
+        }
+
+        .original-size-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .original-size-image img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">IDEA.L</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advisor.html">Advisor</a></li>
+                    <li>
+                        <a href="#">Members</a>
+                        <ul>
+                            <li><a href="phdcandidates.html">Ph.D Candidates</a></li>
+                            <li><a href="mastercandidates.html">MS Candidates</a></li>
+                            <li><a href="alumni.html">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publication.html">Publication</a></li>
+                    <li><a href="recruit.html">Recruit</a></li>
+                    <li><a href="patent.html">Patent</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="wrapper style2">
+            <div class="container">
+                <header class="major">
+                    <h2>NCDE: In-Network Caching for Directory Entries to Expedite Data Access in Tiled-chip Multiprocessors</h2>
+                    <p>Jae Eun Shim, Min Gu Kang, and Tae Hee Han</p>
+                    <p>January 2023</p>
+                </header>
+
+                <!-- Content -->
+                <section id="content">
+                    <div class="original-size-image">
+                        <img src="publication-images/ncde.PNG" alt="논문 이미지" />
+                    </div>
+                    <h3>Abstract</h3>
+                    <div class="abstract-content">
+                        <p>
+                            The processing of data-intensive applications, followed by an unprecedented amount of data
+                            traffic, drives explosive accesses to the memory subsystem. The overloaded memory subsystem experiences
+                            increased data access latency. To expedite data access, a network caching technique that leverages networkon-chip (NoC) virtual channels (VCs) as an expanded memory subsystem has emerged. Previous network
+                            caching studies focused on utilizing VCs on the NoC’s local input port as a victim cache to reduce local data
+                            access latency. In contrast to previous studies, we explore the opportunity of mitigating problems associated
+                            with shared data access via in-network caching for directory entries (NCDE), which can utilize every input
+                            port’s VCs to hold directory entries. NCDE exploits VCs as the victim and prefetch buffers of the directory
+                            entries, each reducing directory eviction-induced invalidations and simplifying the cache-to-cache (C2C)
+                            data transfer. The effectiveness of NCDE was evaluated using a gem5 full-system simulator, and the results
+                            show that the average memory access time (AMAT) and workload execution time were reduced by 7.69%
+                            and 5.82%, respectively. As a cost for accelerating the data access latency, implementing NCDE incurs a
+                            negligible router area overhead of 1.56%
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
+                                Semiconductor Building, No.400525<br />
+                                Sungkyunkwan University
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-phone"><span class="label">Tel</span></h3>
+                                (031) 299-4659
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-envelope"><span class="label">Contact Email</span></h3>
+                                jihun5029@g.skku.edu
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; IDEA.L. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+    Latitude by Pixelarity
+    pixelarity.com | hello@pixelarity.com
+    License: pixelarity.com/license
+-->
+<html>
+<head>
+    <title>Parallelism-Aware Channel Partition for Read/Write Interference Mitigation in Solid State Drives</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .abstract-content p {
+            font-size: 1.4em; /* 글자 크기 증가 */
+            line-height: 1.6; /* 줄 간격 추가 */
+            color: black; /* 글자 색상 변경 */
+        }
+
+        .original-size-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .original-size-image img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">IDEA.L</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advisor.html">Advisor</a></li>
+                    <li>
+                        <a href="#">Members</a>
+                        <ul>
+                            <li><a href="phdcandidates.html">Ph.D Candidates</a></li>
+                            <li><a href="mastercandidates.html">MS Candidates</a></li>
+                            <li><a href="alumni.html">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publication.html">Publication</a></li>
+                    <li><a href="recruit.html">Recruit</a></li>
+                    <li><a href="patent.html">Patent</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="wrapper style2">
+            <div class="container">
+                <header class="major">
+                    <h2>Parallelism-Aware Channel Partition for Read/Write Interference Mitigation in Solid State Drives</h2>
+                    <p>Hyun Jo Lim, Dong Kun Shin, and Tae Hee Han</p>
+                    <p>December 2022</p>
+                </header>
+
+                <!-- Content -->
+                <section id="content">
+                    <div class="original-size-image">
+                        <img src="publication-images/pacp.PNG" alt="논문 이미지" />
+                    </div>
+                    <h3>Abstract</h3>
+                    <div class="abstract-content">
+                        <p>
+                            The advancement of multi-level cell technology that enables storing multiple bits in a
+                            single NAND flash memory cell has increased the density and affordability of solid-state drives
+                            (SSDs). However, increased latency asymmetry between read and write (R/W) intensifies the
+                            severity of R/W interference, so reads cannot be processed for a long time owing to the extended
+                            flash memory resource occupancy of writing. Existing flash translation layer (FTL)-level mitigation
+                            techniques can allocate flash memory resources in a balanced manner taking R/W interference into
+                            account; however, due to the inefficient utilization of parallel flash memory resources, the effect on
+                            performance enhancement is restrictive. From the perspectives of the predicted access pattern and
+                            available concurrency of flash memory resources, we propose a parallelism-aware channel partition
+                            (PACP) scheme that prevents SSD performance degradation caused by R/W interference. Moreover,
+                            an additional performance improvement is achieved by reallocating interference-vulnerable page
+                            using leveraged garbage collection (GC) migration. The evaluation results showed that compared
+                            with the existing solution, PACP reduced the average read latency by 11.6% and average write latency
+                            by 6.0%, with a negligible storage overhead.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
+                                Semiconductor Building, No.400525<br />
+                                Sungkyunkwan University
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-phone"><span class="label">Tel</span></h3>
+                                (031) 299-4659
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-envelope"><span class="label">Contact Email</span></h3>
+                                jihun5029@g.skku.edu
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; IDEA.L. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

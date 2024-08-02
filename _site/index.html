@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<!--
+    Latitude by Pixelarity
+    pixelarity.com | hello@pixelarity.com
+    License: pixelarity.com/license
+-->
+<html>
+<head>
+    <title>IDEA.L</title>
+	<link rel="icon" type="image/png" href="images/logo.PNG" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+		.logo {
+            height: 40px; /* 로고의 높이를 조절합니다. 필요에 따라 조정하세요. */
+            vertical-align: middle; /* 텍스트와 수직 정렬을 맞춥니다. */
+            margin-left: 10px; /* 텍스트와 로고 사이의 간격을 조정합니다. */
+        }
+        .banner {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin: 10px auto;
+        }
+        .year-divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .year-divider::before {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background: #000;
+            margin-right: 10px;
+        }
+        .year-divider::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background: #000;
+            margin-left: 10px;
+        }
+        .year {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .banner-item {
+            background-color: #f0f0f0;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .banner-item:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .banner {
+                width: 95%;
+            }
+            .banner-item {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
+        @media (max-width: 480px) {
+            .banner-item {
+                padding: 6px;
+                font-size: 0.8em;
+            }
+        }
+        .wave {
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        .wave:hover {
+            animation: wave-animation 0.5s infinite;
+        }
+        @keyframes wave-animation {
+            0% { transform: translateY(0); }
+            25% { transform: translateY(-10px); }
+            50% { transform: translateY(0); }
+            75% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .home-link {
+            font-size: 24px; /* 원하는 크기로 변경하세요 */
+        }
+
+
+    </style>
+</head>
+<body class="landing is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">IDEA.L</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" class="home-link">Home</a></li>
+                    <li><a href="advisor.html" class="home-link">Advisor</a></li>
+                    <li>
+                        <a class="home-link">Members</a>
+                        <ul>
+                            <li><a href="phdcandidates.html" >Ph.D Candidates</a></li>
+                            <li><a href="mastercandidates.html">Master Candidates</a></li>
+                            <li><a href="alumni-phd.html">Alumni-PhD</a></li>
+                            <li><a href="alumni-ms.html">Alumni-MS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="project.html" class="home-link">Project</a></li>
+                    <li><a href="publication.html" class="home-link">Publication</a></li>
+                    <li><a href="recruit.html" class="home-link">Recruit</a></li>
+                    <li><a href="patent.html" class="home-link">Patent</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="container">
+                <!--<span class="logo">Welcome to IDEA.L</span> cyan 색깔 로고였음--> 
+                <header>
+                    <h2><span class="wave" style="font-weight: bold; font-size: 1.5em;">Welcome to IDEA.L</span></h2>
+                    <h2>
+                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">I</span>NTELLIGENT 
+                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">D</span>ATA-CENTRIC 
+                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">E</span>MERGING 
+                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">A</span>RCHITECTURE 
+                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">L</span>AB
+                    </h2>
+                </header>
+            </div>
+        </section>
+
+        <!-- Intro -->
+        <section id="intro" class="wrapper style1">
+            <div class="container">
+                <h2>IDEA lab<span> investigates various hardware and software challenges related to System-on-Chip<br />
+                    architecture and design technology implemented as semiconductor chips.
+                    </span></h2>
+                <footer>
+                    <p>We are recruiting self-motivated students (graduates and undergraduate interns) <br />
+                        who want to explore and uncover new knowledge to change the world.<br />
+                    IDEA LAB 에서는 석사 및 박사과정 학생과 학부생 인턴을 모집하고 있습니다.</p>
+                    <ul class="actions">
+                        <li><a href="recruit.html" class="button large">Contact us! →</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </section>
+
+        <!-- Main -->
+        <section id="main" class="wrapper style2">
+            <div class="container">
+                <section>
+                    <header>
+                        <h2>Research Area</h2>
+                    </header>
+                    <div class="row">
+                        <div class="col-3 col-6-narrow col-12-mobilep">
+                            <a href="" class="image fit"><img src="mainpage-images/aiacceleration.png" alt="" /></a>
+                            <h3>AI Acceleration</h3>
+                            <p>We design new AI acceleration techniques for System-on-Chip(SoC) technologies, including deep-learning specific instruction-set processors, energy-efficient computer arithmetic, and high-performance computing system.</p>
+                        </div>
+                        <div class="col-3 col-6-narrow col-12-mobilep">
+                            <a href="" class="image fit"><img src="mainpage-images/soconchipnetwork.png" alt="" /></a>
+                            <h3>SoC On-Chip Network</h3>
+                            <p>Network-on-Chip technology is an efficient data transmission hardware architecture system. We design faster System-on-Chip(SoC) for efficient algorithms that take workload characteristics into account.</p>
+                        </div>
+                        <div class="col-3 col-6-narrow col-12-mobilep">
+                            <a href="" class="image fit"><img src="mainpage-images/neardataprocessing.png" alt="" /></a>
+                            <h3>Near Data Processing</h3>
+                            <p>NDP has great opportunities in terms of accelerating computation and reducing power consumption. We solve the challenge of NDP by utilizing system-level simulation.</p>
+                        </div>
+                        <div class="col-3 col-6-narrow col-12-mobilep">
+                            <a href="" class="image fit"><img src="mainpage-images/nextgenerationmemory.png" alt="" /></a>
+                            <h3>Next Generation Memory</h3></li>
+                            <p>We are developing memory subsystem, system architecture technology, open fusion memory solutions, and platforms for the next-generation memory system.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <header>
+                        <h2>Recent News</h2>
+                    </header>
+                    <div class="banner">
+                        <div class="year-divider"><span class="year">2024</span></div>
+                        
+                        <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0306627" >
+                            <div class="banner-item">
+                                <p><strong>(2024-07)</strong> <strong>Kwan Hee Han's</strong> paper is accepted by the PLOS ONE</p>
+                            </div>
+                        </a>
+
+                        <a href="https://ieeexplore.ieee.org/document/10489970">
+                            <div class="banner-item">
+                                <p><strong>(2024-04)</strong> <strong>Yong Wook Kim's</strong> paper is accepted by the IEEE Access.</p>
+                            </div>
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/document/10373004">
+                            <div class="banner-item">
+                                <p><strong>(2024-03)</strong> <strong>Ho Jung Yoo's</strong> paper is selected as the featured article in IEEE Access.</p>
+                            </div>
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/document/10463391">
+                            <div class="banner-item">
+                                <p><strong>(2024-02)</strong> <strong>Won Hyeok Kim's</strong> paper is accepted by the ICAIIC.</p>
+                            </div>
+                        </a>
+                        
+                        <div class="banner-item">
+                            <p><strong>(2024-02)</strong> Welcome! <strong>Woo Hyun Kim</strong>, <strong>Sung Ryong Yoo</strong>, and <strong>Min Jun Kim</strong> have joined our group as graduate students.</p>
+                        </div>
+                        
+                        <div class="year-divider"><span class="year">2023</span></div>
+                        <a href="https://ieeexplore.ieee.org/document/10373004">
+                            <div class="banner-item">
+                                <p><strong>(2023-12)</strong> <strong>Ho Jung Yoo's</strong> paper is accepted by the IEEE Access.</p>
+                            </div>
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/document/10316298">
+                            <div class="banner-item">
+                                <p><strong>(2023-11)</strong> <strong>Ju Yeon Kang's</strong> paper is accepted by the IEEE Access.</p>
+                            </div>
+                        </a>
+                        <div class="banner-item">
+                            <p><strong>(2023-08)</strong> Welcome! <strong>Hyung Jin Kim</strong> and <strong>Ji Hun Choi</strong> have joined our group as graduate students.</p>
+                        </div>
+                        <div class="banner-item">
+                            <p><strong>(2023-02)</strong> Welcome! <strong>Han Sol Kim</strong> and <strong>Won Hyeok Kim</strong> have joined our group as graduate students.</p>
+                        </div>
+                        <a href="https://ieeexplore.ieee.org/document/10024251">
+                            <div class="banner-item">
+                                <p><strong>(2023-01)</strong> <strong>Ju Yeon Kang's</strong> paper is accepted by the IEEE Access.</p>
+                            </div>
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/document/10007840">
+                            <div class="banner-item">
+                                <p><strong>(2023-01)</strong> <strong>Jae Eun Shim's</strong> paper is accepted by the IEEE Access.</p>
+                            </div>
+                        </a>
+                        <div class="year-divider"><span class="year">2022</span></div>
+                        <a href="https://www.mdpi.com/2079-9292/11/23/4048">
+                            <div class="banner-item">
+                                <p><strong>(2022-12)</strong> <strong>Hyun Jo Lim's</strong> paper is accepted by the MDPI Electronics.</p>
+                            </div>
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/document/9930627">
+                            <div class="banner-item">
+                                <p><strong>(2022-10)</strong> <strong>Young Sik Lee's</strong> paper is accepted by the IEEE Transactions on Parallel and Distributed Systems (TPDS).</p>
+                            </div>
+                        </a>
+                        <div class="banner-item">
+                            <p><strong>(2022-09)</strong> <strong>Prof. Tae Hee Han</strong> has been elevated to the senior member of the IEEE.</p>
+                        </div>
+                        <div class="banner-item">
+                            <p><strong>(2022-08)</strong> Welcome! <strong>Suk Bong Kang</strong> and <strong>Hui Ze Hong</strong> have joined our group as graduate students.</p>
+                        </div>
+                        <a href="https://www.mdpi.com/2079-9292/11/17/2678">
+                            <div class="banner-item">
+                                <p><strong>(2022-08)</strong> <strong>Sang Min Hyun's</strong> paper is accepted by the MDPI Electronics.</p>
+                            </div>
+                        </a>
+                        <a href="https://ieeexplore.ieee.org/document/9833499">
+                            <div class="banner-item">
+                                <p><strong>(2022-07)</strong> <strong>Min Gu Kang's</strong> paper is accepted by the IEEE Access.</p>
+                            </div>
+                        </a>
+                        <a href="https://www.skku.edu/skku/campus/skk_comm/news.do?mode=view&articleNo=97311&article.offset=0&articleLimit=10">
+                            <div class="banner-item">
+                                <p><strong>(2022-05)</strong> <strong>Prof. Tae Hee Han</strong> is awarded the SKKU Teaching Award.</p>
+                            </div>
+                        </a>
+                        <div class="banner-item">
+                            <p><strong>(2022-02)</strong> Welcome! <strong>Chang Ho Ryu</strong> and <strong>Ho Jung Yoo</strong> have joined our group as graduate students.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
+                                Semiconductor Building, No.400525<br />
+                                Sungkyunkwan University
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-phone"><span class="label">Tel</span></h3>
+                                (031) 299-4659
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-envelope"><span class="label">Contact Email</span></h3>
+                                jihun5029@g.skku.edu
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; IDEA.L. All rights reserved.
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

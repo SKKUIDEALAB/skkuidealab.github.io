@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+    Latitude by Pixelarity
+    pixelarity.com | hello@pixelarity.com
+    License: pixelarity.com/license
+-->
+<html>
+<head>
+    <title>Task Parallelism-Aware Deep Neural Network Scheduling on Multiple Hybrid Memory Cube-based Processing-in-Memory</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .abstract-content p {
+            font-size: 1.4em; /* 글자 크기 증가 */
+            line-height: 1.6; /* 줄 간격 추가 */
+            color: black; /* 글자 색상 변경 */
+        }
+
+        .original-size-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .original-size-image img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">IDEA.L</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advisor.html">Advisor</a></li>
+                    <li>
+                        <a href="#">Members</a>
+                        <ul>
+                            <li><a href="phdcandidates.html">Ph.D Candidates</a></li>
+                            <li><a href="mastercandidates.html">MS Candidates</a></li>
+                            <li><a href="alumni.html">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publication.html">Publication</a></li>
+                    <li><a href="recruit.html">Recruit</a></li>
+                    <li><a href="patent.html">Patent</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="wrapper style2">
+            <div class="container">
+                <header class="major">
+                    <h2>Task Parallelism-Aware Deep Neural Network Scheduling on Multiple Hybrid Memory Cube-based Processing-in-Memory</h2>
+                    <p>Young Sik Lee, Tae Hee Han</p>
+                    <p>May 2021</p>
+                </header>
+
+                <!-- Content -->
+                <section id="content">
+                    <div class="original-size-image">
+                        <img src="publication-images/Task Parallelism-Aware Deep Neural Network.png" alt="논문 이미지" />
+                    </div>
+                    <h3>Abstract</h3>
+                    <div class="abstract-content">
+                        <p>
+                            Processing-in-memory (PIM) comprises computational logic in the memory domain.
+                            It is the most promising solution to alleviate the memory bandwidth problem in deep
+                            neural network (DNN) processing. The hybrid memory cube (HMC), a 3D stacked memory 
+                            structure, can efficiently implement the PIM architecture by maximizing the existing 
+                            legacy hardware. To accelerate DNN inference, multiple HMCs can be connected,
+                            and data-independent tasks can be assigned to processing elements (PEs) within each HMC.
+                            However, owing to the packet-switched network structure, inter-HMC interconnects exhibit 
+                            variable and unpredictable latencies depending on the data transmission path and link contention. 
+                            A well-designed task schedule using context switching can effectively hide communication latency
+                            and improve PE utilization. Nevertheless, as the number of HMC increases, the variability of 
+                            a wide range of inter-HMC communication latencies causes frequent context switching, degrading 
+                            overall performance. This paper proposes a DNN task scheduling that can effectively utilize task
+                            parallelism by reducing the communication latency variance owing to HMC interconnect
+                            characteristics. Task partitions are generated to exploit parallelism while providing 
+                            inter-HMC traffic within the sustainable link bandwidth. Task-to-HMC mapping is performed
+                            to hide the average communication latency of intermediate DNN processing results. 
+                            A task schedule is generated using retiming to accelerate DNN inference while maximizing 
+                            resource utilization. The effectiveness of the proposed method was verified through simulations
+                            using various realistic DNN applications performed on a ZSim x86-64 simulator. The simulations
+                            revealed that DNN processing with the proposed scheduling improved the DNN processing speed by reducing the 
+                            processing time by 18.19% over conventional methods where each HMC operated independently.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
+                                Semiconductor Building, No.400525<br />
+                                Sungkyunkwan University
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-phone"><span class="label">Tel</span></h3>
+                                (031) 299-4659
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-envelope"><span class="label">Contact Email</span></h3>
+                                jihun5029@g.skku.edu
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; IDEA.L. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
