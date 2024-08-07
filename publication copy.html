@@ -108,26 +108,33 @@
         }
 
         .collapsible {
-            background-color: #777;
-            color: white;
-            cursor: pointer;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-        }
-        .active, .collapsible:hover {
-            background-color: #555;
-        }
-        .collapsible-content {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-            background-color: #f1f1f1;
-        }    
-
+        background-color: white; /* Changed from gray to white */
+        color: black; /* Ensures text is visible on a light background */
+        cursor: pointer;
+        padding: 10px 20px; /* Increased padding for better visibility */
+        width: 100%;
+        border: 2px solid #ccc; /* Adds a light border */
+        text-align: left;
+        outline: none;
+        font-size: 18px; /* Increased font size */
+        transition: background-color 0.4s ease; /* Smooth transition for hover */
+    }
+    .collapsible:hover {
+        background-color: #f9f9f9; /* Light gray background on hover for better interaction */
+    }
+    .collapsible.active {
+        background-color: #e9e9e9; /* Slightly darker when active */
+    }
+    .collapsible:after {
+        content: '\002B'; /* Unicode character for '+' sign */
+        color: black;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+    .collapsible.active:after {
+        content: "\2212"; /* Unicode character for '-' sign */
+    }
     </style>
 </head>
 <body class="is-preload">
@@ -401,7 +408,7 @@
                             <div class="publication-info">Electronics, Vol. 8, No. 12, Dec. 2019.</div>
                         </div>
                     </div>
-                    <button class="collapsible">View Older Publications</button>
+                    <button class="collapsible">View more International Publications &#9660;</button>
                     <div class="publication-item">
                     <div class="collapsible-content">
                         <div class="publication-content">
