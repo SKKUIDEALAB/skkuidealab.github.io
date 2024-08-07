@@ -892,7 +892,7 @@
                             <div class="publication-info">IEEE Transactions on Consumer Electronics, vol. 44, no. 2, pp. 337-342, May 1998.</div>
                         </div>
                     </div>
-                </div>          
+                </div>        
 
                     
 
@@ -986,5 +986,31 @@
             }
         }
     </script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        });
+    </script>
+
+
+
+
+
+
+
 </body>
 </html>
