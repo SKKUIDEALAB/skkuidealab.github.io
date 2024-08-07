@@ -1,0 +1,966 @@
+<!DOCTYPE HTML>
+<!--
+    Latitude by Pixelarity
+    pixelarity.com | hello@pixelarity.com
+    License: pixelarity.com/license
+-->
+<html>
+<head>
+    <title>IDEA.L</title>
+	<link rel="icon" type="image/png" href="images/logo.PNG" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .conference-badge {
+            background-color: #00AEEF; /* 첨부한 하늘색 색상 */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 0.9em;
+            margin-right: 10px;
+            margin-bottom: 10px; /* 간격 추가 */
+        }
+        .abstract-badge, .link-badge {
+            background-color: #4CAF50; /* 초록색 */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+			cursor: pointer;
+            font-size: 0.9em;
+            margin-right: 5px; /* 간격 추가 */
+        }
+        .publication-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .publication-content {
+            flex: 1;
+        }
+        .publication-image {
+            flex: 0 0 300px;
+            margin-left: 20px;
+        }
+        .publication-image img {
+            max-width: 100%;
+        }
+        .publication-title {
+            font-size: 1.5em; /* 글자 크기를 원래대로 유지 */
+            font-weight: bold;
+            color: black; /* 검은색으로 변경 */
+            text-decoration: none; /* 밑줄 제거 */
+            font-family: 'Arial', sans-serif; /* 글자체를 International Journals / Conferences와 동일하게 설정 */
+        }
+        .publication-authors {
+            font-size: 1.1em;
+            color: #666;
+        }
+        .publication-info {
+            font-size: 1.1em; /* 논문 출처 정보의 글자 크기 */
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .large-title {
+            font-size: 2em; /* 제목의 크기를 키움 */
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: 'Arial', sans-serif; /* 글자체를 설정 */
+        }
+        .divider {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">IDEA.L</a></h1>
+            <link rel="icon" type="image/png" href="images/logo.PNG" />
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advisor.html">Advisor</a></li>
+                    <li>
+                        <a href="#">Members</a>
+                        <ul>
+                            <li><a href="phdcandidates.html">Ph.D Candidates</a></li>
+                            <li><a href="mastercandidates.html">MS Candidates</a></li>
+                            <li><a href="alumni-phd.html">Alumni-PhD</a></li>
+                            <li><a href="alumni-ms.html">Alumni-MS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="publication.html">Publication</a></li>
+                    <li><a href="recruit.html">Recruit</a></li>
+                    <li><a href="patent.html">Patent</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="wrapper style2">
+            <header class="major">
+                <h2>Publications</h2>
+            </header>
+            <div class="container">
+                <h3 class="large-title">International Journals / Conferences</h3> <!-- 아래 제목 -->
+                <!-- Content -->
+                <section id="content">
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">PLOS ONE</span> <span class="conference-badge">DL</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/Deep learning-based material.html')">Abstract </div>
+                            <div class="link-badge" onclick="window.location.href='https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0306627'">Link</div>
+                            <div class="publication-title">Deep learning-based material decomposition of iodine and calcium in mobile photon counting detector CT</div>
+                            <div class="publication-authors">Kwanhee Han,Chang Ho Ryu,Chang-Lae Lee,Tae Hee Han</div>
+                            <div class="publication-info">PLOS ONE, July 26, 2024</div>
+   
+                        </div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">NoC</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/owbm1.html')">Abstract </div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/10489970'">Link</div>
+                            <div class="publication-title">OWBM: OSNR-Aware Wavelength Allocation and Branching Methods for Multicast Routing in Custom Topology-Based Optical Network-on-Chips</div>
+                            <div class="publication-authors">Yong Wook Kim and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Access, Vol. 12, pp. 49508-49527, Apr. 2024</div>
+   
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">ICAIIC</span> <span class="conference-badge">RISC-V</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/risc-v.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/10463391'">Link</div>
+                            <div class="publication-title">RISC-V R-Extension: Advancing Efficiency with Rented-Pipeline for Edge DNN Processing</div>
+                            <div class="publication-authors">Won Hyeok Kim, Hyeong Jin Kim and Tae Hee Han</div>
+                            <div class="publication-info">2024 International Conference on Artificial Intelligence in Information and Communication (ICAIIC), pp. 800-805, Osaka, Japan, Feb. 2024</div>
+                        </div>
+                    </div>
+
+
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">Featured article</span> <span class="conference-badge">RL-based Cache replacement</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/RL-cache.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/10373004'">Link</div>
+                            <div class="publication-title">RL-Based Cache Replacement: A Modern Interpretation of Belady’s Algorithm With Bypass Mechanism and Access Type Analysis</div>
+                            <div class="publication-authors">Ho Jung Yoo, Jeong Hun Kim and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Access, Vol. 11, pp. 145238-145253, Dec. 2023</div>
+                        </div>
+                    </div>
+
+
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">Neural Network</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/sfao.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/10316298'">Link</div>
+                            <div class="publication-title">SFAO: Sign-Flipping-Aware Optimization for Early-Stopping of Binarized Neural Networks</div>
+                            <div class="publication-authors">Ju Yeon Kang, Chang Ho Ryu, Suk Bong Kang, and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Access, Vol. 11, pp. 128306-128315, Nov. 2023</div>
+                        </div>
+                    </div>
+
+
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">Neural Network</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/binarized-neural-network.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/10024251'">Link</div>
+                            <div class="publication-title">Binarized Neural Network with Parameterized Weight Clipping and Quantization Gap Minimization for Online Knowledge Distillation</div>
+                            <div class="publication-authors">Ju Yeon Kang, Chang Ho Ryu, and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Access, Vol. 11, pp. 8057-8064, Jan. 2023</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">NoC</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/in-network-caching.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/10007840'">Link</div>
+                            <div class="publication-title">NCDE: In-Network Caching for Directory Entries to Expedite Data Access in Tiled-chip Multiprocessors</div>
+                            <div class="publication-authors">Jae Eun Shim, Min Gu Kang, and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Access, Vol. 11, pp. 3080-3095, Jan. 2023</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE TPDS</span> <span class="conference-badge">NoC</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/multicast-routing.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/9930627'">Link</div>
+                            <div class="publication-title">MRCN: Throughput-Oriented Multicast Routing for Customized Network-on-Chips</div>
+                            <div class="publication-authors">Young Sik Lee, Yong Wook Kim, and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Transactions on Parallel and Distributed Systems (TPDS), Vol. 34, No. 1, pp. 163-179, Jan. 2023</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Electronics</span> <span class="conference-badge">SSD</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/channel-partition.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://www.mdpi.com/2079-9292/11/23/4048'">Link</div>
+                            <div class="publication-title">Parallelism-Aware Channel Partition for Read/Write Interference Mitigation in Solid State Drives</div>
+                            <div class="publication-authors">Hyun Jo Lim, Dong Kun Shin, and Tae Hee Han</div>
+                            <div class="publication-info">Electronics, Vol. 11, No. 23, Dec. 2022</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Electronics</span> <span class="conference-badge">SSD</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/gating-architecture.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://www.mdpi.com/2079-9292/11/17/2678'">Link</div>
+                            <div class="publication-title">CSGN: Combined Channel- and Spatial-wise Dynamic Gating Architecture for Convolutional Neural Networks</div>
+                            <div class="publication-authors">Sang Min Hyun, Chang Ho Ryu, Ju Yeon Kang, Hyun Jo Lim, and Tae Hee Han</div>
+                            <div class="publication-info">Electronics, Vol. 11, No. 17, Aug. 2022</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">CNN</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/lowering-engine.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/9833499'">Link</div>
+                            <div class="publication-title">On-the-fly Lowering Engine: Offloading Data Layout Conversion for Convolutional Neural Networks</div>
+                            <div class="publication-authors">Min Gu Kang, Sang Min Hyun, Tae Hee Han, Seok In Hong, and Jung Rae Kim</div>
+                            <div class="publication-info">IEEE Access, Vol. 10, pp. 79370-79746, Jul. 2022</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">NoC</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/MRBS.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/9656849'">Link</div>
+                            <div class="publication-title">MRBS: An Area-Efficient Multicast Router for Network-on-Chip Using Buffer Sharing</div>
+                            <div class="publication-authors">Min Chae Yang, Young Sik Lee, Tae Hee Han</div>
+                            <div class="publication-info">IEEE Access, Vol. 9, pp. 168783-168793, Dec. 2021.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">NoC</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/Rapid Topology Generation.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/9505672'">Link</div>
+                            <div class="publication-title">Rapid Topology Generation and Core Mapping of Optical Network-on-Chip for Heterogeneous Computing Platform</div>
+                            <div class="publication-authors">Yong Wook Kim, Seo Hong Choi, and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Access, Vol. 9, pp. 110359-110370, Aug. 2021.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">PIM</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/Task Parallelism-Aware Deep Neural Network.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/9422695'">Link</div>
+                            <div class="publication-title">Task Parallelism-Aware Deep Neural Network Scheduling on Multiple Hybrid Memory Cube-based Processing-in-Memory</div>
+                            <div class="publication-authors">Young Sik Lee, Tae Hee Han</div>
+                            <div class="publication-info">IEEE Access, Vol. 9, pp. 68561-68572, May 2021.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE TCAD</span> <span class="conference-badge">NoC</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/System-Level Signal Analysis Methodology.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/8859235'">Link</div>
+                            <div class="publication-title">System-Level Signal Analysis Methodology for Optical Network-on-Chip Using Linear Model-Based Characterization</div>
+                            <div class="publication-authors">Min Su Kim, Yong Wook Kim, and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Vol. 39, No. 10, pp. 2761-2771, Oct. 2020.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Access</span> <span class="conference-badge">NoC</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/Extended Worst-Case OSNR Searching Algorithm.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://ieeexplore.ieee.org/document/9133429'">Link</div>
+                            <div class="publication-title">Extended Worst-case OSNR Searching Algorithm for Optical Network-on-Chip using a Semi-greedy Heuristic with Adaptive Scan Range</div>
+                            <div class="publication-authors">Yong Wook Kim, Jae Hoon Lee, and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Access, Vol. 8, pp. 125863-125873, Jul. 2020.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">MDPI</span> 
+                            <div class="abstract-badge" onclick="openModal('abstract/Optimized Lossless Embedded Compression.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://www.mdpi.com/2079-9292/9/5/868'">Link</div>
+                            <div class="publication-title">Optimized Lossless Embedded Compression for Mobile Multimedia Applications</div>
+                            <div class="publication-authors">Sungchul Yoon, Sungho Jun, Yongkwon Cho, Kilhwan Lee, Hyukjae Jang, and Tae Hee Han</div>
+                            <div class="publication-info">Electronics, Vol. 9, No. 5, May 2020.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">MDPI</span> 
+                            <div class="abstract-badge" onclick="openModal('abstract/Error-Vulnerable Pattern-Aware.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://www.mdpi.com/2079-9292/9/4/626'">Link</div>
+                            <div class="publication-title">Error-Vulnerable Pattern-Aware Binary-to-Ternary Data Mapping for Improving Storage Density of 3LC Phase Change Memory</div>
+                            <div class="publication-authors">Jeong Beom Hong, Young Sik Lee, Yong Wook Kim, and Tae Hee Han</div>
+                            <div class="publication-info">Electronics, Vol. 9, No. 4, Apr. 2020.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings of 2020 Design & Verification Conference & Exhibition</span> 
+                            <div class="abstract-badge" onclick="openModal('abstract/Developing a Portable Block.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://dvcon-proceedings.org/wp-content/uploads/developing-a-portable-block-testbench-and-reusable-soc-verification-scenarios-using-ip-xact-based-automation.pdf'">Link</div>
+                            <div class="publication-title">Developing a Portable Block Testbench and Reusable SOC Verification Scenarios Using IP-XACT Based Automation</div>
+                            <div class="publication-authors">Tae Jin Kim, Tae Hee Han</div>
+                            <div class="publication-info">Proceedings of 2020 Design & Verification Conference & Exhibition, USA, Mar. 2020.</div>
+                        </div>
+                    </div>
+                                        
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">MDPI</span> <span class="conference-badge">NoC</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/Q-Function-Based.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://www.mdpi.com/2079-9292/9/3/392'">Link</div>
+                            <div class="publication-title">Q-Function-Based Traffic- and Thermal-Aware Adaptive Routing for 3D Network-on-Chip</div>
+                            <div class="publication-authors">Seung Chan Lee, and Tae Hee Han</div>
+                            <div class="publication-info">Electronics, Vol. 9, No. 3, Feb. 2020.</div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">MDPI</span> <span class="conference-badge">NoC</span>
+                            <div class="abstract-badge" onclick="openModal('abstract/Aging-Resilient Topology Synthesis.html')">Abstract</div>
+                            <div class="link-badge" onclick="window.location.href='https://www.mdpi.com/2079-9292/8/12/1458'">Link</div>
+                            <div class="publication-title">Aging-Resilient Topology Synthesis of Heterogeneous Manycore Network-On-Chip Using Genetic Algorithm with Flexible Number of Routers</div>
+                            <div class="publication-authors">Young Sik Lee, SoYoung Kim, and Tae Hee Han</div>
+                            <div class="publication-info">Electronics, Vol. 8, No. 12, Dec. 2019.</div>
+                        </div>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Electronics</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Timing Criticality-Aware Design Optimization Using BEOL Air Gap Technology on Consecutive Metal Layers</div>
+                            <div class="publication-authors">Seongmin Ryu, Youngwoo Cho, and Tae Hee Han</div>
+                            <div class="publication-info">Electronics, Vol. 8, No. 11, Nov. 2019.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">A 4-way Matrix Multiply Unit for High Throughput Machine Learning Accelerator</div>
+                            <div class="publication-authors">Seung Chan Lee, Tae Hee Han</div>
+                            <div class="publication-info">Proceedings of 2019 International SoC Design Conference, pp. 113-114, Jeju, Korea, Oct. 2019.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Applied Sciences</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Power and Signal-to-Noise Ratio Optimization in Mesh-Based Hybrid Optical Network-on-Chip Using Semiconductor Optical Amplifiers</div>
+                            <div class="publication-authors">Jun Yeong Jang, Min Su Kim, Chang-Lin Li, and Tae Hee Han</div>
+                            <div class="publication-info">Applied Sciences, Vol. 9, Issue 6, Mar. 2019.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Sensors and Materials</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Design of Metal-mesh Electrode-based Touch Panel for Preventing Back-surface Touch Error</div>
+                            <div class="publication-authors">Kyoung Soo Chae, Yun Ki Hong, Hyun Jun Kim, Jae Youn Jeong, and Tae Hee Han</div>
+                            <div class="publication-info">Sensors and Materials, Vol. 31, No. 2, pp. 587–593, Feb. 2019.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Random I/O Performance Boosting Technique based on Statistical I/O Traffic Patterns of Embedded Storage</div>
+                            <div class="publication-authors">Myung Sub Shin, Tae Hee Han</div>
+                            <div class="publication-info">2019 International Conference on Electronics, Information, and Communication, Auckland, New Zealand, Jan. 2019.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Reliability Optimization of ReRAM Architecture using Heterogeneous Error Correcting Code Scheme</div>
+                            <div class="publication-authors">Kwangjin Lee, and Tae Hee Han</div>
+                            <div class="publication-info">2018 International SoC Design Conference (ISOCC), pp. 25-26, Daegu, Korea, Nov. 2018.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Electronics Letters</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Power-efficient error-resilient network-on-chip router using selective error correction code scheme</div>
+                            <div class="publication-authors">Changlin Li, Yong Wook Kim, Young Sik Lee, and Tae Hee Han</div>
+                            <div class="publication-info">Electronics Letters, Vol. 54, No. 24, pp. 1368-1370, Nov. 2018.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Journal of Semiconductor Technology and Science</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Energy-Efficient Custom Topology-based Dynamic Voltage-Frequency Island-enabled Network-on-Chip Design</div>
+                            <div class="publication-authors">Chang-Lin Li, Jae-Chern Yoo, and Tae Hee Han</div>
+                            <div class="publication-info">Journal of Semiconductor Technology and Science, Vol.18, No.3, pp. 352-359, Jun. 2018.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Load-Aware Memory DVFS in Mobile SoC</div>
+                            <div class="publication-authors">Kyoung Min Lee, Sungchul Yoon, Changhoon Oh, and Tae Hee Han</div>
+                            <div class="publication-info">2018 Design Automation Conference, Designer/IP Track, California, USA, Jun. 2018.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEICE Electronics Express</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Adaptive thermal property control technique for holistic thermal management of mobile devices</div>
+                            <div class="publication-authors">Kyoung Min Lee, Yunhyeok Im, Jun Ho Huh, and Tae Hee Han</div>
+                            <div class="publication-info">IEICE Electronics Express, Vol.15, No.10, 1–7, Apr. 2018.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Insertion Loss-aware Routing Analysis and Optimization for a Fat-Tree-based Optical Network-on-Chip</div>
+                            <div class="publication-authors">Jae Hoon Lee, Min Soo Kim, and Tae Hee Han</div>
+                            <div class="publication-info">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Vol. 37, Issue 3, pp. 559-572, Mar. 2018.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEICE Electronics Express</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">New library development method by FSM based cell pattern extraction</div>
+                            <div class="publication-authors">Byung Su Kim, Tae Hee Han , Joon-Sung Yang, and Jaeyong Chung</div>
+                            <div class="publication-info">IEICE Electronics Express, Vol. 15, No. 9, pp. 1-6, Jan. 2018.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Sensors and Materials</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Fabrication of Single-Layer Touch Screen Panel with Corrosion Resistant Metal-Mesh Electrodes</div>
+                            <div class="publication-authors">Kyoung Soo Chae, Sung Han, Jae Youn Jeong, and Tae Hee Han</div>
+                            <div class="publication-info">Sensors and Materials, Vol. 29, No. 9, pp. 1285-1290, Sep. 2017.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Air Gap-Aware Design Optimization for High Performance SOC with Efficient Process Cost</div>
+                            <div class="publication-authors">Seongmin Ryu, Hyosig Won, and Tae Hee Han</div>
+                            <div class="publication-info">2017 Design Automation Conference, Designer/IP Track, Texas, USA, Jun. 2017.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Non-linear Library Characterization Method for FinFET Logic Cells by L1-minimization</div>
+                            <div class="publication-authors">Byung Su Kim, Hyo Sig Won, Tae Hee Han, and Joon-Sung Yang</div>
+                            <div class="publication-info">2017 IEEE International Symposium on Circuits and Systems, pp. 1-4, MD, USA, May, 2017.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">How to Make Fast DVFS Beneficial in Mobile Devices</div>
+                            <div class="publication-authors">Sung Chul Yoon, Kyoung Min Lee, and Tae Hee Han</div>
+                            <div class="publication-info">Proceedings of 2017 European Conference on Computer Systems, Belgrade, Serbia, Apr. 2017.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Optical Engineering</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Wavelength-based crosstalk-aware design for hybrid optical network-on-chip</div>
+                            <div class="publication-authors">Jae Hoon Lee and Tae Hee Han</div>
+                            <div class="publication-info">Optical Engineering, Vol. 56, No. 1, 016111.1 - 016111.7, Jan. 2017.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Journal of Semiconductor Technology and Science</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Energy-efficient Custom Topology Generation for Link-failure-aware Network-on-chip in Voltage-frequency Island Regime</div>
+                            <div class="publication-authors">Chang-Lin Li, Jae-Chern Yoo, and Tae Hee Han</div>
+                            <div class="publication-info">Journal of Semiconductor Technology and Science, Vol. 16, No. 6, pp. 832-841, Dec. 2016.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Journal of Semiconductor Technology and Science</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Voltage and Frequency Tuning Methodology for Near-Threshold Manycore Computing using Critical Path Delay Variation</div>
+                            <div class="publication-authors">Chang-Lin Li, Hyun Joong Kim, Seo Weon Heo, and Tae Hee Han</div>
+                            <div class="publication-info">Journal of Semiconductor Technology and Science, Vol. 15, No. 6, pp. 678-684, Dec. 2015.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEICE Electronics Express</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Sudden-voltage-drop protection technique for enhancing the reliability of mobile devices under low battery conditions</div>
+                            <div class="publication-authors">Kyoung Min Lee, Myung Kyoon Yim, and Tae Hee Han</div>
+                            <div class="publication-info">IEICE Electronics Express, Vol. 12, No. 10, pp. 1-9, May 2015.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEICE Electronics Express</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Surface temperature-aware thermal management technique for mobile devices</div>
+                            <div class="publication-authors">Myung Kyoon Yim, Kyoung Min Lee, and Tae Hee Han</div>
+                            <div class="publication-info">IEICE Electronics Express, Vol. 11, No. 23, pp. 1-6, Dec. 2014.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEICE Electronics Express</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Communication-aware custom topology generation for VFI network-on-chip</div>
+                            <div class="publication-authors">Chang-Lin Li, Jae Hoon Lee, Joon-Sung Yang, and Tae Hee Han</div>
+                            <div class="publication-info">IEICE Electronics Express, Vol. 11, No. 18, pp. 1-8, Sep. 2014.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">An Improvement Technique for the Test Compression Ratio and Application Time of Multiple Expansion Scan Chain based SoC using New Cost Function</div>
+                            <div class="publication-authors">Do Han Lee, and Tae Hee Han</div>
+                            <div class="publication-info">Proceedings of IEEE 57th International Midwest Symposium on Circuits and Systems, Texas, USA, Aug. 2014.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE/OSA Journal of Lightwave Technology</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">System-Level Design Framework for Insertion-Loss-Minimized Optical Network-on-Chip Router Architectures</div>
+                            <div class="publication-authors">J. H. Lee, J-C. Yoo, and T.H. Han</div>
+                            <div class="publication-info">IEEE/OSA Journal of Lightwave Technology, Vol. 32, Issue 18, pp. 3161-3174, Sep. 2014.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">ETRI Journal</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Dynamic Self Repair Architectures for Defective Through Silicon Vias</div>
+                            <div class="publication-authors">J.-S. Yang, T.H. Han, D. Kobla and E. L. Ju</div>
+                            <div class="publication-info">ETRI Journal, Vol. 36, No. 2, pp. 301~308, Apr. 2014.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Journal of Systems Architecture</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">A Shortest Path Adaptive Routing Technique for Minimizing Path Collisions in Hybrid Optical Network-on-Chip</div>
+                            <div class="publication-authors">Jae Hoon Lee, Young Seok Kim, Chang Lin Li, and Tae Hee Han</div>
+                            <div class="publication-info">Journal of Systems Architecture, Vol. 59, Issue 10, pp. 1334-1347, Nov. 2013.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">An Efficient Dual-Supply Design for Low-Power Mobile Systems</div>
+                            <div class="publication-authors">Hoi-Jin Lee, Youngmin Shin, Jae Cheol Son, Tae Hee Han, and Bai-Sun Kong</div>
+                            <div class="publication-info">Proceedings of 2012 International SoC Design Conference, pp. 359~362, Jeju, Korea, Nov. 2012.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEICE Electronics Express</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Low-power dual-supply clock networks with clock gating and frequency doubling</div>
+                            <div class="publication-authors">Hoi-Jin Lee, Jong-Woo Kim, Tae Hee Han, Jae Cheol Son, Jeong-Teak Kong, and Bai-Sun Kong</div>
+                            <div class="publication-info">IEICE Electronics Express, Vol. 9, No. 6, pp. 502~508, Mar. 2012.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">3CEO:Three Dimensional Cmesh based Electrical-Optical Router for Networks-on-Chip</div>
+                            <div class="publication-authors">Hyeong Ju Kim, Jung Tack Seo, and Tae Hee Han</div>
+                            <div class="publication-info">Proceedings of International Conference on ICT Convergence 2011, pp. 517~522, Seoul, Korea, Sep. 2011.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">3D Network-on-Chip System Communication Using Minimum Number of TSVs</div>
+                            <div class="publication-authors">Yong Joong Hwang, Jea Hun Lee, and Tae Hee Han</div>
+                            <div class="publication-info">Proceedings of International Conference on ICT Convergence 2011, pp. 114~119, Seoul, Korea, Sep. 2011.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Design Automation for Embedded Systems</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Communication-Aware VFI Partitioning for GALS-based Networks-on-Chip</div>
+                            <div class="publication-authors">Dongkun Shin, Woojoong Kim, Soontae Kwon, and Tae Hee Han</div>
+                            <div class="publication-info">Design Automation for Embedded Systems, Vol. 15, Issue 2, pp. 89-109, Jun. 2011.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IET Signal Processing</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Logic operation-based template matching algorithm for one-dimensional signals</div>
+                            <div class="publication-authors">Jae-Chern Yoo and Tae Hee Han</div>
+                            <div class="publication-info">IET Signal Processing, Vol. 5, No. 2, pp. 261-269, Apr. 2011.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Low Power Implementation of MDCT/IMDCT for MP3 Audio Decoder</div>
+                            <div class="publication-authors">Hi-Seok Kim, Sea-Ho Kim, Ki-Soek Chung, and Tae Hee Han</div>
+                            <div class="publication-info">Proceedings of 2010 International SoC Design Conference, pp. 143-146, Incheon, Korea, Nov. 2010.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">A Novel Load Balancing Method for Multi-core with Non-Uniform Memory Architecture</div>
+                            <div class="publication-authors">Youngho Ahn, Won-Jin Kim, Sea-Ho Kim, Tae Hee Han, Hi-Seok Kim, and Ki-Seok Chung</div>
+                            <div class="publication-info">Proceedings of 2010 International SoC Design Conference, pp. 412-415, Incheon, Korea, Nov. 2010.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">PRAM and NAND Flash Hybrid Architecture based on Hot Data Detection</div>
+                            <div class="publication-authors">Jung Sik Park, Ki-Seok Chung, Hi-Seok Kim, and Tae Hee Han</div>
+                            <div class="publication-info">Proceedings of International Conference on Mechanical and Electronics Engineering 2010, Vol. 1, pp. 93-97, Aug. 2010.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Efficient Garbage Collection Policy and Block Management Method for NAND Flash Memory</div>
+                            <div class="publication-authors">Kee-Hoon Jang and Tae Hee Han</div>
+                            <div class="publication-info">Proceedings of International Conference on Mechanical and Electronics Engineering 2010, vol. 1, pp. 327-331, Aug. 2010.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">International Journal of Electronics</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Power grid aware timing analysis using S-parameter</div>
+                            <div class="publication-authors">Kyung Ki Kim, Tae Hee Han, and Ken Choi</div>
+                            <div class="publication-info">International Journal of Electronics, vol. 97, no. 7, pp. 759-772, Jul. 2010.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEICE Transactions on Communications</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">A New LLR Approximation for BICM Systems with HARQ</div>
+                            <div class="publication-authors">Jin Whan Kang, Sang-Hyo Kim, Seokho Yoon, Tae Hee Han, and Hyoung Kee Choi</div>
+                            <div class="publication-info">IEICE Transactions on Communications, vol. E93-B , no.6, pp. 1628-1632, Jun. 2010.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEICE Transactions on Electronics</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">New low-voltage low-latency mixed-voltage I/O buffer</div>
+                            <div class="publication-authors">Joung-Yeal Kim, Su-Jin Park, Yong-Ki Kim, Sang-Keun Han, Young-Hyun Jun, Chilgee Lee, Tae Hee Han, and Bai-Sun Kong</div>
+                            <div class="publication-info">IEICE Transactions on Electronics, vol. E93-C, no. 5, pp. 709-711, May 2010.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Communications Magazine</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Power, Interface, and Integration: Handset Chipset Design Issues</div>
+                            <div class="publication-authors">Tae Hee Han, Jae-Chern Yoo, and Hyunseok Lee</div>
+                            <div class="publication-info">IEEE Communications Magazine, vol. 47, no. 11, pp 172 - 179, Nov. 2009.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Circuits, Systems and Signal Processing</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Fast Normalized Cross-Correlation</div>
+                            <div class="publication-authors">Jae-Chern Yoo and Tae Hee Han</div>
+                            <div class="publication-info">Circuits, Systems and Signal Processing, Vol. 28, No. 6, pp. 819-843, Dec. 2009.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">A New Demapper for BICM system with HARQ</div>
+                            <div class="publication-authors">Jin Whan Kang, Sang-Hyo Kim, Seokho Yoon, and Tae Hee Han</div>
+                            <div class="publication-info">Proceedings of 70th IEEE Vehicular Technology Conference, Anchorage, Sep. 2009.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEICE Electronics Express</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">CMOS Cross-Coupled Charge Pump with Improved Latch-Up Immunity</div>
+                            <div class="publication-authors">Su-Jin Park, Yong-Gu Kang, Joung-Yeal Kim, Tae Hee Han, Young-Hyun Jun, Chilgee Lee, and Bai-Sun Kong</div>
+                            <div class="publication-info">IEICE Electronics Express, vol. 6, no. 11, pp. 736-742, Jun. 2009.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Communications Letters</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Symbol Error Rate of the DM-MPSK Under the Influence of Jamming Signals</div>
+                            <div class="publication-authors">Youngpo Lee, Taeung Yoon, Iickho Song, Yun Hee Kim, Tae Hee Han, and Seokho Yoon</div>
+                            <div class="publication-info">IEEE Communications Letters, Vol. 13, No.7, pp. 468~470, Jul. 2009.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Frequency and Yield Optimization using Power Gates in Power-Constrained Designs</div>
+                            <div class="publication-authors">Nam Sung Kim, Jun Seomun, Abhishek Sinkar, Jungseob Lee, Tae Hee Han, Ken Choi, and Youngsoo Shin</div>
+                            <div class="publication-info">Proceedings of IEEE/ACM International Symposium on Low Power Electronics and Design 2009, pp. 121 – 126, San Francisco, Aug. 2009.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">A Low Power Design Technique for a Mobile Broadcasting SoC</div>
+                            <div class="publication-authors">Jiyong Yoon, Joonhwan Yi, Yongchan Kim, Tae Hee Han, and Kyungho Kim</div>
+                            <div class="publication-info">Proceedings of International SoC Design Conference, pp. 152-155, Seoul Korea, Oct 2004.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">Proceedings</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">A Mobile Station Modem VLSI for cdma2000 1x</div>
+                            <div class="publication-authors">S.C.Han, T.H.Han et al.</div>
+                            <div class="publication-info">Proceedings of 14th IEEE ASIC/SOC conference, pp. 52-56, Washington, USA, Sep. 2001.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IET Computers and Digital Techniques</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Versatile architecture for block matching motion estimation</div>
+                            <div class="publication-authors">T.H.Han and S.Hwang</div>
+                            <div class="publication-info">IET Computers and Digital Techniques, vol. 146, no. 4, pp. 188-195, Jul. 1999.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item">
+                        <div class="publication-content">
+                            <span class="conference-badge">IEEE Transactions on Consumer Electronics</span>
+                            <div class="link-badge" onclick="window.location.href='#'">Link</div>
+                            <div class="publication-title">Novel hierarchical-search block matching algorithm and VLSI architecture considering the spatial complexity of the macroblock</div>
+                            <div class="publication-authors">T.H.Han and S.Hwang</div>
+                            <div class="publication-info">IEEE Transactions on Consumer Electronics, vol. 44, no. 2, pp. 337-342, May 1998.</div>
+                        </div>
+                    </div>
+
+                    
+
+
+               
+
+                    <!-- Extra -->
+                </section>
+            </div>
+        </section>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="modal-body">
+                    <h2>Loading...</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
+                                Semiconductor Building, No.400525<br />
+                                Sungkyunkwan University
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-phone"><span class="label">Tel</span></h3>
+                                (031) 299-4659
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-envelope"><span class="label">Contact Email</span></h3>
+                                jihun5029@g.skku.edu
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; IDEA.L. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function openModal(file) {
+            document.getElementById('myModal').style.display = "block";
+            // AJAX를 사용하여 특정 파일의 내용을 로드
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('modal-body').innerHTML = data;
+                })
+                .catch(error => {
+                    document.getElementById('modal-body').innerHTML = '<h2>Failed to load content</h2>';
+                });
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        // 클릭 시 모달을 닫음
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('myModal')) {
+                document.getElementById('myModal').style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
