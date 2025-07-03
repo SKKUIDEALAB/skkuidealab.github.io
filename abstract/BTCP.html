@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+    Latitude by Pixelarity
+    pixelarity.com | hello@pixelarity.com
+    License: pixelarity.com/license
+-->
+<html>
+<head>
+    <title>Expanding the PDE Cache by Exploiting Underutilized TLB Entries for Data-Intensive Workloads</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .abstract-content p {
+            font-size: 1.4em; /* 글자 크기 증가 */
+            line-height: 1.6; /* 줄 간격 추가 */
+            color: black; /* 글자 색상 변경 */
+        }
+
+        .original-size-image {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .original-size-image img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">IDEA.L</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advisor.html">Advisor</a></li>
+                    <li>
+                        <a href="#">Members</a>
+                        <ul>
+                            <li><a href="phdcandidates.html">Ph.D Candidates</a></li>
+                            <li><a href="mastercandidates.html">MS Candidates</a></li>
+                            <li><a href="alumni.html">Alumni</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="research.html">Project</a></li>
+                    <li><a href="publication.html">Publication</a></li>
+                    <li><a href="recruit.html">Recruit</a></li>
+                    <li><a href="patent.html">Patent</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <section id="main" class="wrapper style2">
+            <div class="container">
+                <header class="major">
+                    <h2>BTCP:Binary Temporal Convolutional Network-based Data Prefetcher for Low Inference Latency and Storage Overhead</h2>
+                    <p>Chang Ho Ryu and Tae Hee Han</p>
+                    <p>02 July 2025</p>
+
+                <!-- Content -->
+                <section id="content">
+                    <div class="original-size-image">
+                        <img src="publication-images\BTCP.png" alt="논문 이미지" />
+                    </div>
+                    <h3>Abstract</h3>
+                    <div class="abstract-content">
+                        <p>
+                            Data prefetching is crucial for hiding long-latency memory access on modern high-performance processors. 
+                            Machine learning (ML)-based data prefetchers have demonstrated superior address prediction performance compared with traditional rule-based prefetchers by learning complex patterns to hide long-latency memory access. 
+                            However, prioritizing only predictive performance introduces challenges, such as increased inference latency and significant storage demands, when deployed in real hardware systems. 
+                            To address these issues, we propose a binary temporal convolutional network-based data prefetcher (BTCP) that offers advantages in terms of computational efficiency and memory requirements, enabling feasible hardware implementation. 
+                            The efficiency of BTCP is fundamentally attributed to its binary temporal convolutional network architecture, which achieves low inference latency and storage overhead by processing memory patterns through efficient binary operations. 
+                            BTCP aids in detecting memory patterns by processing addresses and program counters through bitwise XOR operations and feeding them into a neural network.
+                            We employed positional delta maps to predict the closest future address, integrating address deltas with temporal weights for labeling.
+                            BTCP facilitates variable-degree prefetching by incorporating the ratio of irregular addresses into the positional delta map for enhanced training.
+                            The design choices result in an inference latency and storage overhead of only 134 cycles and 4,654 bytes, respectively, indicating a substantial decrease of 95.87% and 99.70%, respectively, compared to the leading ML-based prefetcher, TransFetch.
+                            With benchmark evaluations using SPEC CPU and GAP, BTCP achieved an IPC improvement of 18.70% over systems without prefetching, surpassing the state-of-the-art rule-based prefetcher Bingo by 2.78% and ML-based prefetcher TransFetch by 0.16%.
+                            
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>
+                                Semiconductor Building, No.400525<br />
+                                Sungkyunkwan University
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-phone"><span class="label">Tel</span></h3>
+                                (031) 299-4659
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-3 col-6-narrow col-12-mobilep">
+                        <ul class="labeled-icons">
+                            <li>
+                                <h3 class="icon solid fa-envelope"><span class="label">Contact Email</span></h3>
+                                jihun5029@g.skku.edu
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; IDEA.L. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
