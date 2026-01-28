@@ -60,25 +60,19 @@
         <section id="main" class="wrapper style2">
             <div class="container">
                 <header class="major">
-                    <h2>Efficient Graph Index Updates for ANNS with Near-Data Processing</h2>
-                    <p>Sung Yong Yoo, Hyeong Jin Kim, Tae Hee Han</p>
+                    <h2>Reducing Data Transfer Overhead with CXL-Based Near-Data Processing for LLM Inference </h2>
+                    <p>Woo Hyun Kim, Han Sol Kim, Tae Hee Han</p>
                     <p>15 October 2025</p>
 
                 <!-- Content -->
                 <section id="content">
                     <div class="original-size-image">
-                        <img src="publication-images\Graph_ANNS_NDP.png" alt="논문 이미지" />
+                        <img src="publication-images\CXL_NDP_LLM.png" alt="논문 이미지" />
                     </div>
                     <h3>Abstract</h3>
                     <div class="abstract-content">
                         <p>
-                            Dynamic graph indexing in real-time graph databases is typically performed 
-                            through either periodic rebuilding or update-based methods. While rebuilding preserves graph quality, 
-                            it becomes increasingly expensive as the dataset grows, leading to higher indexing time and hardware costs. 
-                            Update-based methods, by comparison, are more efficient and cost-effective, with a potential trade-off in graph quality. 
-                            This work proposes an update-based indexing approach that integrates algorithmic optimization with Near-data processing (NDP) to reduce overhead while maintaining graph quality. 
-                            Our method reduces end-to-end update latency by up to 75.8%, with consistently improved performance across diverse datasets and update ratios, making it well-suited for dynamic,
-                            large-scale approximate nearest neighbor search (ANNS) workloads.
+                            In Large Language Models (LLMs), the Key-Value (KV) cache demands a substantial memory footprint as the input sequence length grows. Such memory requirements can exceed the size of model parameters and become unmanageable within limited GPU memory. In this paper, we offload the KV cache to Compute Express Link (CXL) memory and leverage Near-Data Processing (NDP) to select and transfer only the KV cache entries that highly affect model accuracy. Our approach reduces the data transfer overhead caused by limited CXL bandwidth and achieves an average 1.45× speedup over the baseline GPU with CXL memory.
                             
                         </p>
                     </div>
