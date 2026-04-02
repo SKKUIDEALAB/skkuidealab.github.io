@@ -67,24 +67,16 @@
                 <!-- Content -->
                 <section id="content">
                     <div class="original-size-image">
-                        <img src="publication-images\BTCP.png" alt="논문 이미지" />
-                        <!-- 수정 예정 -->
+                        <img src="publication-images\PhantomWalk.png" alt="논문 이미지" />
                     </div>
                     <h3>Abstract</h3>
                     <div class="abstract-content">
                         <p>
-                            Data prefetching is crucial for hiding long-latency memory access on modern high-performance processors. 
-                            Machine learning (ML)-based data prefetchers have demonstrated superior address prediction performance compared with traditional rule-based prefetchers by learning complex patterns to hide long-latency memory access. 
-                            However, prioritizing only predictive performance introduces challenges, such as increased inference latency and significant storage demands, when deployed in real hardware systems. 
-                            To address these issues, we propose a binary temporal convolutional network-based data prefetcher (BTCP) that offers advantages in terms of computational efficiency and memory requirements, enabling feasible hardware implementation. 
-                            The efficiency of BTCP is fundamentally attributed to its binary temporal convolutional network architecture, which achieves low inference latency and storage overhead by processing memory patterns through efficient binary operations. 
-                            BTCP aids in detecting memory patterns by processing addresses and program counters through bitwise XOR operations and feeding them into a neural network.
-                            We employed positional delta maps to predict the closest future address, integrating address deltas with temporal weights for labeling.
-                            BTCP facilitates variable-degree prefetching by incorporating the ratio of irregular addresses into the positional delta map for enhanced training.
-                            The design choices result in an inference latency and storage overhead of only 134 cycles and 4,654 bytes, respectively, indicating a substantial decrease of 95.87% and 99.70%, respectively, compared to the leading ML-based prefetcher, TransFetch.
-                            With benchmark evaluations using SPEC CPU and GAP, BTCP achieved an IPC improvement of 18.70% over systems without prefetching, surpassing the state-of-the-art rule-based prefetcher Bingo by 2.78% and ML-based prefetcher TransFetch by 0.16%.
-                            
-                            <!-- 수정 예정 -->
+                            Multi-GPU systems rely on unified virtual memory to provide a global address space, which inevitably triggers page migrations. 
+                            Our analysis shows that reducing migrations further is difficult even with advanced policies. 
+                            These migrations invalidate page ta- ble entries (PTEs) across GPUs and generate migration-induced misses (M-misses), which constitute a large portion of all translation requests and significantly degrade performance. 
+                            This paper intro- duces Phantom Walk, which accelerates M-miss address translation by reducing GPU-local page faults and page table walks through a shorter post-migration translation path. 
+                            Our evaluation shows that Phantom Walk improves overall performance by 44.37% on average.
                         </p>
                     </div>
                 </section>
