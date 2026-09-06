@@ -1,0 +1,8 @@
+# Jekyll 빌드 산출물 - 원본에서 자동 생성되므로 커밋하지 않음
+# GitHub Pages는 원본을 받아 서버에서 직접 다시 빌드함
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# 사용하지 않는 백업/사본 보관용 (로컬에만 유지)
+_trash/
