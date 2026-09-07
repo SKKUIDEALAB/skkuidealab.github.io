@@ -1,0 +1,22 @@
+<!-- 모든 페이지 공통 <head>. 수정하면 전 페이지에 반영됩니다. -->
+<!-- 경로는 루트 절대경로입니다. abstract/ 처럼 하위 폴더에 있는 페이지에서도 똑같이 동작해야 하기 때문입니다. -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>{{ page.title | default: site.title }}</title>
+<link rel="icon" type="image/png" href="{{ '/assets/images/logo.PNG' | relative_url }}" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FCWF6QFJ0D"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-FCWF6QFJ0D');
+</script>
+
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+{%- for css in page.page_css %}
+<!-- 이 페이지 전용 스타일 -->
+<link rel="stylesheet" href="{{ '/assets/css/pages/' | append: css | append: '.css' | relative_url }}" />
+{%- endfor %}

@@ -1,0 +1,20 @@
+# IDEA.L 연구실 홈페이지 Jekyll 설정
+title: IDEA.L
+description: Intelligent Data-centric Emerging Architecture Lab, Sungkyunkwan University
+
+# abstract/ 아래 논문 초록 페이지는 모두 같은 틀과 스타일을 씁니다.
+# 새 초록을 추가할 때 front matter 에 layout 을 적지 않아도 자동 적용됩니다.
+defaults:
+  - scope:
+      path: "abstract"
+    values:
+      layout: abstract
+      page_css:
+        - abstract
+
+# 빌드에서 제외할 항목
+# (밑줄로 시작하는 _includes, _layouts, _trash 등은 Jekyll이 기본으로 제외함)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

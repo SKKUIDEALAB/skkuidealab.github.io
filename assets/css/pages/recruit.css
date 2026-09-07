@@ -1,0 +1,24 @@
+/* recruit.html 전용 스타일.
+   .container / h2 / h3 / ul 은 footer 도 함께 쓰는 공용 선택자이므로
+   반드시 #main 안쪽으로 범위를 좁힌다. 그러지 않으면 footer 연락처 칸이 찌그러진다. */
+
+#main .container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#main .box {
+	flex: 1 1 50%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+#main h2,
+#main h3 {
+	margin: 0;
+	padding: 5px 0;
+}
+
+#main ul {
+	padding-left: 20px;
+}

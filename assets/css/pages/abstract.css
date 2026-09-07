@@ -1,0 +1,20 @@
+/* 논문 초록 본문 스타일.
+   abstract/ 페이지와 publication.html 팝업 양쪽에서 함께 사용합니다. */
+
+.abstract-content p {
+	font-size: 1.4em;   /* 글자 크기 증가 */
+	line-height: 1.6;   /* 줄 간격 추가 */
+	color: black;       /* 글자 색상 변경 */
+}
+
+.original-size-image {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
+
+.original-size-image img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}

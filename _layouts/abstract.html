@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<!-- 논문 초록 페이지 공통 틀. publication.html 의 팝업은 아래 #main 안쪽만 뽑아서 보여줍니다. -->
+<section id="main" class="wrapper style2">
+	<div class="container">
+		<header class="major">
+			<h2>{{ page.title }}</h2>
+			{%- if page.authors %}
+			<p>{{ page.authors }}</p>
+			{%- endif %}
+			{%- if page.date_text %}
+			<p>{{ page.date_text }}</p>
+			{%- endif %}
+		</header>
+
+		<section id="content">
+			{%- if page.image %}
+			<div class="original-size-image">
+				<img src="{{ '/media/publication/' | append: page.image | relative_url }}" alt="논문 이미지" />
+			</div>
+			{%- endif %}
+{{ content }}
+		</section>
+	</div>
+</section>

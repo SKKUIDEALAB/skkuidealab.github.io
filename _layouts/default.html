@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<!--
+	Latitude by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+	<head>
+{% include head.html %}
+	</head>
+	<body class="{{ page.body_class | default: 'is-preload' }}">
+		<div id="page-wrapper">
+
+{% include header.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+		</div>
+
+{% include scripts.html %}
+
+	</body>
+</html>

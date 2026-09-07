@@ -1,0 +1,23 @@
+<!-- 상단바 + 메뉴. 메뉴를 바꾸려면 이 파일만 고치면 전 페이지에 반영됩니다. -->
+<header id="header"{% if page.header_class %} class="{{ page.header_class }}"{% endif %}>
+	<h1><a href="{{ '/index.html' | relative_url }}">IDEA.L</a></h1>
+	<nav id="nav">
+		<ul>
+			<li><a href="{{ '/index.html' | relative_url }}" class="home-link">Home</a></li>
+			<li><a href="{{ '/advisor.html' | relative_url }}" class="home-link">Advisor</a></li>
+			<li>
+				<a href="#" class="home-link">Members</a>
+				<ul>
+					<li><a href="{{ '/phdcandidates.html' | relative_url }}">Ph.D Candidates</a></li>
+					<li><a href="{{ '/mastercandidates.html' | relative_url }}">MS Candidates</a></li>
+					<li><a href="{{ '/alumni-phd.html' | relative_url }}">Alumni-PhD</a></li>
+					<li><a href="{{ '/alumni-ms.html' | relative_url }}">Alumni-MS</a></li>
+				</ul>
+			</li>
+			<li><a href="{{ '/project.html' | relative_url }}" class="home-link">Project</a></li>
+			<li><a href="{{ '/publication.html' | relative_url }}" class="home-link">Publication</a></li>
+			<li><a href="{{ '/recruit.html' | relative_url }}" class="home-link">Recruit</a></li>
+			<li><a href="{{ '/patent.html' | relative_url }}" class="home-link">Patent</a></li>
+		</ul>
+	</nav>
+</header>

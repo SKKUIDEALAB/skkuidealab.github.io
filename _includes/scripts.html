@@ -1,0 +1,12 @@
+<!-- 템플릿 공통 스크립트 -->
+<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/jquery.dropotron.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/jquery.scrollex.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/util.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+{%- for js in page.page_js %}
+<!-- 이 페이지 전용 스크립트 -->
+<script src="{{ '/assets/js/pages/' | append: js | append: '.js' | relative_url }}"></script>
+{%- endfor %}

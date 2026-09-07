@@ -1,0 +1,38 @@
+/* advisor.html 전용 스타일.
+   .container 등은 footer 도 함께 쓰는 공용 선택자이므로 #main 안쪽으로 범위를 좁힌다.
+   그러지 않으면 footer 연락처 칸이 flex 로 바뀌어 찌그러진다. */
+
+#main {
+	line-height: 1.6;
+}
+
+#main .container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.profile-image {
+	flex: 0.8;
+	max-width: 400px;
+}
+
+.profile-details {
+	flex: 2.2;
+	margin-left: 20px;
+}
+
+.interests,
+.education {
+	margin-top: 0px;
+}
+
+#content .image.fit img {
+	max-width: 400px;
+	height: auto;
+}
+
+#main section {
+	border-top: none !important;
+	padding-top: 0.2em !important;
+	margin-top: 0 !important;
+}
