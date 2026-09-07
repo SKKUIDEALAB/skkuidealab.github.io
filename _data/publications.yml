@@ -1,0 +1,1088 @@
+# IDEA.L 논문 목록 — 이 파일 하나만 고치면 publication.html 과 research/*.html 에 함께 반영됩니다.
+#
+# 필드
+#   venue     학회/저널명. 회색 중립 배지로 표시됩니다.
+#   areas     연구 분야. _data/areas.yml 의 키를 적습니다. 분야별 색 배지로 표시되고,
+#             해당 연구분야 페이지의 Selected Publications 목록에 자동으로 들어갑니다.
+#               memcentric  Memory-Centric      memsystem  Memory System
+#               ai          AI Accel            noc        NoC
+#               soc         SoC Design
+#   topics    세부 주제. 자유 어휘이며 외곽선 배지로 표시됩니다.
+#   top_tier  true 이면 Top Tier 배지가 붙습니다.
+#   featured  true 이면 Featured Article 배지가 붙습니다. (저널 선정 우수논문)
+#   group     recent(최근 국제) / international(더보기 국제) / domestic(국내)
+#
+# 예) areas: [memsystem, ai]     topics: ["Cache", "ML-Based"]
+
+# 아래 논문은 일시적으로 숨겨져 있습니다. 주석(#)을 지우면 다시 표시됩니다.
+# - title: "Bypass-Enabled Topology-Agnostic Multicast Router for Fault-Tolerant Network-on-Chips"
+#   authors: "Jun Tae Jeong and Tae Hee Han"
+#   info: "The 55th International Conference on Parallel Processing (ICPP), Sep. 28, 2026"
+#   venue: "ICPP"
+#   areas: [noc]
+#   topics: ["Multicast", "Fault Tolerance"]
+#   abstract: "abstract/BEAM.html"
+#   link: "https://doi.org/10.1145/3770743.3804244"
+#   group: recent
+- title: "Phantom Walk: Reducing the Post-Migration Translation Path via Proactive Translation Dissemination in Multi-GPU Systems"
+  authors: "Ji Hun Choi, Jae Sang Moh and Tae Hee Han"
+  info: "2026 63rd ACM/IEEE The Chips to Systems Conference (DAC), Jul. 26, 2026"
+  top_tier: true
+  venue: "DAC"
+  areas: [memsystem]
+  topics: ["GPU", "Address Translation"]
+  abstract: "abstract/PhantomWalk.html"
+  link: "https://doi.org/10.1145/3770743.3804244"
+  group: recent
+
+- title: "ScaleMoE: A Fast and Scalable Distributed Training Framework for Large-Scale Mixture-of-Experts Models"
+  authors: "Seo Hong choi, Huize Hong, Tae Hee Han and Joon Sung Kim"
+  info: "2025 34th International Conference on Parallel Architectures and Compilation Techniques (PACT), Nov. 03, 2025"
+  top_tier: true
+  venue: "PACT"
+  areas: [ai]
+  topics: ["MoE", "Distributed Training"]
+  abstract: "abstract/ScaleMoE.html"
+  link: "https://ieeexplore.ieee.org/document/11282919"
+  group: recent
+
+- title: "Reducing Data Transfer Overhead with CXL-Based Near-Data Processing for LLM Inference"
+  authors: "Woo Hyun Kim, Han Sol Kim, Tae Hee Han"
+  info: "2025 22nd International SoC Design Conference (ISOCC), Oct. 15, 2025"
+  venue: "ISOCC"
+  areas: [memcentric, ai]
+  topics: ["NDP", "CXL", "LLM"]
+  abstract: "abstract/CXL_NDP_LLM.html"
+  link: "https://ieeexplore.ieee.org/abstract/document/11329799"
+  group: recent
+
+- title: "Efficient Graph Index Updates for ANNS with Near-Data Processing"
+  authors: "Sung Yong Yoo, Hyeong Jin Kim, Tae Hee Han"
+  info: "2025 22nd International SoC Design Conference (ISOCC), Oct. 15, 2025"
+  venue: "ISOCC"
+  areas: [memcentric]
+  topics: ["NDP", "Graph"]
+  abstract: "abstract/Graph_ANNS_NDP.html"
+  link: "https://ieeexplore.ieee.org/abstract/document/11329982"
+  group: recent
+
+- title: "LNBN: layer-flexible non-blocking bypass network-on-chip for accelerating DNN inference"
+  authors: "Suk Bong Kang, Won Hyeok Kim, Tae Hee Han"
+  info: "The Journal of Supercomputing, Volume 81, article number 1434, Oct. 10, 2025"
+  venue: "J. Supercomput."
+  areas: [noc, ai]
+  topics: ["Bypass Network", "DNN Inference"]
+  abstract: "abstract/LNBN.html"
+  link: "https://doi.org/10.1007/s11227-025-07913-4"
+  group: recent
+
+- title: "BTCP:Binary Temporal Convolutional Network-based Data Prefetcher for Low Inference Latency and Storage Overhead"
+  authors: "Chang Ho Ryu and Tae Hee Han"
+  info: "IEEE Access, Vol. 13, pp. 115048-115062, Jul. 02, 2025"
+  venue: "IEEE Access"
+  areas: [memsystem, ai]
+  topics: ["Prefetching", "ML-Based"]
+  abstract: "abstract/BTCP.html"
+  link: "https://ieeexplore.ieee.org/document/11062847"
+  group: recent
+
+- title: "Expanding the PDE Cache by Exploiting Underutilized TLB Entries for Data-Intensive Workloads"
+  authors: "Hyeong Jin Kim,Woo Hyun Kim,Tae Hee Han"
+  info: "2025 International Conference on Electronics, Information, and Communication (ICEIC), Jan. 19, 2025"
+  venue: "ICEIC"
+  areas: [memsystem]
+  topics: ["Address Translation", "TLB"]
+  abstract: "abstract/Expanding the PDE Cache.html"
+  link: "https://ieeexplore.ieee.org/document/10879750"
+  group: recent
+
+- title: "Deep learning-based material decomposition of iodine and calcium in mobile photon counting detector CT"
+  authors: "Kwanhee Han,Chang Ho Ryu,Chang-Lae Lee,Tae Hee Han"
+  info: "PLOS ONE, Jul. 26, 2024"
+  venue: "PLOS ONE"
+  areas: [ai]
+  topics: ["Medical Imaging"]
+  abstract: "abstract/Deep learning-based material.html"
+  link: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0306627"
+  group: recent
+
+- title: "OWBM: OSNR-Aware Wavelength Allocation and Branching Methods for Multicast Routing in Custom Topology-Based Optical Network-on-Chips"
+  authors: "Yong Wook Kim and Tae Hee Han"
+  info: "IEEE Access, Vol. 12, pp. 49508-49527, Apr. 2024"
+  venue: "IEEE Access"
+  areas: [noc]
+  topics: ["Optical NoC", "Multicast"]
+  abstract: "abstract/owbm1.html"
+  link: "https://ieeexplore.ieee.org/document/10489970"
+  group: recent
+
+- title: "RISC-V R-Extension: Advancing Efficiency with Rented-Pipeline for Edge DNN Processing"
+  authors: "Won Hyeok Kim, Hyeong Jin Kim and Tae Hee Han"
+  info: "2024 International Conference on Artificial Intelligence in Information and Communication (ICAIIC), pp. 800-805, Osaka, Japan, Feb. 2024"
+  venue: "ICAIIC"
+  areas: [ai, soc]
+  topics: ["RISC-V", "Edge DNN"]
+  abstract: "abstract/risc-v.html"
+  link: "https://ieeexplore.ieee.org/document/10463391"
+  group: recent
+
+- title: "RL-Based Cache Replacement: A Modern Interpretation of Belady’s Algorithm With Bypass Mechanism and Access Type Analysis"
+  authors: "Ho Jung Yoo, Jeong Hun Kim and Tae Hee Han"
+  info: "IEEE Access, Vol. 11, pp. 145238-145253, Dec. 2023"
+  featured: true
+  venue: "IEEE Access"
+  areas: [memsystem, ai]
+  topics: ["Cache", "ML-Based"]
+  abstract: "abstract/RL-cache.html"
+  link: "https://ieeexplore.ieee.org/document/10373004"
+  group: recent
+
+- title: "SFAO: Sign-Flipping-Aware Optimization for Early-Stopping of Binarized Neural Networks"
+  authors: "Ju Yeon Kang, Chang Ho Ryu, Suk Bong Kang, and Tae Hee Han"
+  info: "IEEE Access, Vol. 11, pp. 128306-128315, Nov. 2023"
+  venue: "IEEE Access"
+  areas: [ai]
+  topics: ["Quantization", "BNN"]
+  abstract: "abstract/sfao.html"
+  link: "https://ieeexplore.ieee.org/document/10316298"
+  group: recent
+
+- title: "Binarized Neural Network with Parameterized Weight Clipping and Quantization Gap Minimization for Online Knowledge Distillation"
+  authors: "Ju Yeon Kang, Chang Ho Ryu, and Tae Hee Han"
+  info: "IEEE Access, Vol. 11, pp. 8057-8064, Jan. 2023"
+  venue: "IEEE Access"
+  areas: [ai]
+  topics: ["Quantization", "Distillation"]
+  abstract: "abstract/binarized-neural-network.html"
+  link: "https://ieeexplore.ieee.org/document/10024251"
+  group: recent
+
+- title: "NCDE: In-Network Caching for Directory Entries to Expedite Data Access in Tiled-chip Multiprocessors"
+  authors: "Jae Eun Shim, Min Gu Kang, and Tae Hee Han"
+  info: "IEEE Access, Vol. 11, pp. 3080-3095, Jan. 2023"
+  venue: "IEEE Access"
+  areas: [memsystem, noc]
+  topics: ["Cache Coherence", "Directory"]
+  abstract: "abstract/in-network-caching.html"
+  link: "https://ieeexplore.ieee.org/document/10007840"
+  group: recent
+
+- title: "MRCN: Throughput-Oriented Multicast Routing for Customized Network-on-Chips"
+  authors: "Young Sik Lee, Yong Wook Kim, and Tae Hee Han"
+  info: "IEEE Transactions on Parallel and Distributed Systems (TPDS), Vol. 34, No. 1, pp. 163-179, Jan. 2023"
+  venue: "IEEE TPDS"
+  areas: [noc]
+  topics: ["Multicast", "Routing"]
+  abstract: "abstract/multicast-routing.html"
+  link: "https://ieeexplore.ieee.org/document/9930627"
+  group: recent
+
+- title: "Parallelism-Aware Channel Partition for Read/Write Interference Mitigation in Solid State Drives"
+  authors: "Hyun Jo Lim, Dong Kun Shin, and Tae Hee Han"
+  info: "Electronics, Vol. 11, No. 23, Dec. 2022"
+  venue: "Electronics"
+  areas: [memsystem]
+  topics: ["SSD", "Storage"]
+  abstract: "abstract/channel-partition.html"
+  link: "https://www.mdpi.com/2079-9292/11/23/4048"
+  group: recent
+
+- title: "CSGN: Combined Channel- and Spatial-wise Dynamic Gating Architecture for Convolutional Neural Networks"
+  authors: "Sang Min Hyun, Chang Ho Ryu, Ju Yeon Kang, Hyun Jo Lim, and Tae Hee Han"
+  info: "Electronics, Vol. 11, No. 17, Aug. 2022"
+  venue: "Electronics"
+  areas: [ai]
+  topics: ["CNN", "Dynamic Gating"]
+  abstract: "abstract/gating-architecture.html"
+  link: "https://www.mdpi.com/2079-9292/11/17/2678"
+  group: recent
+
+- title: "On-the-fly Lowering Engine: Offloading Data Layout Conversion for Convolutional Neural Networks"
+  authors: "Min Gu Kang, Sang Min Hyun, Tae Hee Han, Seok In Hong, and Jung Rae Kim"
+  info: "IEEE Access, Vol. 10, pp. 79370-79746, Jul. 2022"
+  venue: "IEEE Access"
+  areas: [ai, memcentric]
+  topics: ["CNN", "Dataflow", "Offloading"]
+  abstract: "abstract/lowering-engine.html"
+  link: "https://ieeexplore.ieee.org/document/9833499"
+  group: recent
+
+- title: "MRBS: An Area-Efficient Multicast Router for Network-on-Chip Using Buffer Sharing"
+  authors: "Min Chae Yang, Young Sik Lee, Tae Hee Han"
+  info: "IEEE Access, Vol. 9, pp. 168783-168793, Dec. 2021."
+  venue: "IEEE Access"
+  areas: [noc]
+  topics: ["Multicast", "Router Design"]
+  abstract: "abstract/MRBS.html"
+  link: "https://ieeexplore.ieee.org/document/9656849"
+  group: recent
+
+- title: "Rapid Topology Generation and Core Mapping of Optical Network-on-Chip for Heterogeneous Computing Platform"
+  authors: "Yong Wook Kim, Seo Hong Choi, and Tae Hee Han"
+  info: "IEEE Access, Vol. 9, pp. 110359-110370, Aug. 2021."
+  venue: "IEEE Access"
+  areas: [noc]
+  topics: ["Optical NoC", "Topology"]
+  abstract: "abstract/Rapid Topology Generation.html"
+  link: "https://ieeexplore.ieee.org/document/9505672"
+  group: recent
+
+- title: "Task Parallelism-Aware Deep Neural Network Scheduling on Multiple Hybrid Memory Cube-based Processing-in-Memory"
+  authors: "Young Sik Lee, Tae Hee Han"
+  info: "IEEE Access, Vol. 9, pp. 68561-68572, May 2021."
+  venue: "IEEE Access"
+  areas: [memcentric, ai]
+  topics: ["PIM", "DNN Scheduling"]
+  abstract: "abstract/Task Parallelism-Aware Deep Neural Network.html"
+  link: "https://ieeexplore.ieee.org/document/9422695"
+  group: recent
+
+- title: "System-Level Signal Analysis Methodology for Optical Network-on-Chip Using Linear Model-Based Characterization"
+  authors: "Min Su Kim, Yong Wook Kim, and Tae Hee Han"
+  info: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Vol. 39, No. 10, pp. 2761-2771, Oct. 2020."
+  venue: "IEEE TCAD"
+  areas: [noc, soc]
+  topics: ["Optical NoC", "Modeling"]
+  abstract: "abstract/System-Level Signal Analysis Methodology.html"
+  link: "https://ieeexplore.ieee.org/document/8859235"
+  group: recent
+
+- title: "Extended Worst-case OSNR Searching Algorithm for Optical Network-on-Chip using a Semi-greedy Heuristic with Adaptive Scan Range"
+  authors: "Yong Wook Kim, Jae Hoon Lee, and Tae Hee Han"
+  info: "IEEE Access, Vol. 8, pp. 125863-125873, Jul. 2020."
+  venue: "IEEE Access"
+  areas: [noc]
+  topics: ["Optical NoC", "Routing"]
+  abstract: "abstract/Extended Worst-Case OSNR Searching Algorithm.html"
+  link: "https://ieeexplore.ieee.org/document/9133429"
+  group: recent
+
+- title: "Optimized Lossless Embedded Compression for Mobile Multimedia Applications"
+  authors: "Sungchul Yoon, Sungho Jun, Yongkwon Cho, Kilhwan Lee, Hyukjae Jang, and Tae Hee Han"
+  info: "Electronics, Vol. 9, No. 5, May 2020."
+  venue: "Electronics"
+  areas: [soc, memsystem]
+  topics: ["Compression", "Mobile SoC"]
+  abstract: "abstract/Optimized Lossless Embedded Compression.html"
+  link: "https://www.mdpi.com/2079-9292/9/5/868"
+  group: recent
+
+- title: "Error-Vulnerable Pattern-Aware Binary-to-Ternary Data Mapping for Improving Storage Density of 3LC Phase Change Memory"
+  authors: "Jeong Beom Hong, Young Sik Lee, Yong Wook Kim, and Tae Hee Han"
+  info: "Electronics, Vol. 9, No. 4, Apr. 2020."
+  venue: "Electronics"
+  areas: [memsystem]
+  topics: ["PCM", "Reliability"]
+  abstract: "abstract/Error-Vulnerable Pattern-Aware.html"
+  link: "https://www.mdpi.com/2079-9292/9/4/626"
+  group: recent
+
+- title: "Developing a Portable Block Testbench and Reusable SOC Verification Scenarios Using IP-XACT Based Automation"
+  authors: "Tae Jin Kim, Tae Hee Han"
+  info: "Proceedings of 2020 Design & Verification Conference & Exhibition, USA, Mar. 2020."
+  venue: "DVCon"
+  areas: [soc]
+  topics: ["Verification"]
+  abstract: "abstract/Developing a Portable Block.html"
+  link: "https://dvcon-proceedings.org/wp-content/uploads/developing-a-portable-block-testbench-and-reusable-soc-verification-scenarios-using-ip-xact-based-automation.pdf"
+  group: recent
+
+- title: "Q-Function-Based Traffic- and Thermal-Aware Adaptive Routing for 3D Network-on-Chip"
+  authors: "Seung Chan Lee, and Tae Hee Han"
+  info: "Electronics, Vol. 9, No. 3, Feb. 2020."
+  venue: "Electronics"
+  areas: [noc]
+  topics: ["Routing", "Thermal", "3D"]
+  abstract: "abstract/Q-Function-Based.html"
+  link: "https://www.mdpi.com/2079-9292/9/3/392"
+  group: recent
+
+- title: "Aging-Resilient Topology Synthesis of Heterogeneous Manycore Network-On-Chip Using Genetic Algorithm with Flexible Number of Routers"
+  authors: "Young Sik Lee, SoYoung Kim, and Tae Hee Han"
+  info: "Electronics, Vol. 8, No. 12, Dec. 2019."
+  venue: "Electronics"
+  areas: [noc]
+  topics: ["Topology", "Reliability"]
+  abstract: "abstract/Aging-Resilient Topology Synthesis.html"
+  link: "https://www.mdpi.com/2079-9292/8/12/1458"
+  group: recent
+
+- title: "Timing Criticality-Aware Design Optimization Using BEOL Air Gap Technology on Consecutive Metal Layers"
+  authors: "Seongmin Ryu, Youngwoo Cho, and Tae Hee Han"
+  info: "Electronics, Vol. 8, No. 11, Nov. 2019."
+  venue: "Electronics"
+  group: international
+
+- title: "A 4-way Matrix Multiply Unit for High Throughput Machine Learning Accelerator"
+  authors: "Seung Chan Lee, Tae Hee Han"
+  info: "Proceedings of 2019 International SoC Design Conference, pp. 113-114, Jeju, Korea, Oct. 2019."
+  venue: "ISOCC"
+  group: international
+
+- title: "Power and Signal-to-Noise Ratio Optimization in Mesh-Based Hybrid Optical Network-on-Chip Using Semiconductor Optical Amplifiers"
+  authors: "Jun Yeong Jang, Min Su Kim, Chang-Lin Li, and Tae Hee Han"
+  info: "Applied Sciences, Vol. 9, Issue 6, Mar. 2019."
+  venue: "Appl. Sci."
+  group: international
+
+- title: "Design of Metal-mesh Electrode-based Touch Panel for Preventing Back-surface Touch Error"
+  authors: "Kyoung Soo Chae, Yun Ki Hong, Hyun Jun Kim, Jae Youn Jeong, and Tae Hee Han"
+  info: "Sensors and Materials, Vol. 31, No. 2, pp. 587–593, Feb. 2019."
+  venue: "Sens. Mater."
+  group: international
+
+- title: "Random I/O Performance Boosting Technique based on Statistical I/O Traffic Patterns of Embedded Storage"
+  authors: "Myung Sub Shin, Tae Hee Han"
+  info: "2019 International Conference on Electronics, Information, and Communication, Auckland, New Zealand, Jan. 2019."
+  venue: "ICEIC"
+  group: international
+
+- title: "Reliability Optimization of ReRAM Architecture using Heterogeneous Error Correcting Code Scheme"
+  authors: "Kwangjin Lee, and Tae Hee Han"
+  info: "2018 International SoC Design Conference (ISOCC), pp. 25-26, Daegu, Korea, Nov. 2018."
+  venue: "ISOCC"
+  group: international
+
+- title: "Power-efficient error-resilient network-on-chip router using selective error correction code scheme"
+  authors: "Changlin Li, Yong Wook Kim, Young Sik Lee, and Tae Hee Han"
+  info: "Electronics Letters, Vol. 54, No. 24, pp. 1368-1370, Nov. 2018."
+  venue: "Electron. Lett."
+  group: international
+
+- title: "Energy-Efficient Custom Topology-based Dynamic Voltage-Frequency Island-enabled Network-on-Chip Design"
+  authors: "Chang-Lin Li, Jae-Chern Yoo, and Tae Hee Han"
+  info: "Journal of Semiconductor Technology and Science, Vol.18, No.3, pp. 352-359, Jun. 2018."
+  venue: "JSTS"
+  group: international
+
+- title: "Load-Aware Memory DVFS in Mobile SoC"
+  authors: "Kyoung Min Lee, Sungchul Yoon, Changhoon Oh, and Tae Hee Han"
+  info: "2018 Design Automation Conference, Designer/IP Track, California, USA, Jun. 2018."
+  venue: "DAC"
+  group: international
+
+- title: "Adaptive thermal property control technique for holistic thermal management of mobile devices"
+  authors: "Kyoung Min Lee, Yunhyeok Im, Jun Ho Huh, and Tae Hee Han"
+  info: "IEICE Electronics Express, Vol.15, No.10, 1–7, Apr. 2018."
+  venue: "IEICE ELEX"
+  group: international
+
+- title: "Insertion Loss-aware Routing Analysis and Optimization for a Fat-Tree-based Optical Network-on-Chip"
+  authors: "Jae Hoon Lee, Min Soo Kim, and Tae Hee Han"
+  info: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Vol. 37, Issue 3, pp. 559-572, Mar. 2018."
+  venue: "IEEE TCAD"
+  group: international
+
+- title: "New library development method by FSM based cell pattern extraction"
+  authors: "Byung Su Kim, Tae Hee Han , Joon-Sung Yang, and Jaeyong Chung"
+  info: "IEICE Electronics Express, Vol. 15, No. 9, pp. 1-6, Jan. 2018."
+  venue: "IEICE ELEX"
+  group: international
+
+- title: "Fabrication of Single-Layer Touch Screen Panel with Corrosion Resistant Metal-Mesh Electrodes"
+  authors: "Kyoung Soo Chae, Sung Han, Jae Youn Jeong, and Tae Hee Han"
+  info: "Sensors and Materials, Vol. 29, No. 9, pp. 1285-1290, Sep. 2017."
+  venue: "Sens. Mater."
+  group: international
+
+- title: "Air Gap-Aware Design Optimization for High Performance SOC with Efficient Process Cost"
+  authors: "Seongmin Ryu, Hyosig Won, and Tae Hee Han"
+  info: "2017 Design Automation Conference, Designer/IP Track, Texas, USA, Jun. 2017."
+  venue: "DAC"
+  group: international
+
+- title: "Non-linear Library Characterization Method for FinFET Logic Cells by L1-minimization"
+  authors: "Byung Su Kim, Hyo Sig Won, Tae Hee Han, and Joon-Sung Yang"
+  info: "2017 IEEE International Symposium on Circuits and Systems, pp. 1-4, MD, USA, May, 2017."
+  venue: "ISCAS"
+  group: international
+
+- title: "How to Make Fast DVFS Beneficial in Mobile Devices"
+  authors: "Sung Chul Yoon, Kyoung Min Lee, and Tae Hee Han"
+  info: "Proceedings of 2017 European Conference on Computer Systems, Belgrade, Serbia, Apr. 2017."
+  venue: "EuroSys"
+  group: international
+
+- title: "Wavelength-based crosstalk-aware design for hybrid optical network-on-chip"
+  authors: "Jae Hoon Lee and Tae Hee Han"
+  info: "Optical Engineering, Vol. 56, No. 1, 016111.1 - 016111.7, Jan. 2017."
+  venue: "Opt. Eng."
+  group: international
+
+- title: "Energy-efficient Custom Topology Generation for Link-failure-aware Network-on-chip in Voltage-frequency Island Regime"
+  authors: "Chang-Lin Li, Jae-Chern Yoo, and Tae Hee Han"
+  info: "Journal of Semiconductor Technology and Science, Vol. 16, No. 6, pp. 832-841, Dec. 2016."
+  venue: "JSTS"
+  group: international
+
+- title: "Voltage and Frequency Tuning Methodology for Near-Threshold Manycore Computing using Critical Path Delay Variation"
+  authors: "Chang-Lin Li, Hyun Joong Kim, Seo Weon Heo, and Tae Hee Han"
+  info: "Journal of Semiconductor Technology and Science, Vol. 15, No. 6, pp. 678-684, Dec. 2015."
+  venue: "JSTS"
+  group: international
+
+- title: "Sudden-voltage-drop protection technique for enhancing the reliability of mobile devices under low battery conditions"
+  authors: "Kyoung Min Lee, Myung Kyoon Yim, and Tae Hee Han"
+  info: "IEICE Electronics Express, Vol. 12, No. 10, pp. 1-9, May 2015."
+  venue: "IEICE ELEX"
+  group: international
+
+- title: "Surface temperature-aware thermal management technique for mobile devices"
+  authors: "Myung Kyoon Yim, Kyoung Min Lee, and Tae Hee Han"
+  info: "IEICE Electronics Express, Vol. 11, No. 23, pp. 1-6, Dec. 2014."
+  venue: "IEICE ELEX"
+  group: international
+
+- title: "Communication-aware custom topology generation for VFI network-on-chip"
+  authors: "Chang-Lin Li, Jae Hoon Lee, Joon-Sung Yang, and Tae Hee Han"
+  info: "IEICE Electronics Express, Vol. 11, No. 18, pp. 1-8, Sep. 2014."
+  venue: "IEICE ELEX"
+  group: international
+
+- title: "An Improvement Technique for the Test Compression Ratio and Application Time of Multiple Expansion Scan Chain based SoC using New Cost Function"
+  authors: "Do Han Lee, and Tae Hee Han"
+  info: "Proceedings of IEEE 57th International Midwest Symposium on Circuits and Systems, Texas, USA, Aug. 2014."
+  venue: "MWSCAS"
+  group: international
+
+- title: "System-Level Design Framework for Insertion-Loss-Minimized Optical Network-on-Chip Router Architectures"
+  authors: "J. H. Lee, J-C. Yoo, and T.H. Han"
+  info: "IEEE/OSA Journal of Lightwave Technology, Vol. 32, Issue 18, pp. 3161-3174, Sep. 2014."
+  venue: "JLT"
+  group: international
+
+- title: "Dynamic Self Repair Architectures for Defective Through Silicon Vias"
+  authors: "J.-S. Yang, T.H. Han, D. Kobla and E. L. Ju"
+  info: "ETRI Journal, Vol. 36, No. 2, pp. 301~308, Apr. 2014."
+  venue: "ETRI J."
+  group: international
+
+- title: "A Shortest Path Adaptive Routing Technique for Minimizing Path Collisions in Hybrid Optical Network-on-Chip"
+  authors: "Jae Hoon Lee, Young Seok Kim, Chang Lin Li, and Tae Hee Han"
+  info: "Journal of Systems Architecture, Vol. 59, Issue 10, pp. 1334-1347, Nov. 2013."
+  venue: "JSA"
+  group: international
+
+- title: "An Efficient Dual-Supply Design for Low-Power Mobile Systems"
+  authors: "Hoi-Jin Lee, Youngmin Shin, Jae Cheol Son, Tae Hee Han, and Bai-Sun Kong"
+  info: "Proceedings of 2012 International SoC Design Conference, pp. 359~362, Jeju, Korea, Nov. 2012."
+  venue: "ISOCC"
+  group: international
+
+- title: "Low-power dual-supply clock networks with clock gating and frequency doubling"
+  authors: "Hoi-Jin Lee, Jong-Woo Kim, Tae Hee Han, Jae Cheol Son, Jeong-Teak Kong, and Bai-Sun Kong"
+  info: "IEICE Electronics Express, Vol. 9, No. 6, pp. 502~508, Mar. 2012."
+  venue: "IEICE ELEX"
+  group: international
+
+- title: "3CEO:Three Dimensional Cmesh based Electrical-Optical Router for Networks-on-Chip"
+  authors: "Hyeong Ju Kim, Jung Tack Seo, and Tae Hee Han"
+  info: "Proceedings of International Conference on ICT Convergence 2011, pp. 517~522, Seoul, Korea, Sep. 2011."
+  venue: "ICTC"
+  group: international
+
+- title: "3D Network-on-Chip System Communication Using Minimum Number of TSVs"
+  authors: "Yong Joong Hwang, Jea Hun Lee, and Tae Hee Han"
+  info: "Proceedings of International Conference on ICT Convergence 2011, pp. 114~119, Seoul, Korea, Sep. 2011."
+  venue: "ICTC"
+  group: international
+
+- title: "Communication-Aware VFI Partitioning for GALS-based Networks-on-Chip"
+  authors: "Dongkun Shin, Woojoong Kim, Soontae Kwon, and Tae Hee Han"
+  info: "Design Automation for Embedded Systems, Vol. 15, Issue 2, pp. 89-109, Jun. 2011."
+  venue: "DAES"
+  group: international
+
+- title: "Logic operation-based template matching algorithm for one-dimensional signals"
+  authors: "Jae-Chern Yoo and Tae Hee Han"
+  info: "IET Signal Processing, Vol. 5, No. 2, pp. 261-269, Apr. 2011."
+  venue: "IET SP"
+  group: international
+
+- title: "Low Power Implementation of MDCT/IMDCT for MP3 Audio Decoder"
+  authors: "Hi-Seok Kim, Sea-Ho Kim, Ki-Soek Chung, and Tae Hee Han"
+  info: "Proceedings of 2010 International SoC Design Conference, pp. 143-146, Incheon, Korea, Nov. 2010."
+  venue: "ISOCC"
+  group: international
+
+- title: "A Novel Load Balancing Method for Multi-core with Non-Uniform Memory Architecture"
+  authors: "Youngho Ahn, Won-Jin Kim, Sea-Ho Kim, Tae Hee Han, Hi-Seok Kim, and Ki-Seok Chung"
+  info: "Proceedings of 2010 International SoC Design Conference, pp. 412-415, Incheon, Korea, Nov. 2010."
+  venue: "ISOCC"
+  group: international
+
+- title: "PRAM and NAND Flash Hybrid Architecture based on Hot Data Detection"
+  authors: "Jung Sik Park, Ki-Seok Chung, Hi-Seok Kim, and Tae Hee Han"
+  info: "Proceedings of International Conference on Mechanical and Electronics Engineering 2010, Vol. 1, pp. 93-97, Aug. 2010."
+  venue: "ICMEE"
+  group: international
+
+- title: "Efficient Garbage Collection Policy and Block Management Method for NAND Flash Memory"
+  authors: "Kee-Hoon Jang and Tae Hee Han"
+  info: "Proceedings of International Conference on Mechanical and Electronics Engineering 2010, vol. 1, pp. 327-331, Aug. 2010."
+  venue: "ICMEE"
+  group: international
+
+- title: "Power grid aware timing analysis using S-parameter"
+  authors: "Kyung Ki Kim, Tae Hee Han, and Ken Choi"
+  info: "International Journal of Electronics, vol. 97, no. 7, pp. 759-772, Jul. 2010."
+  venue: "IJE"
+  group: international
+
+- title: "A New LLR Approximation for BICM Systems with HARQ"
+  authors: "Jin Whan Kang, Sang-Hyo Kim, Seokho Yoon, Tae Hee Han, and Hyoung Kee Choi"
+  info: "IEICE Transactions on Communications, vol. E93-B , no.6, pp. 1628-1632, Jun. 2010."
+  venue: "IEICE Trans. Commun."
+  group: international
+
+- title: "New low-voltage low-latency mixed-voltage I/O buffer"
+  authors: "Joung-Yeal Kim, Su-Jin Park, Yong-Ki Kim, Sang-Keun Han, Young-Hyun Jun, Chilgee Lee, Tae Hee Han, and Bai-Sun Kong"
+  info: "IEICE Transactions on Electronics, vol. E93-C, no. 5, pp. 709-711, May 2010."
+  venue: "IEICE Trans. Electron."
+  group: international
+
+- title: "Power, Interface, and Integration: Handset Chipset Design Issues"
+  authors: "Tae Hee Han, Jae-Chern Yoo, and Hyunseok Lee"
+  info: "IEEE Communications Magazine, vol. 47, no. 11, pp 172 - 179, Nov. 2009."
+  venue: "IEEE Commun. Mag."
+  group: international
+
+- title: "Fast Normalized Cross-Correlation"
+  authors: "Jae-Chern Yoo and Tae Hee Han"
+  info: "Circuits, Systems and Signal Processing, Vol. 28, No. 6, pp. 819-843, Dec. 2009."
+  venue: "CSSP"
+  group: international
+
+- title: "A New Demapper for BICM system with HARQ"
+  authors: "Jin Whan Kang, Sang-Hyo Kim, Seokho Yoon, and Tae Hee Han"
+  info: "Proceedings of 70th IEEE Vehicular Technology Conference, Anchorage, Sep. 2009."
+  venue: "VTC"
+  group: international
+
+- title: "CMOS Cross-Coupled Charge Pump with Improved Latch-Up Immunity"
+  authors: "Su-Jin Park, Yong-Gu Kang, Joung-Yeal Kim, Tae Hee Han, Young-Hyun Jun, Chilgee Lee, and Bai-Sun Kong"
+  info: "IEICE Electronics Express, vol. 6, no. 11, pp. 736-742, Jun. 2009."
+  venue: "IEICE ELEX"
+  group: international
+
+- title: "Symbol Error Rate of the DM-MPSK Under the Influence of Jamming Signals"
+  authors: "Youngpo Lee, Taeung Yoon, Iickho Song, Yun Hee Kim, Tae Hee Han, and Seokho Yoon"
+  info: "IEEE Communications Letters, Vol. 13, No.7, pp. 468~470, Jul. 2009."
+  venue: "IEEE Commun. Lett."
+  group: international
+
+- title: "Frequency and Yield Optimization using Power Gates in Power-Constrained Designs"
+  authors: "Nam Sung Kim, Jun Seomun, Abhishek Sinkar, Jungseob Lee, Tae Hee Han, Ken Choi, and Youngsoo Shin"
+  info: "Proceedings of IEEE/ACM International Symposium on Low Power Electronics and Design 2009, pp. 121 – 126, San Francisco, Aug. 2009."
+  venue: "ISLPED"
+  group: international
+
+- title: "A Low Power Design Technique for a Mobile Broadcasting SoC"
+  authors: "Jiyong Yoon, Joonhwan Yi, Yongchan Kim, Tae Hee Han, and Kyungho Kim"
+  info: "Proceedings of International SoC Design Conference, pp. 152-155, Seoul Korea, Oct 2004."
+  venue: "ISOCC"
+  group: international
+
+- title: "A Mobile Station Modem VLSI for cdma2000 1x"
+  authors: "S.C.Han, T.H.Han et al."
+  info: "Proceedings of 14th IEEE ASIC/SOC conference, pp. 52-56, Washington, USA, Sep. 2001."
+  venue: "ASIC/SoC"
+  group: international
+
+- title: "Versatile architecture for block matching motion estimation"
+  authors: "T.H.Han and S.Hwang"
+  info: "IET Computers and Digital Techniques, vol. 146, no. 4, pp. 188-195, Jul. 1999."
+  venue: "IET CDT"
+  group: international
+
+- title: "Novel hierarchical-search block matching algorithm and VLSI architecture considering the spatial complexity of the macroblock"
+  authors: "T.H.Han and S.Hwang"
+  info: "IEEE Transactions on Consumer Electronics, vol. 44, no. 2, pp. 337-342, May 1998."
+  venue: "IEEE TCE"
+  group: international
+
+- title: "이종 가속기 환경에서의 대규모 언어 모델 추론을 위한 이질성 인지형 스케줄링 및 통신 기법"
+  authors: "홍혜택, 한태희"
+  info: "전자공학회논문지 제 63권 제 5호, pp. 40-58, 2026년 5월"
+  group: domestic
+
+- title: "IoT 엣지 디바이스의 이미지 손실 압축을 위한 디코더 교환 오토인코더 기법"
+  authors: "강석봉, 한태희"
+  info: "한국통신학회 하계종합학술발표회, pp. 911-912, 2023년 6월, 강원"
+  group: domestic
+
+- title: "불균일 캐시 구조에 최적화된 컨볼루션 연산 가속 데이터 전처리 알고리즘"
+  authors: "강석봉, 강민구, 한태희"
+  info: "한국통신학회 동계종합학술발표회, pp. 1362-1363, 2023년 2월, 강원"
+  group: domestic
+
+- title: "고집적 낸드 플래시 SSD의 수명 및 쓰기 성능 향상을 위한 BER 기반 하이브리드 파티션 기법"
+  authors: "최기재, 김정훈, 한태희"
+  info: "전자공학회 논문지 제 59권 제 12호, pp. 48-55, 2022년 12월"
+  group: domestic
+
+- title: "이진화 신경망의 안정적인 최적화를 위한 구간별 가중치 감쇠 기법"
+  authors: "류창호, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 288-291, 2022년 11월, 광주"
+  group: domestic
+
+- title: "메모리 접근 패턴 기반 확률적 리프레시를 사용하는 로우 해머링 완화 방법"
+  authors: "유호중, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 320-323, 2022년 11월, 광주"
+  group: domestic
+
+- title: "인공신경망의 고속 처리를 위한 로그 양자화 기반 인 스토리지 프로세싱 유닛 설계"
+  authors: "김정훈, 강석봉, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 314-319, November 2022, 광주."
+  group: domestic
+
+- title: "모바일 디스플레이 구동 IC의 외부 메모리 접근 빈도 저감을 위한 PSR 동작 특화 적응형 무손실 이미지 압축 기법"
+  authors: "송재우, 한태희"
+  info: "전자공학회 논문지 제 59권 제 9호, pp. 30-40, September 2022."
+  group: domestic
+
+- title: "Adaptive 경로 지정 알고리즘을 위한 혼잡도 예측기 기반의 Lookahead 기법"
+  authors: "심재은, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 73-76, November 2021, 인천."
+  group: domestic
+
+- title: "네트워크-온-칩에서 데이터 무결성 검증을 위한 패킷 인증기"
+  authors: "이기헌, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 60-63, November 2021, 인천."
+  group: domestic
+
+- title: "전체 시스템 시뮬레이터를 이용한 상변화 메모리와 SSD 성능 분석"
+  authors: "임현조, 현상민, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 56-59, November 2021, 인천."
+  group: domestic
+
+- title: "병렬 그래프 프로세싱을 위한 PIM 가속기의 캐시 지역성 향상 기법"
+  authors: "Hessa Alshamsi, 한태희"
+  info: "전자공학회 논문지 제 58권 제 10호, pp. 16-23, October 2021."
+  group: domestic
+
+- title: "매니코어 통신의 확장성을 고려한 고속 아비터 설계"
+  authors: "김정훈, 한태희"
+  info: "대한전자공학회 하계학술대회, pp. 2311-2314, June 2021, 제주."
+  group: domestic
+
+- title: "인공신경망 모델 압축을 위한 적응적 양자화 기반 지식 증류 기법"
+  authors: "이조은, 한태희"
+  info: "전자공학회논문지 제 57권 제 9호, pp. 37-43, September 2020."
+  group: domestic
+
+- title: "연계된 데이터로의 불규칙 메모리 접근을 위한 인 메모리 가속기"
+  authors: "윤추실, 한태희"
+  info: "전자공학회논문지 제 57권 제 5호, pp. 37-44, May 2020."
+  group: domestic
+
+- title: "네트워크-온-칩 라우터의 단일 사이클 내 타이밍 오류 복구 기법"
+  authors: "강민구, 강주연, 이조은, 한태희"
+  info: "전자공학회논문지제 57권 제 5호, pp. 45-52, May 2020."
+  group: domestic
+
+- title: "심층 신경망의 정확도 향상을 위한 뉴런 제거 방법"
+  authors: "이조은, 한태희"
+  info: "대한전자공학회 추계학술대회, November 2019, 강원."
+  group: domestic
+
+- title: "네트워크 온 칩에서의 효율적인 부하기반 이기종 오류정정기법 적용 방법"
+  authors: "강주연, 한태희"
+  info: "대한전자공학회 2019 SoC 학술대회, May 2019, 대전."
+  group: domestic
+
+- title: "하이브리드 광학 네트워크-온-칩에서의 레이저 전력 할당 최적화 기법"
+  authors: "김용욱, 한태희"
+  info: "대한전자공학회 2019 SoC 학술대회, May 2019, 대전."
+  group: domestic
+
+- title: "메모리 검증시간 단축을 위한 강화학습 기반 테스트 벡터 실시간 변경 기법"
+  authors: "강민구, 한태희"
+  info: "대한전자공학회 하계학술대회, June 2019, 제주."
+  group: domestic
+
+- title: "Through Silicon Via Allocation Method in 3D Network-on-Chip"
+  authors: "이조은, 한태희"
+  info: "대한전자공학회 하계학술대회, June 2019, 제주."
+  group: domestic
+
+- title: "네트워크-온-칩의 신뢰성 향상을 위한 제어 신호의 오류 정정 기법"
+  authors: "김용욱, 한태희"
+  info: "대한전자공학회 추계학술대회, November 2018, 인천."
+  group: domestic
+
+- title: "셀 간격 고려 상변화 메모리 테스트 벡터 변형 기법"
+  authors: "이승찬, 한태희"
+  info: "대한전자공학회 추계학술대회, November 2018, 인천."
+  group: domestic
+
+- title: "멀티 레벨 셀 상변화 RAM의 고장 모델 그룹화를 통한 고장 검출 테스트 기법"
+  authors: "강민구, 한태희"
+  info: "대한전자공학회 추계학술대회, November 2018, 인천."
+  group: domestic
+
+- title: "네트워크-온-칩의 신뢰성 향상을 위한 DEC BCH 디코더의 타이밍 최적화 기법"
+  authors: "김용욱, 한태희"
+  info: "대한전자공학회 2018 SoC 학술대회, May 2018, 수원."
+  group: domestic
+
+- title: "멀티 레벨 셀 PRAM 에서 온도 정보를 고려한 스크러빙 주기 할당 기법"
+  authors: "홍정범, 한태희"
+  info: "대한전자공학회 2018 SoC 학술대회, May 2018, 수원."
+  group: domestic
+
+- title: "적응적 라우팅 네트워크-온-칩에서 데이터 처리량 최적화를 위한 입자 군집 최적화 기반 IP 매핑 기법"
+  authors: "강민구, 한태희"
+  info: "대한전자공학회 2018 SoC 학술대회, May 2018, 수원."
+  group: domestic
+
+- title: "네트워크 온 칩에서 시간 기반 다중 라우팅 알고리즘 기법"
+  authors: "강주연, 한태희"
+  info: "한국통신학회 2018년도 동계종합학술발표회, pp. 580-581, January 2018, 정선."
+  group: domestic
+
+- title: "로드밸런싱을 위한 적응적 네트워크-온-칩 라우팅 할당 방법"
+  authors: "김주성, 한태희"
+  info: "한국통신학회 2018년도 동계종합학술발표회, pp. 582-583, January 2018, 정선."
+  group: domestic
+
+- title: "효율적인 포트 스와퍼를 내재한 고신뢰성 라우터 설계"
+  authors: "김용욱, 이영식, 이창림, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 237-239, November 2017, 송도."
+  group: domestic
+
+- title: "에이징 최소화를 위한 Memetic 알고리즘 기반 네트워크-온-칩 라우팅 경로 할당 기법"
+  authors: "김주성, 한태희"
+  info: "대한전자공학회 하계학술대회, pp. 289-292, June 2017, 부산."
+  group: domestic
+
+- title: "네트워크-온-칩에서 위치기반 XY-YX 라우팅 알고리즘을 위한 트래픽부하를 고려한 구역분할기법"
+  authors: "강주연, 한태희"
+  info: "대한전자공학회 하계학술대회, pp. 110-113, June 2017, 부산."
+  group: domestic
+
+- title: "네트워크-온-칩에서 시간적 지역성을 고려한 End-to-End 적응적 오류 감내 기법"
+  authors: "이영식, 윤성재, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 7-10, November 2016, 대구."
+  group: domestic
+
+- title: "분리된 주소/데이터 네트워크-온-칩에서 지연시간과 신뢰도 보장을 위한 오류 정정기법"
+  authors: "이영식, 김상헌, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 24-27, November 2016, 대구."
+  group: domestic
+
+- title: "링크 도선 길이를 고려한 고성능 비동기식 NoC 토폴로지 생성기법"
+  authors: "김상헌, 이재성, 이재훈, 한태희"
+  info: "전자공학회논문지 제53권 제8호, pp. 1197-1206, August 2016."
+  group: domestic
+
+- title: "Voltage-Frequency-Island NoC를 위한 테이블 기반의 고장 감내 라우팅 기법"
+  authors: "윤성재, 이창림, 김용석, 한태희"
+  info: "전자공학회논문지 제53권 제8호, pp. 1214-1223, August 2016."
+  group: domestic
+
+- title: "파워 게이팅 설계에서 IR Drop에 견고한 셀 배치방법"
+  authors: "권석일, 한태희"
+  info: "전자공학회논문지 제53권 제6호, pp. 55-66, June 2016."
+  group: domestic
+
+- title: "팻트리 기반 하이브리드 광학 네트워크-온-칩에서의 신호 감쇄 최적화 결정적 라우팅 알고리즘에 대한 연구"
+  authors: "이재훈, 김민수, 한태희"
+  info: "대한전자공학회 하계학술대회, pp. 52-55, June 2016, 제주."
+  group: domestic
+
+- title: "무선 네트워크-온-칩에서 지연시간 최적화를 위한 유전알고리즘 기반 하드웨어 자원의 매핑기법"
+  authors: "이영식, 이재성, 한태희"
+  info: "한국정보통신학회 춘계학술대회, pp. 174-177, May 2016, 부산."
+  group: domestic
+
+- title: "버스 프로토콜 호환 가능한 네트워크-온-칩에서의 분리된 주소/데이터 네트워크 설계"
+  authors: "정승아, 이재훈, 김상헌, 이재성, 한태희"
+  info: "전자공학회논문지 제53권 제4호, pp. 68-75, April 2016."
+  group: domestic
+
+- title: "특정용도 네트워크-온-칩에서의 에너지를 고려한 트리 기반 토폴로지 설계 기법"
+  authors: "이재성, 정승아, 한태희"
+  info: "한국통신학회 동계학술대회, pp. 102-103, January 2016, 강원."
+  group: domestic
+
+- title: "에너지 최적화를 위한 전압-주파수-구역 기반 NoC 라우팅 알고리즘"
+  authors: "윤성재, 한태희"
+  info: "한국통신학회 동계학술대회, pp. 100-101, January 2016, 강원."
+  group: domestic
+
+- title: "SSD 수명 관점에서 리눅스 I/O 스택에 대한 실험적 분석"
+  authors: "정남기, 한태희"
+  info: "대한전자공학회 논문지 제52권 제9호, pp. 54-62, September 2015."
+  group: domestic
+
+- title: "광학 네트워크-온-칩에서 WDM/TDM 기반 채널 할당 기법"
+  authors: "홍유민, 이재훈, 한태희"
+  info: "대한전자공학회 논문지 제52권 제7호, pp. 40-48, July 2015."
+  group: domestic
+
+- title: "비동기식 네트워크-온-칩에서 핫스팟 최소화를 위한 개미군 최적화 기반 라우팅 알고리즘"
+  authors: "이재성, 김상헌, 한태희"
+  info: "대한전자공학회 하계학술대회, pp. 244-247, June 2015, 제주."
+  group: domestic
+
+- title: "특정 용도 하이브리드 광학 네트워크-온-칩에서의 에너지/응답시간 최적화를 위한 토폴로지 설계 기법"
+  authors: "최적, 이재훈, 김현중, 한태희"
+  info: "대한 전자공학회 논문지 제51권 제11호, pp. 2481-2491, November 2014."
+  group: domestic
+
+- title: "3D NoC 구조에서 발열 관리를 위한 태스크 이동의 오버헤드 최적화"
+  authors: "김현중, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 203-205, November 2014, 한양대학교(안산)."
+  group: domestic
+
+- title: "태스크 특성 기반의 여유시간 분배를 통한 동적 전압 주파수 스케일링"
+  authors: "정승아, 장진규, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 226-229, November 2014, 한양대학교(안산)."
+  group: domestic
+
+- title: "DVFS 전이 오버헤드를 고려한 낮은 복잡도의 태스크 스케줄링 방법"
+  authors: "박성현, 김현중, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 230-233, November 2014, 한양대학교(안산)."
+  group: domestic
+
+- title: "네트워크-온-칩에서의 고성능 오류 감내 라우팅 알고리즘"
+  authors: "윤성재, 이창림, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 55-58, November 2014, 한양대학교(안산)."
+  group: domestic
+
+- title: "3D NoC 구조에서 성능을 고려한 어댑티브 수직 스로틀링 기반 동적 열관리 기법"
+  authors: "황준선, 한태희"
+  info: "대한전자공학회 논문지 제51권 제7호, pp. 1529-1536, July 2014."
+  group: domestic
+
+- title: "공정 코너별 LVCC 마진 특성을 이용한 전력 소모 개선 Voltage Binning 기법"
+  authors: "이원준, 한태희"
+  info: "대한전자공학회 논문지 제51권 제7호, pp. 1548-1555, July 2014."
+  group: domestic
+
+- title: "하이브리드 광학 네트워크-온-칩에서 열 문제를 고려한 Rollback 라우팅 알고리즘"
+  authors: "최적, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 139-143, November 2013, 서울."
+  group: domestic
+
+- title: "다중 우선순위를 이용한 네트워크 온 칩에서의 QoS 향상을 위한 버퍼리스 디플렉션 라우팅"
+  authors: "나세연, 남문식, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 65-68, November 2013, 서울."
+  group: domestic
+
+- title: "네트워크-온-칩에서 가상채널 지연 모델을 이용한 주파수 대역폭 할당 기법"
+  authors: "이승현, 이창림, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 61-64, November 2013, 서울."
+  group: domestic
+
+- title: "전력 가중치를 고려한 동적 전압 주파수 스케일링을 통한 에너지 최적화 방법"
+  authors: "박상환, 김현중, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 7-10, November 2013, 서울."
+  group: domestic
+
+- title: "위치기반의 우선순위를 이용한 네트워크온칩에서의 디플렉션 라우팅"
+  authors: "남문식, 한태희"
+  info: "대한전자공학회 논문지 제50권 제11호, November 2013."
+  group: domestic
+
+- title: "파장 라우팅 광학 네트워크-온-칩에서의 최소 개수 파장 할당 기법"
+  authors: "김영석, 이재훈, 최적, 한태희"
+  info: "대한전자공학회 논문지 제50권 제10호, pp. 1759-1767, October 2013."
+  group: domestic
+
+- title: "하이브리드 광학 네트워크-온-칩에서 지연 시간 최적화를 위한 매핑 알고리즘"
+  authors: "이재훈, 이창림, 한태희"
+  info: "대한전자공학회 논문지 제50권 제7호, pp. 1759-1767, July 2013."
+  group: domestic
+
+- title: "De Bruin Graph를 이용한 3D NoC"
+  authors: "유현종, 김현중, 한태희"
+  info: "대한전자공학회 추계학술대회, pp. 70-73, November 2012, 서울."
+  group: domestic
+
+- title: "Hybrid Optical NoC에서의 복귀 라우팅 알고리즘"
+  authors: "최성민, 남문식, 한태희"
+  info: "대한전자공학회 추계 학술대회, pp. 135-138, November 2012, 서울."
+  group: domestic
+
+- title: "고속 Toggle 2.0 낸드 플래시 인터페이스에서 동적 전압 변동성을 고려한 설계 방법"
+  authors: "이현주, 한태희"
+  info: "대한전자공학회 논문지 제 49권 9호, pp. 251-258, September 2012."
+  group: domestic
+
+- title: "3D Cmesh 네트워크-온-칩에서 효율적인 TSV 통신 알고리즘"
+  authors: "김현중, 남문식, 한태희"
+  info: "대한전자공학회 하계학술대회 논문집 35권 1호, pp. 97-100, June 2012, 제주."
+  group: domestic
+
+- title: "바이패스 토폴로지를 이용한 네트워크 온 칩에서 홉 수 감소 기법"
+  authors: "남문식, 이재훈, 한태희"
+  info: "대한전자공학회 추계학술대회 논문집 34권 2호, pp. 113-116, November 2011, 대전."
+  group: domestic
+
+- title: "하이브리드 광학 네트워크-온-칩에서 낮은 지연시간을 위한 적응적 알고리즘의 성능 분석"
+  authors: "김영석, 남문식, 한태희"
+  info: "대한전자공학회 추계학술대회 논문집 34권 2호, pp. 143-146, November 2011, 대전."
+  group: domestic
+
+- title: "하이브리드 광학 네트워크-온-칩에서 병렬 라우팅에 관한 연구"
+  authors: "서정택, 황용중, 한태희"
+  info: "대한전자공학회 논문지 SD편 48권 8호, pp. 25-32, August 2011."
+  group: domestic
+
+- title: "SSD 컨트롤러 최적 설계 기법"
+  authors: "이두진, 한태희"
+  info: "대한전자공학회 논문지 SD편 48권 8호, pp. 45-52, August 2011."
+  group: domestic
+
+- title: "SSD 스토리지 시스템을 위한 효율적인 DRAM 버퍼 액세스 스케줄링 기법"
+  authors: "박준수, 황용중, 한태희"
+  info: "대한전자공학회 논문지 SD편 48권 7호, pp. 48-56, July 2011."
+  group: domestic
+
+- title: "SSD 성능 향상을 위한 DRAM 버퍼 데이터 처리 기법"
+  authors: "임광석, 한태희"
+  info: "대한전자공학회 논문지 SD편 48권 7호, pp. 57-64, July 2011."
+  group: domestic
+
+- title: "3차원 네트워크-온-칩 에서 효율적인 수직 통신 방법에 대한 연구"
+  authors: "황용중, 서정택, 한태희"
+  info: "대한전자공학회 하계종합학술대회 논문집 34권 1호, pp. 354-357, June 2011, 제주."
+  group: domestic
+
+- title: "계층적 우선순위를 이용한 효율적인 공유 버스 중재 방식"
+  authors: "황용중, 서정택, 한태희"
+  info: "대한전자공학회 추계학술대회 논문집 33권 2호, pp. 79-80, November 2010, 서울."
+  group: domestic
+
+- title: "전압-주파수-구역과 광학적 상호 연결을 이용한 네트워크-온-칩에서 통신 최적화 기법"
+  authors: "서정택, 황용중, 한태희"
+  info: "대한전자공학회 추계학술대회 논문집 33권 2호, pp. 28-29, November 2010, 서울."
+  group: domestic
+
+- title: "휴대용 멀티미디어 기기를 위한 실시간 얼굴 추적 시스템"
+  authors: "윤석기, 한태희"
+  info: "대한전자공학회 논문지 SD편 46권 9호, pp. 39-48, September 2009."
+  group: domestic
+
+- title: "광학적 상호연결을 이용한 네트워크-온-칩에서의 스위치 구조와 라우팅 최적화 방법"
+  authors: "권순태, 조준동, 한태희"
+  info: "대한전자공학회 논문지 SD편 46권 9호, pp. 25-32, September 2009."
+  group: domestic
+
+- title: "전압-주파수-구역을 고려한 에너지 최적화 네트워크-온-칩 설계 방법론"
+  authors: "김우중, 권순태, 신동군, 한태희"
+  info: "대한 전자공학회 논문지 SD편 46권 8호, pp. 22-30, August 2009."
+  group: domestic
+
+- title: "무선 센서네트워크에서 데이터 수신구간을 확장한 비동기 MAC 알고리즘"
+  authors: "윤정호, 배성재, 박용국, 한태희, 정민영"
+  info: "2009년 한국통신학회 하계종합학술대회 논문집, pp. 316, June 2009."
+  group: domestic
+
+- title: "무선 센서네트워크를 위한 웨이크 업 시간 예측 기반의 비동기 MAC 알고리즘"
+  authors: "윤정호, 배성재, 강정훈, 한태희, 정민영"
+  info: "2009년 한국통신학회 하계종합학술대회 논문집, pp. 317, June 2009."
+  group: domestic
+
+- title: "BOC 신호 동기화를 위한 새로운 주변 첨두 제거 기법"
+  authors: "김상훈, 윤태웅, 이영윤, 한태희, 윤석호"
+  info: "한국통신학회논문지 34권 1호 pp. 266-272, January 2009."
+  group: domestic
+
+- title: "차동 결합을 이용한 새로운 OFDM 정수 주파수 옵셋 추정 기법"
+  authors: "안상호, 정다해, 한태희, 김상효, 윤석호"
+  info: "한국통신학회논문지 33권 8호, pp. 627-632, August 2008."
+  group: domestic
+
+- title: "3차원 네트워크-온-칩 에서 효율적인 수직 통신 방법에 대한 연구"
+  authors: "황용중, 서정택, 한태희"
+  info: "대한전자공학회 하계종합학술대회 논문집 34권 1호, pp. 354-357, June 2011, 제주."
+  group: domestic
+
+- title: "계층적 우선순위를 이용한 효율적인 공유 버스 중재 방식"
+  authors: "황용중, 서정택, 한태희"
+  info: "대한전자공학회 추계학술대회 논문집 33권 2호, pp. 79-80, November 2010, 서울."
+  group: domestic
+
+- title: "전압-주파수-구역과 광학적 상호 연결을 이용한 네트워크-온-칩에서 통신 최적화 기법"
+  authors: "서정택, 황용중, 한태희"
+  info: "대한전자공학회 추계학술대회 논문집 33권 2호, pp. 28-29, November 2010, 서울."
+  group: domestic
+
+- title: "휴대용 멀티미디어 기기를 위한 실시간 얼굴 추적 시스템"
+  authors: "윤석기, 한태희"
+  info: "대한전자공학회 논문지 SD편 46권 9호, pp. 39-48, September 2009."
+  group: domestic
+
+- title: "광학적 상호연결을 이용한 네트워크-온-칩에서의 스위치 구조와 라우팅 최적화 방법"
+  authors: "권순태, 조준동, 한태희"
+  info: "대한전자공학회 논문지 SD편 46권 9호, pp. 25-32, September 2009."
+  group: domestic
+
+- title: "전압-주파수-구역을 고려한 에너지 최적화 네트워크-온-칩 설계 방법론"
+  authors: "김우중, 권순태, 신동군, 한태희"
+  info: "대한 전자공학회 논문지 SD편 46권 8호, pp. 22-30, August 2009."
+  group: domestic
+
+- title: "무선 센서네트워크에서 데이터 수신구간을 확장한 비동기 MAC 알고리즘"
+  authors: "윤정호, 배성재, 박용국, 한태희, 정민영"
+  info: "2009년 한국통신학회 하계종합학술대회 논문집, pp. 316, June 2009."
+  group: domestic
+
+- title: "무선 센서네트워크를 위한 웨이크 업 시간 예측 기반의 비동기 MAC 알고리즘"
+  authors: "윤정호, 배성재, 강정훈, 한태희, 정민영"
+  info: "2009년 한국통신학회 하계종합학술대회 논문집, pp. 317, June 2009."
+  group: domestic
+
+- title: "BOC 신호 동기화를 위한 새로운 주변 첨두 제거 기법"
+  authors: "김상훈, 윤태웅, 이영윤, 한태희, 윤석호"
+  info: "한국통신학회논문지 34권 1호 pp. 266-272, January 2009."
+  group: domestic
+
+- title: "차동 결합을 이용한 새로운 OFDM 정수 주파수 옵셋 추정 기법"
+  authors: "안상호, 정다해, 한태희, 김상효, 윤석호"
+  info: "한국통신학회논문지 33권 8호, pp. 627-632, August 2008."
+  group: domestic
+
+- title: "OFDM 기반 시스템에서 파일럿 심볼을 이용한 새로운 정수 주파수 옵셋 추정 기법"
+  authors: "이영윤, 김상훈, 한태희, 유승환, 김선용, 윤석호"
+  info: "한국통신학회논문지 33권 6호, pp. 592-597, June 2008."
+  group: domestic
+
+- title: "멀티모드 이동통신 모뎀을 위한 전력 효율적 다기능 캐리스킵 가산기"
+  authors: "한태희"
+  info: "대한전자공학회 논문지 SD편 45권 3호, pp. 86-93, March 2008."
+  group: domestic
+
+- title: "TD-SCDMA 시스템의 순방향 링크 파라미터 변화에 따른 셀 용량과 커버리지 분석"
+  authors: "김범석, 안정랑, 김동욱, 한태희, 전현철, 김정곤"
+  info: "한국전파공학회, 2007 마이크로파 및 전파 추계 학술대회 논문집, pp. 333-336, September 2007."
+  group: domestic
+
+- title: "이동통신 SoC 설계"
+  authors: "한태희"
+  info: "한국통신학회지, 24권 3호, pp. 62-75, March 2007."
+  group: domestic
+
+- title: "cdma2000 1x 이동국 모뎀을 위한 하드웨어-소프트웨어 동시검증 방법"
+  authors: "한태희, 한성철, 한동구, 김성룡, 한금구, 황석민, 김경호"
+  info: "대한전자공학회 논문지, Vol. 39, no. 7, pp. 46-56, July 2002."
+  group: domestic
+
+- title: "cdma2000 1x 이동국 모뎀의 설계와 검증"
+  authors: "권윤주, 김철진, 임준혁, 김경호, 이경하, 한태희, 김용석"
+  info: "대한전자공학회 논문지, Vol. 39, no. 6, pp. 69-77, June 2002."
+  group: domestic
+
+- title: "IS-54 (IS-136) 시스템을 위한 비터비 복호기의 설계"
+  authors: "김재열, 한태희, 황승호, 이용훈"
+  info: "한국통신학회 학술대회 논문집, pp. 146-149, April 1996."
+  group: domestic
+
+- title: "BiCMOS를 이용한 고속 저전력 8비트 A/D 변환기"
+  authors: "한태희, 조상우, 이희덕, 한철희"
+  info: "대한전기학회 하계 학술대회, July 1991."
+  group: domestic
+

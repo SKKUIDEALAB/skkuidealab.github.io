@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<!-- 연구분야 소개 페이지 공통 틀.
+     새 분야를 추가하려면 research/ 아래에 html 을 하나 만들고
+     front matter 에 title / tagline / image 만 적으면 됩니다. -->
+<section id="main" class="wrapper style2">
+	<header class="major">
+		<h2>{{ page.title }}</h2>
+		{%- if page.tagline %}
+		<p>{{ page.tagline }}</p>
+		{%- endif %}
+	</header>
+
+	<div class="container">
+		<section id="content">
+			{%- if page.image %}
+			<!-- 대표 그림은 media/research/ 에 둡니다. index 카드 그림(media/home/)과
+			     분리해 두었으므로 한쪽을 바꿔도 다른 쪽에 영향이 없습니다. -->
+			<div class="research-hero">
+				<img src="{{ '/media/research/' | append: page.image | relative_url }}" alt="{{ page.title }}" />
+			</div>
+			{%- endif %}
+
+{{ content }}
+
+			{%- comment %}
+			이 분야의 논문 목록. 원본은 _data/publications.yml 이고,
+			각 논문의 areas: 에 이 페이지의 area 값이 들어 있으면 자동으로 나타납니다.
+			{% endcomment %}
+			{%- assign papers = site.data.publications | where_exp: "p", "p.areas contains page.area" %}
+			{%- if papers.size > 0 %}
+			<h3>Selected Publications</h3>
+			{%- for p in papers %}
+			{% include publication-item.html p=p %}
+			{%- endfor %}
+			{%- endif %}
+
+			<ul class="actions">
+				<li><a href="{{ '/index.html' | relative_url }}#research" class="button">&larr; Research Area</a></li>
+				<li><a href="{{ '/publication.html' | relative_url }}" class="button">Publications</a></li>
+			</ul>
+		</section>
+	</div>
+</section>
+
+{% include abstract-modal.html %}

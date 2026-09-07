@@ -1,0 +1,33 @@
+# 연구 분야 정의. publications.yml 의 areas: 에 여기 있는 키를 적습니다.
+# label 은 키워드에 표시될 이름, css 는 색상 클래스(assets/css/pages/publication.css)입니다.
+# 분야를 추가하려면 여기에 한 항목 넣고 CSS 에 .kw-* 색을 하나 추가하면 됩니다.
+#
+# ★ 이 파일에 적힌 순서가 곧 논문 목록의 #키워드 표시 순서입니다.
+#   publications.yml 에 areas 를 어떤 순서로 적든 항상 아래 순서대로 나옵니다.
+#   표시 순서를 바꾸려면 아래 항목들의 위치를 바꾸면 됩니다.
+
+memcentric:
+  label: "Memory-Centric"
+  css: "area-memcentric"
+  page: "/research/memory-centric-computing.html"
+
+memsystem:
+  label: "Memory System"
+  css: "area-memsystem"
+  page: "/research/next-generation-memory.html"
+
+ai:
+  label: "AI Accel"
+  css: "area-ai"
+  page: "/research/ai-acceleration.html"
+
+noc:
+  label: "NoC"
+  css: "area-noc"
+  page: "/research/on-chip-network.html"
+
+# SoC Design 은 4개 카드에 속하지 않는 검증·압축 계열 논문을 위한 분류입니다.
+# 대응하는 연구분야 페이지는 아직 없습니다.
+soc:
+  label: "SoC Design"
+  css: "area-soc"

@@ -1,23 +1,75 @@
-.conference-badge {
-            background-color: #00AEEF; /* 첨부한 하늘색 색상 */
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-            font-size: 0.9em;
-            margin-right: 10px;
-            margin-bottom: 10px; /* 간격 추가 */
-        }
-        .abstract-badge, .link-badge {
-            background-color: #4CAF50; /* 초록색 */
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-			cursor: pointer;
-            font-size: 0.9em;
-            margin-right: 5px; /* 간격 추가 */
-        }
+/* ── 배지 체계 ──────────────────────────────────────────────
+   Top Tier    top-tier-badge          수상/등급
+   학회·저널   venue-badge             중립 회색, 배경 역할
+   연구 분야   area-badge area-*       _data/areas.yml 에 정의된 5개, 분야별 색
+   세부 주제   topic-badge             외곽선만, 자유 어휘
+   Abstract/Link 는 태그가 아니라 클릭 동작이므로 알약 모양 외곽선으로 구분 */
+
+/* 제목 위 한 줄: 등급 배지 + 학회·저널 배지만 박스로 둔다.
+   나머지 분류는 아래 #키워드 줄로 내려서 시선을 분산시키지 않는다. */
+.venue-badge,
+.top-tier-badge,
+.featured-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    margin: 0 4px 4px 0;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* 학회·저널: 중립 */
+.venue-badge { background: #E2E8F0; color: #334155; }
+
+/* 논문 제목이 곧 링크. 기본 모양은 제목 그대로 두고 hover 에서만 표시 */
+.publication-title a {
+    color: inherit;
+    text-decoration: none;
+}
+.publication-title a:hover {
+    text-decoration: underline;
+}
+
+/* ── 키워드 줄 ─────────────────────────────────────────────
+   분야와 세부 주제를 #해시태그 형태로 나열한다.
+   분야만 색을 입혀 목록을 훑을 때 계열이 눈에 들어오게 한다. */
+.publication-keywords {
+    margin-top: 6px;
+    font-size: 0.85em;
+    line-height: 1.9;
+}
+
+.publication-keywords .kw {
+    margin-right: 12px;
+    white-space: nowrap;
+}
+
+.kw-area  { font-weight: 600; }
+.kw-topic { color: #64748B; }
+
+.kw-memcentric { color: #7C3AED; }  /* Memory-Centric */
+.kw-memsystem  { color: #2563EB; }  /* Memory System  */
+.kw-ai         { color: #DB2777; }  /* AI Accel       */
+.kw-noc        { color: #0D9488; }  /* NoC            */
+.kw-soc        { color: #64748B; }  /* SoC Design     */
+
+/* Abstract: 클릭 가능한 동작이므로 알약 모양으로 구분 */
+.abstract-badge {
+    display: inline-block;
+    padding: 1px 12px;
+    font-size: 0.95em;
+    font-weight: 600;
+    line-height: 1.6;
+    background: transparent;
+    border: 1px solid #16A34A;
+    color: #16A34A;
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+.abstract-badge:hover { background: #16A34A; color: #fff; }
         .publication-item {
             display: flex;
             align-items: flex-start;
@@ -129,14 +181,14 @@
         content: '\2212'; /* Minus sign for when active/open */
     }
 
+    /* 수상/등급 (공통 배지 규격은 위 배지 체계 블록에 있음) */
     .top-tier-badge {
-    background-color: #FF8C00; /* 강조를 위한 진한 주황색 (또는 금색 #D4AF37) */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    display: inline-block;
-    font-size: 0.9em;
-    font-weight: bold;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    background: #F59E0B;
+    color: #fff;
+    }
+
+    /* 저널 선정 우수논문. Top Tier 와 같은 계열의 따뜻한 색으로 두되 한 단계 진하게 */
+    .featured-badge {
+    background: #B45309;
+    color: #fff;
     }

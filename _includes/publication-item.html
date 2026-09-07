@@ -1,0 +1,60 @@
+{%- comment %}
+논문 한 건의 표시 형식. publication.html 과 research/*.html 이 함께 씁니다.
+내용은 _data/publications.yml 에서 오고, 부르는 쪽에서 p 로 항목 하나를 넘겨줍니다.
+분야 키워드의 이름과 색은 _data/areas.yml 에서 가져옵니다.
+
+배치
+  1줄  등급 배지(Top Tier / Featured) + 학회·저널 배지
+  2줄  논문 제목  (link 이 있으면 제목 자체가 링크)
+  3줄  저자
+  4줄  출처
+  5줄  #키워드 ... + Abstract 버튼
+
+(주의: Liquid 는 HTML 주석 안의 태그도 실행하므로 예시 코드는 comment 블록 안에 둘 것)
+{% endcomment -%}
+<div class="publication-item">
+	<div class="publication-content">
+		{%- if include.p.top_tier %}
+		<span class="top-tier-badge">Top Tier</span>
+		{%- endif %}
+		{%- if include.p.featured %}
+		<span class="featured-badge">Featured Article</span>
+		{%- endif %}
+		{%- if include.p.venue %}
+		<span class="venue-badge">{{ include.p.venue }}</span>
+		{%- endif %}
+
+		<div class="publication-title">
+			{%- if include.p.link %}
+			<a href="{{ include.p.link }}" target="_blank" rel="noopener">{{ include.p.title }}</a>
+			{%- else %}
+			{{ include.p.title }}
+			{%- endif %}
+		</div>
+		<div class="publication-authors">{{ include.p.authors }}</div>
+		<div class="publication-info">{{ include.p.info }}</div>
+
+		{%- assign has_kw = false %}
+		{%- if include.p.areas.size > 0 or include.p.topics.size > 0 or include.p.abstract %}{% assign has_kw = true %}{% endif %}
+		{%- if has_kw %}
+		<div class="publication-keywords">
+			{%- comment %}
+			분야 키워드는 논문마다 순서가 달라지지 않도록,
+			_data/publications.yml 에 적힌 순서가 아니라 _data/areas.yml 의 정의 순서로 출력한다.
+			표시 순서를 바꾸려면 areas.yml 에서 항목 순서를 바꾸면 된다.
+			{% endcomment -%}
+			{%- for a in site.data.areas %}
+			{%- if include.p.areas contains a[0] %}
+			<span class="kw kw-area kw-{{ a[0] }}">#{{ a[1].label | default: a[0] }}</span>
+			{%- endif %}
+			{%- endfor %}
+			{%- for t in include.p.topics %}
+			<span class="kw kw-topic">#{{ t }}</span>
+			{%- endfor %}
+			{%- if include.p.abstract %}
+			<span class="abstract-badge" onclick="openModal('{{ include.p.abstract | relative_url }}')">Abstract</span>
+			{%- endif %}
+		</div>
+		{%- endif %}
+	</div>
+</div>

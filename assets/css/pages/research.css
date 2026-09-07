@@ -1,0 +1,19 @@
+/* 연구분야 소개 페이지 스타일.
+   공용 선택자(.container, ul, h2 등)는 footer 에도 걸리므로 쓰지 않는다. */
+
+.research-hero {
+	display: flex;
+	justify-content: center;
+	margin: 0 0 2.5em 0;
+}
+
+.research-hero img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	border-radius: 5px;
+}
+
+#main .research-topics li {
+	margin-bottom: 0.5em;
+}

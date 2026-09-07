@@ -12,6 +12,19 @@ defaults:
       page_css:
         - abstract
 
+  # research/ 아래 연구분야 소개 페이지도 마찬가지입니다.
+  # 논문 목록과 초록 팝업을 함께 쓰므로 publication / abstract 스타일도 불러옵니다.
+  - scope:
+      path: "research"
+    values:
+      layout: research
+      page_css:
+        - research
+        - publication
+        - abstract
+      page_js:
+        - publication
+
 # 빌드에서 제외할 항목
 # (밑줄로 시작하는 _includes, _layouts, _trash 등은 Jekyll이 기본으로 제외함)
 exclude:
