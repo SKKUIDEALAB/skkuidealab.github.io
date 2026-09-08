@@ -26,7 +26,7 @@
 #   group: recent
 - title: "Phantom Walk: Reducing the Post-Migration Translation Path via Proactive Translation Dissemination in Multi-GPU Systems"
   authors: "Ji Hun Choi, Jae Sang Moh and Tae Hee Han"
-  info: "2026 63rd ACM/IEEE The Chips to Systems Conference (DAC), Jul. 26, 2026"
+  info: "2026 63rd ACM/IEEE Design Automation Conference (DAC), Jul. 26, 2026"
   top_tier: true
   venue: "DAC"
   areas: [memsystem]
