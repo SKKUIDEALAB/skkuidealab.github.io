@@ -15,8 +15,14 @@
 	gtag('config', 'G-FCWF6QFJ0D');
 </script>
 
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+{%- comment %}
+CSS 주소 뒤에 빌드 시각(?v=)을 붙인다.
+파일 이름이 그대로면 브라우저가 예전 CSS 를 캐시에서 계속 꺼내 쓰기 때문에,
+고친 내용이 화면에 안 나타나는 일이 생긴다. 빌드할 때마다 값이 바뀌므로 항상 새로 받아온다.
+{% endcomment -%}
+{%- assign cssver = site.time | date: '%Y%m%d%H%M%S' %}
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ cssver }}" />
 {%- for css in page.page_css %}
 <!-- 이 페이지 전용 스타일 -->
-<link rel="stylesheet" href="{{ '/assets/css/pages/' | append: css | append: '.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/pages/' | append: css | append: '.css' | relative_url }}?v={{ cssver }}" />
 {%- endfor %}

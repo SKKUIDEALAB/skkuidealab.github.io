@@ -81,6 +81,291 @@ body {
             font-size: 24px; /* 원하는 크기로 변경하세요 */
         }
 
+        /* ══ 메인 배너 ══════════════════════════════════════════════════
+           배경 사진(assets/images/banner.png, 1916x821)의 비율에 맞춘 무대를 만들고
+           그 위에 텍스트와 설명 사진 3장을 % 좌표로 얹는다.
+           무대 비율을 사진 비율과 똑같이 맞췄기 때문에 창 크기가 변해도
+           사진 속 칩 위치와 사진·연결선의 위치가 어긋나지 않는다.
+
+           ▸ 사진 위치를 옮기려면 아래 .callout-* 의 --x / --y / --w 만 바꾸면 된다.
+           ▸ 연결선 좌표는 index.html 의 <svg> 안에 있고, 사진 픽셀 좌표(1916x821) 기준이다. */
+
+        /* #banner 는 화면 끝까지 검은 배경만 깔고, 실제 내용은 가운데 .banner-stage 안에 둔다.
+           그래서 화면이 아무리 넓어져도 좌우로는 검은 배경이 퍼져 보인다.
+
+           스크롤하면 배너는 화면 위에 붙어 있고(sticky) 아래 내용이 배너를 덮으며 올라온다. */
+        /* 배경색은 사진 가장자리 색을 그대로 뽑아 쓴다. 그래야 사진이 좌우로
+           그대로 이어진 것처럼 보이고 경계선이 안 생긴다.
+             사진 왼쪽 끝 평균  #010408
+             사진 오른쪽 끝 평균 #0E1E21   (좌우 색이 달라 영역을 나눠 칠한다) */
+        #banner {
+            position: sticky;
+            top: 0;
+            z-index: 0;
+            padding: 0;                     /* main.css 의 큰 여백 해제 */
+            background: #010408;            /* 왼쪽 + 무대 안쪽 글자 영역 */
+        }
+
+        /* 무대 오른쪽 바깥 영역만 사진 오른쪽 끝 색으로 덮는다.
+           calc(50% + 800px) = 가운데 정렬된 무대(최대 1600px)의 오른쪽 끝.
+           화면이 1600px 보다 좁으면 폭이 0 이 되어 보이지 않는다. */
+        #banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: calc(50% + 800px);
+            right: 0;
+            background: #0E1E21;
+            z-index: 0;
+        }
+
+        /* 무대 비율 = PPT 에서 배너가 차지하던 영역 (960 x 291 pt = 3.299 : 1).
+           배경 사진은 오른쪽에 원래 비율(2.334:1)로 붙고 왼쪽 29%가 글자 자리가 된다.
+           70.73% x 3.2990 = 2.334 라서 사진이 잘리지 않고 정확히 들어맞는다. */
+        .banner-stage {
+            position: relative;
+            z-index: 1;                     /* #banner::after 위에 온다 */
+            max-width: 1600px;              /* 너무 커지지 않도록 상한 */
+            margin: 0 auto;
+            aspect-ratio: 960 / 291;
+            overflow: hidden;
+            background-image: url("../images/overlay.png"), url("../../images/banner.png");
+            background-position: top left, right center;
+            background-repeat: repeat, no-repeat;
+            background-size: auto, auto 100%;
+
+            /* 글자 크기를 화면(vw)이 아니라 이 무대 너비 기준으로 잡기 위한 선언.
+               무대가 화면보다 좁을 때 글자만 커져서 줄이 넘치던 문제를 막는다. */
+            container-type: inline-size;
+        }
+
+        /* main.css 가 #banner 에 걸어둔 배경 사진은 무대로 옮겼으므로 해제 */
+        #banner { background-image: none; }
+
+        /* ── 글자 3덩이 ──
+           내용과 인라인 스타일은 기존 그대로 두고 위치만 PPT 좌표로 옮겼다.
+           크기 단위 cqw = 무대 너비의 1%. PPT 는 슬라이드 폭 960pt 기준이므로
+           28pt -> 28/960 = 2.92cqw 처럼 그대로 환산된다. */
+        .banner-title,
+        .banner-acronym,
+        .banner-desc {
+            position: absolute;
+            z-index: 3;
+            color: #fff;
+            text-align: center;   /* PPT 에서 세 상자의 중심축이 모두 23.7% 로 같다 */
+        }
+
+        .banner-title h2,
+        .banner-acronym h2,
+        .banner-desc h2 {
+            margin: 0;
+            color: #fff;
+            line-height: 1.25;
+        }
+
+        /* Welcome to IDEA.L — PPT 28pt. 안쪽 span 이 1.5em 이라 1.944 x 1.5 = 2.92cqw.
+           nowrap 을 준 이유: 줄이 넘어가면 아래 문단과 겹쳐 버리기 때문이다. */
+        .banner-title        { left: 10.14%; top: 20.0%;  width: 27.15%; }
+        .banner-title h2     { font-size: 1.944cqw; white-space: nowrap; }
+
+        /* INTELLIGENT DATA-CENTRIC ... — 머리글자 span 만 1.5em 으로 커진다.
+           한 줄에 들어가야 해서 PPT(18pt = 1.875cqw)보다 조금 줄였다. */
+        .banner-acronym      { left: 1.25%;  top: 35.0%;  width: 44.93%; }
+        .banner-acronym h2   { font-size: 1.7cqw; white-space: nowrap; }
+
+        /* IDEA Lab investigates ... */
+        .banner-desc         { left: -0.56%; top: 62.0%;  width: 48.55%; }
+        .banner-desc h2      { font-size: 1.875cqw; }
+
+        /* container query 를 지원하지 않는 오래된 브라우저용 대략값 */
+        @supports not (container-type: inline-size) {
+            .banner-title h2   { font-size: 1.944vw; }
+            .banner-acronym h2 { font-size: 1.7vw; }
+            .banner-desc h2    { font-size: 1.875vw; }
+        }
+
+        /* 배너 아래 내용이 배너를 덮으며 올라오도록 위에 쌓는다 */
+        #intro,
+        #main,
+        #footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── 연결선 ── */
+        .banner-lines {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .banner-lines line {
+            stroke: #fff;
+            stroke-width: 0.75;     /* PPT 선 두께 0.75pt */
+        }
+
+        /* ── 설명 사진 3장 ──
+           PPT 에서는 사진 뒤에 흰색 사각형(불투명도 60%)을 사진보다 조금 크게 깔아
+           테두리처럼 보이게 했다. 여기서는 padding + 반투명 배경으로 같은 모양을 만든다. */
+        .callout {
+            position: absolute;
+            left: var(--x);
+            top: var(--y);
+            width: var(--w);
+            margin: 0;
+            padding: 0.6%;                              /* 테두리 두께 */
+            background: rgba(255, 255, 255, 0.6);
+            z-index: 2;
+            will-change: transform;
+        }
+
+        .callout img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 0;
+        }
+
+        /* ── 마우스를 올렸을 때 펼쳐지는 설명 ──
+           설명은 사진 아래에 생기지만, 배너 아래로 잘리지 않도록
+           틀 전체를 같은 높이만큼 위로 올린다. 그래서 사진은 제자리에 있고
+           테두리만 아래로 펼쳐지는 것처럼 보인다.
+           높이를 max-height 가 아니라 height 로 고정한 이유:
+           위로 올리는 양과 정확히 같아야 빈 틈이 안 생기기 때문이다. */
+        .callout {
+            transition: margin-top 0.35s ease, background-color 0.25s ease;
+        }
+
+        .callout figcaption {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            text-align: center;
+            color: #10242a;
+            line-height: 1.3;
+            transition: height 0.35s ease, opacity 0.25s ease, margin-top 0.35s ease;
+        }
+
+        .callout figcaption strong {
+            display: block;
+            font-size: 1.0cqw;
+            font-weight: 700;
+            margin-bottom: 0.15cqw;
+        }
+
+        .callout figcaption span {
+            display: block;
+            font-size: 0.85cqw;
+            color: #2b4249;
+        }
+
+        .callout:hover {
+            margin-top: -4.0cqw;                    /* 펼쳐지는 높이만큼 위로 */
+            background: rgba(255, 255, 255, 0.92);  /* 글자가 읽히도록 더 불투명하게 */
+            z-index: 4;                             /* 다른 사진 위로 */
+            animation-play-state: paused;           /* 읽는 동안 흔들림 정지 */
+        }
+
+        .callout:hover figcaption {
+            height: 3.6cqw;
+            opacity: 1;
+            margin-top: 0.4cqw;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .callout,
+            .callout figcaption { transition: none; }
+        }
+
+        /* 위치 — 보내주신 PPT 화면을 기준으로 잡았다. 이 값만 바꾸면 사진이 이동한다.
+           NoC 는 칩 왼쪽, AI_Accel 은 칩 아래 가운데, PIM 은 오른쪽 HBM 아래.
+           사진 한 장의 높이는 테두리까지 합쳐 배너 높이의 약 32.6% 이므로
+           --y 가 67% 를 넘으면 배너 아래로 잘린다. */
+        .callout-noc { --x: 48.48%; --y: 43.76%; --w: 11.60%; animation: drift-a 14s ease-in-out infinite; }
+        .callout-ai  { --x: 64.90%; --y: 66.50%; --w: 11.60%; animation: drift-b 18s ease-in-out infinite 1.5s; }
+        .callout-pim { --x: 85.43%; --y: 66.50%; --w: 11.60%; animation: drift-c 16s ease-in-out infinite 3s; }
+
+        /* ── 제자리에서 일렁이는 움직임 ──
+           % 로 주면 사진 크기의 1% (약 2px) 라 눈에 안 보인다. px 로 준다.
+           세 장이 같이 움직이면 어색하므로 경로·주기·시작 시점을 각각 다르게 둔다. */
+        @keyframes drift-a {
+            0%   { transform: translate(0, 0)          rotate(0deg); }
+            25%  { transform: translate(-2.5px, -3.5px) rotate(-0.25deg); }
+            50%  { transform: translate(1px, -5px)     rotate(0.15deg); }
+            75%  { transform: translate(3px, -2px)     rotate(0.3deg); }
+            100% { transform: translate(0, 0)          rotate(0deg); }
+        }
+        @keyframes drift-b {
+            0%   { transform: translate(0, 0)           rotate(0deg); }
+            25%  { transform: translate(3.5px, -2.5px)  rotate(0.3deg); }
+            50%  { transform: translate(-1.5px, -4.5px) rotate(-0.2deg); }
+            75%  { transform: translate(-3px, -1px)     rotate(-0.3deg); }
+            100% { transform: translate(0, 0)           rotate(0deg); }
+        }
+        @keyframes drift-c {
+            0%   { transform: translate(0, 0)          rotate(0deg); }
+            25%  { transform: translate(-2px, 3px)     rotate(-0.22deg); }
+            50%  { transform: translate(2.5px, 4.5px)  rotate(0.25deg); }
+            75%  { transform: translate(1.5px, -2.5px) rotate(0.12deg); }
+            100% { transform: translate(0, 0)          rotate(0deg); }
+        }
+
+        /* 움직임을 원치 않는 사용자 설정은 존중한다 */
+        @media (prefers-reduced-motion: reduce) {
+            .callout { animation: none; }
+        }
+
+        /* ── 좁은 화면 ──
+           가로가 좁아지면 무대 비율 때문에 배너가 너무 납작해지고 글씨도 읽기 어려워진다.
+           이때는 사진을 배경으로만 쓰고 텍스트를 일반 흐름으로 되돌린다. */
+        @media (max-width: 980px) {
+            #banner {
+                position: static;           /* 좁은 화면에서는 고정 효과 해제 */
+            }
+            .banner-stage {
+                aspect-ratio: auto;
+                max-width: none;
+                padding: 6em 2em 5em 2em;
+                background-size: auto, cover;
+                background-position: top left, center center;
+            }
+            .banner-title,
+            .banner-acronym,
+            .banner-desc {
+                position: static;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 1.2em;
+            }
+            .banner-title h2    { font-size: 1.3em; }
+            .banner-acronym h2  { font-size: 1em; }
+            .banner-desc h2     { font-size: 1.05em; }
+            .callout,
+            .banner-lines       { display: none; }
+        }
+
+        /* ── Intro 줄 (모집 안내 + Contact 버튼) ── */
+        .intro-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3em;
+            flex-wrap: wrap;
+        }
+
+        .intro-row .intro-text {
+            margin: 0;
+            text-align: center;
+        }
+
+        .intro-row .actions {
+            margin: 0;
+        }
+
         /* Research Area 카드 ------------------------------------------------
            각 분야 페이지로 연결되므로, 마우스를 올리면 클릭 가능한 것이 보이도록
            카드가 살짝 떠오르고 그림자와 테두리 강조가 들어간다. */

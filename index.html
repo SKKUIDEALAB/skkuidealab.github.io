@@ -4,38 +4,95 @@ body_class: landing is-preload
 header_class: alt
 page_css:
   - index
+page_js:
+  - index
 ---
 <!-- Banner -->
+        <!-- 배경 사진(assets/images/banner.png)의 비율에 맞춘 무대 위에
+             텍스트와 설명 사진 3장을 좌표로 얹는다.
+             위치를 옮기려면 assets/css/pages/index.css 의 --x / --y 값만 바꾸면 된다. -->
         <section id="banner">
-            <div class="container">
-                <!--<span class="logo">Welcome to IDEA.L</span> cyan 색깔 로고였음--> 
-                <header>
+            <div class="banner-stage">
+
+                <!-- 글자 내용은 기존 그대로이고 위치만 PPT 좌표에 맞췄다. -->
+                <div class="banner-title">
                     <h2><span class="wave" style="font-weight: bold; font-size: 1.5em;">Welcome to IDEA.L</span></h2>
+                </div>
+
+                <div class="banner-acronym">
                     <h2>
-                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">I</span>NTELLIGENT 
-                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">D</span>ATA-CENTRIC 
-                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">E</span>MERGING 
-                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">A</span>RCHITECTURE 
+                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">I</span>NTELLIGENT
+                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">D</span>ATA-CENTRIC
+                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">E</span>MERGING
+                        <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">A</span>RCHITECTURE
                         <span class="wave" style="color: orange; font-weight: bold; font-size: 1.5em;">L</span>AB
                     </h2>
-                </header>
+                </div>
+
+                <div class="banner-desc">
+                    <h2>IDEA Lab<span> investigates various hardware and software challenges related to System-on-Chip<br />
+                        architecture and design technology implemented as semiconductor chips.
+                        </span></h2>
+                </div>
+
+                <!-- 연결선. 배너를 960 x 291 로 본 좌표계다 (x = 배너폭% x 9.6, y = 배너높이% x 2.91).
+                     선은 흰 사각형의 "중앙"에서 출발한다. 사진이 선보다 위에 그려지므로
+                     실제로는 사각형 가장자리부터 보이고, 방향은 중앙을 향한다.
+
+                     x2/y2 (칩 쪽 끝)은 고정값이다. 칩 좌표 환산:
+                       배너x% = 29.27 + px/1916*70.73,  배너y% = py/821*100
+                       NoC      -> 파란 다이 중앙            사진 (1172, 302)
+                       AI_Accel -> 파란 다이 중앙            사진 (1172, 302)
+                       PIM      -> 우측 하단 HBM 윗면 중앙   사진 (1419, 408)
+                                   윗면 네 모서리 (1240,390) (1300,358) (1597,438) (1540,468) 의 평균
+
+                     x1/y1 (사진 쪽 끝)은 assets/js/pages/index.js 가 매 프레임 다시 계산한다.
+                     사진이 흔들릴 때 연결 지점이 따라 움직이게 하기 위해서다.
+                     아래 값은 스크립트가 동작하지 않을 때 쓰이는 초기값이다. -->
+                <svg class="banner-lines" viewBox="0 0 960 291" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                    <line x1="521" y1="171" x2="696" y2="107" />
+                    <line x1="679" y1="237" x2="696" y2="107" />
+                    <line x1="876" y1="237" x2="784" y2="145" />
+                </svg>
+
+                <!-- 마우스를 올리면 흰 테두리가 위로 펼쳐지며 figcaption 이 나타난다.
+                     문구는 아래 Research Area 카드에 쓰인 분야명·세부 주제를 그대로 썼다. -->
+                <figure class="callout callout-noc">
+                    <img src="assets/images/NoC.jpg" alt="SoC On-Chip Network" />
+                    <figcaption>
+                        <strong>SoC On-Chip Network</strong>
+                        <span>Multicast Routing · Optical NoC · Chiplet Interconnect</span>
+                    </figcaption>
+                </figure>
+                <figure class="callout callout-ai">
+                    <img src="assets/images/AI_Accel.jpg" alt="AI Acceleration" />
+                    <figcaption>
+                        <strong>AI Acceleration</strong>
+                        <span>LLM / MoE · DPU-Centric Datacenter · Domain-Specific Processors</span>
+                    </figcaption>
+                </figure>
+                <figure class="callout callout-pim">
+                    <img src="assets/images/PIM.jpg" alt="Memory-Centric Computing" />
+                    <figcaption>
+                        <strong>Memory-Centric Computing</strong>
+                        <span>Processing-in-Memory · Near-Data Processing · In-Storage Processing</span>
+                    </figcaption>
+                </figure>
+
             </div>
         </section>
 
         <!-- Intro -->
         <section id="intro" class="wrapper style1">
             <div class="container">
-                <h2>IDEA Lab<span> investigates various hardware and software challenges related to System-on-Chip<br />
-                    architecture and design technology implemented as semiconductor chips.
-                    </span></h2>
-                <footer>
-                    <p>We are recruiting self-motivated students (graduates and undergraduate interns) <br />
+                <div class="intro-row">
+                    <p class="intro-text">We are recruiting self-motivated students (graduates and undergraduate interns) <br />
                         who want to explore and uncover new knowledge to change the world.<br />
                     IDEA Lab 에서는 석사 및 박사과정 학생과 학부생 인턴을 모집하고 있습니다.</p>
                     <ul class="actions">
                         <li><a href="recruit.html" class="button large">Contact us! →</a></li>
                     </ul>
-                </footer>
+                </div>
             </div>
         </section>
 
