@@ -46,6 +46,8 @@
 	var VB_W = 960;   // svg viewBox 너비
 	var VB_H = 291;   // svg viewBox 높이
 
+	// 기준은 틀(figure) 전체다. 마우스를 올려 설명이 펼쳐지면 틀이 위로 자라므로
+	// 연결 지점도 그만큼 위로 함께 올라간다.
 	var lines = svg.querySelectorAll('line');
 	var pairs = [
 		{ el: document.querySelector('.callout-noc'), line: lines[0] },

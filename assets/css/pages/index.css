@@ -94,30 +94,17 @@ body {
            그래서 화면이 아무리 넓어져도 좌우로는 검은 배경이 퍼져 보인다.
 
            스크롤하면 배너는 화면 위에 붙어 있고(sticky) 아래 내용이 배너를 덮으며 올라온다. */
-        /* 배경색은 사진 가장자리 색을 그대로 뽑아 쓴다. 그래야 사진이 좌우로
-           그대로 이어진 것처럼 보이고 경계선이 안 생긴다.
-             사진 왼쪽 끝 평균  #010408
-             사진 오른쪽 끝 평균 #0E1E21   (좌우 색이 달라 영역을 나눠 칠한다) */
+        /* 배너 배경은 전체가 한 가지 색이다.
+           사진 오른쪽 끝은 아래 .banner-stage 에서 이 색으로 서서히 사라지게 처리해
+           경계선 없이 배경과 이어지도록 했다.
+           색을 바꿀 때는 아래 fade 그라데이션의 rgba 값도 같이 바꿔야 한다.
+           #02070B = rgb(2, 7, 11) */
         #banner {
             position: sticky;
             top: 0;
             z-index: 0;
             padding: 0;                     /* main.css 의 큰 여백 해제 */
-            background: #010408;            /* 왼쪽 + 무대 안쪽 글자 영역 */
-        }
-
-        /* 무대 오른쪽 바깥 영역만 사진 오른쪽 끝 색으로 덮는다.
-           calc(50% + 800px) = 가운데 정렬된 무대(최대 1600px)의 오른쪽 끝.
-           화면이 1600px 보다 좁으면 폭이 0 이 되어 보이지 않는다. */
-        #banner::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: calc(50% + 800px);
-            right: 0;
-            background: #0E1E21;
-            z-index: 0;
+            background: #02070B;
         }
 
         /* 무대 비율 = PPT 에서 배너가 차지하던 영역 (960 x 291 pt = 3.299 : 1).
@@ -125,15 +112,31 @@ body {
            70.73% x 3.2990 = 2.334 라서 사진이 잘리지 않고 정확히 들어맞는다. */
         .banner-stage {
             position: relative;
-            z-index: 1;                     /* #banner::after 위에 온다 */
+            z-index: 1;
             max-width: 1600px;              /* 너무 커지지 않도록 상한 */
             margin: 0 auto;
             aspect-ratio: 960 / 291;
             overflow: hidden;
-            background-image: url("../images/overlay.png"), url("../../images/banner.png");
-            background-position: top left, right center;
-            background-repeat: repeat, no-repeat;
-            background-size: auto, auto 100%;
+            /* 배경 3겹 (위에 적힌 것이 위로 온다)
+               1) 좌우 fade — 사진의 양쪽 끝을 배경색(#02070B)으로 서서히 지워
+                  배너 배경과 경계 없이 이어지게 한다.
+                  사진은 무대의 29.27% 지점부터 시작하므로
+                  왼쪽은 28% 까지 불투명 -> 44% 에서 완전 투명(사진이 온전히 보임),
+                  오른쪽은 82% 부터 다시 짙어져 99% 에서 배경색이 된다.
+                  투명 쪽도 같은 RGB 로 적어야 중간에 탁한 띠가 안 생긴다.
+               2) overlay.png — 템플릿 기본 질감
+               3) banner.png  — 실제 사진. 오른쪽에 원래 비율로 붙는다. */
+            background-image:
+                linear-gradient(to right,
+                    rgba(2, 7, 11, 1) 28%,
+                    rgba(2, 7, 11, 0) 44%,
+                    rgba(2, 7, 11, 0) 82%,
+                    rgba(2, 7, 11, 1) 99%),
+                url("../images/overlay.png"),
+                url("../../images/banner.png");
+            background-position: right center, top left, right center;
+            background-repeat: no-repeat, repeat, no-repeat;
+            background-size: 100% 100%, auto, auto 100%;
 
             /* 글자 크기를 화면(vw)이 아니라 이 무대 너비 기준으로 잡기 위한 선언.
                무대가 화면보다 좁을 때 글자만 커져서 줄이 넘치던 문제를 막는다. */
@@ -211,10 +214,13 @@ body {
         /* ── 설명 사진 3장 ──
            PPT 에서는 사진 뒤에 흰색 사각형(불투명도 60%)을 사진보다 조금 크게 깔아
            테두리처럼 보이게 했다. 여기서는 padding + 반투명 배경으로 같은 모양을 만든다. */
+        /* 위치는 위(top)가 아니라 아래(bottom)를 기준으로 잡는다.
+           그래야 설명이 펼쳐질 때 틀이 위로 자라고 배너 아래로 잘리지 않는다.
+           --b = 100% - (윗변 위치 %) - (틀 높이 29.69%)  ← 틀 높이는 아래 주석 참고 */
         .callout {
             position: absolute;
             left: var(--x);
-            top: var(--y);
+            bottom: var(--b);
             width: var(--w);
             margin: 0;
             padding: 0.6%;                              /* 테두리 두께 */
@@ -231,23 +237,21 @@ body {
         }
 
         /* ── 마우스를 올렸을 때 펼쳐지는 설명 ──
-           설명은 사진 아래에 생기지만, 배너 아래로 잘리지 않도록
-           틀 전체를 같은 높이만큼 위로 올린다. 그래서 사진은 제자리에 있고
-           테두리만 아래로 펼쳐지는 것처럼 보인다.
-           높이를 max-height 가 아니라 height 로 고정한 이유:
-           위로 올리는 양과 정확히 같아야 빈 틈이 안 생기기 때문이다. */
+           틀이 아래(bottom) 기준으로 고정돼 있으므로 설명이 생기면 위로 자란다.
+           높이를 고정값으로 주면 글이 길어질 때 잘리므로 max-height 로만 제한하고
+           실제 높이는 글 내용에 맞춰 정해지도록 둔다. */
         .callout {
-            transition: margin-top 0.35s ease, background-color 0.25s ease;
+            transition: background-color 0.31s ease;
         }
 
         .callout figcaption {
-            height: 0;
+            max-height: 0;
             opacity: 0;
             overflow: hidden;
             text-align: center;
             color: #10242a;
-            line-height: 1.3;
-            transition: height 0.35s ease, opacity 0.25s ease, margin-top 0.35s ease;
+            line-height: 1.35;
+            transition: max-height 0.44s ease, opacity 0.31s ease, margin-top 0.44s ease;
         }
 
         .callout figcaption strong {
@@ -264,16 +268,15 @@ body {
         }
 
         .callout:hover {
-            margin-top: -4.0cqw;                    /* 펼쳐지는 높이만큼 위로 */
             background: rgba(255, 255, 255, 0.92);  /* 글자가 읽히도록 더 불투명하게 */
             z-index: 4;                             /* 다른 사진 위로 */
             animation-play-state: paused;           /* 읽는 동안 흔들림 정지 */
         }
 
         .callout:hover figcaption {
-            height: 3.6cqw;
+            max-height: 14cqw;                      /* 넉넉한 상한. 실제 높이는 글 길이에 따라 결정된다 */
             opacity: 1;
-            margin-top: 0.4cqw;
+            margin-top: 0.45cqw;
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -285,33 +288,40 @@ body {
            NoC 는 칩 왼쪽, AI_Accel 은 칩 아래 가운데, PIM 은 오른쪽 HBM 아래.
            사진 한 장의 높이는 테두리까지 합쳐 배너 높이의 약 32.6% 이므로
            --y 가 67% 를 넘으면 배너 아래로 잘린다. */
-        .callout-noc { --x: 48.48%; --y: 43.76%; --w: 11.60%; animation: drift-a 14s ease-in-out infinite; }
-        .callout-ai  { --x: 64.90%; --y: 66.50%; --w: 11.60%; animation: drift-b 18s ease-in-out infinite 1.5s; }
-        .callout-pim { --x: 85.43%; --y: 66.50%; --w: 11.60%; animation: drift-c 16s ease-in-out infinite 3s; }
+        /* 틀 높이 계산: 폭 11.6% - 좌우 여백 1.2% = 사진 폭 10.4%(배너 폭 기준)
+           사진 높이 = 10.4% x (1086/1448) = 7.8%,  틀 높이 = 7.8 + 1.2 = 9.0% (배너 폭 기준)
+           배너 높이 기준으로는 9.0 x (960/291) = 29.69%
+           --b 는 원하는 윗변 위치에서 역산한 값이다.
+             NoC 43.76% -> 100 - 43.76 - 29.69 = 26.55%
+             AI  66.50% -> 100 - 66.50 - 29.69 =  3.81%
+             PIM 66.50% -> 100 - 66.50 - 29.69 =  3.81% */
+        .callout-noc { --x: 48.48%; --b: 26.55%; --w: 11.60%; animation: drift-a 14s ease-in-out infinite; }
+        .callout-ai  { --x: 64.90%; --b:  3.81%; --w: 11.60%; animation: drift-b 18s ease-in-out infinite 1.5s; }
+        .callout-pim { --x: 85.43%; --b:  3.81%; --w: 11.60%; animation: drift-c 16s ease-in-out infinite 3s; }
 
         /* ── 제자리에서 일렁이는 움직임 ──
            % 로 주면 사진 크기의 1% (약 2px) 라 눈에 안 보인다. px 로 준다.
            세 장이 같이 움직이면 어색하므로 경로·주기·시작 시점을 각각 다르게 둔다. */
         @keyframes drift-a {
-            0%   { transform: translate(0, 0)          rotate(0deg); }
-            25%  { transform: translate(-2.5px, -3.5px) rotate(-0.25deg); }
-            50%  { transform: translate(1px, -5px)     rotate(0.15deg); }
-            75%  { transform: translate(3px, -2px)     rotate(0.3deg); }
-            100% { transform: translate(0, 0)          rotate(0deg); }
+            0%   { transform: translate(0, 0)            rotate(0deg); }
+            25%  { transform: translate(-3.25px, -4.55px) rotate(-0.33deg); }
+            50%  { transform: translate(1.3px, -6.5px)   rotate(0.2deg); }
+            75%  { transform: translate(3.9px, -2.6px)   rotate(0.39deg); }
+            100% { transform: translate(0, 0)            rotate(0deg); }
         }
         @keyframes drift-b {
-            0%   { transform: translate(0, 0)           rotate(0deg); }
-            25%  { transform: translate(3.5px, -2.5px)  rotate(0.3deg); }
-            50%  { transform: translate(-1.5px, -4.5px) rotate(-0.2deg); }
-            75%  { transform: translate(-3px, -1px)     rotate(-0.3deg); }
-            100% { transform: translate(0, 0)           rotate(0deg); }
+            0%   { transform: translate(0, 0)             rotate(0deg); }
+            25%  { transform: translate(4.55px, -3.25px)  rotate(0.39deg); }
+            50%  { transform: translate(-1.95px, -5.85px) rotate(-0.26deg); }
+            75%  { transform: translate(-3.9px, -1.3px)   rotate(-0.39deg); }
+            100% { transform: translate(0, 0)             rotate(0deg); }
         }
         @keyframes drift-c {
-            0%   { transform: translate(0, 0)          rotate(0deg); }
-            25%  { transform: translate(-2px, 3px)     rotate(-0.22deg); }
-            50%  { transform: translate(2.5px, 4.5px)  rotate(0.25deg); }
-            75%  { transform: translate(1.5px, -2.5px) rotate(0.12deg); }
-            100% { transform: translate(0, 0)          rotate(0deg); }
+            0%   { transform: translate(0, 0)             rotate(0deg); }
+            25%  { transform: translate(-2.6px, 3.9px)    rotate(-0.29deg); }
+            50%  { transform: translate(3.25px, 5.85px)   rotate(0.33deg); }
+            75%  { transform: translate(1.95px, -3.25px)  rotate(0.16deg); }
+            100% { transform: translate(0, 0)             rotate(0deg); }
         }
 
         /* 움직임을 원치 않는 사용자 설정은 존중한다 */
