@@ -14,16 +14,16 @@
 #
 # 예) areas: [memsystem, ai]     topics: ["Cache", "ML-Based"]
 
-# 아래 논문은 일시적으로 숨겨져 있습니다. 주석(#)을 지우면 다시 표시됩니다.
-# - title: "Bypass-Enabled Topology-Agnostic Multicast Router for Fault-Tolerant Network-on-Chips"
-#   authors: "Jun Tae Jeong and Tae Hee Han"
-#   info: "The 55th International Conference on Parallel Processing (ICPP), Sep. 28, 2026"
-#   venue: "ICPP"
-#   areas: [noc]
-#   topics: ["Multicast", "Fault Tolerance"]
-#   abstract: "abstract/BEAM.html"
-#   link: "https://doi.org/10.1145/3770743.3804244"
-#   group: recent
+- title: "Bypass-Enabled Topology-Agnostic Multicast Router for Fault-Tolerant Network-on-Chips"
+  authors: "Jun Tae Jeong and Tae Hee Han"
+  info: "The 55th International Conference on Parallel Processing (ICPP), Sep. 28, 2026"
+  venue: "ICPP"
+  areas: [noc]
+  topics: ["Multicast", "Fault Tolerance"]
+  abstract: "abstract/BEAM.html"
+  link: "https://dl.acm.org/doi/10.1145/3832810.3832845"
+  group: recent
+
 - title: "Phantom Walk: Reducing the Post-Migration Translation Path via Proactive Translation Dissemination in Multi-GPU Systems"
   authors: "Ji Hun Choi, Jae Sang Moh and Tae Hee Han"
   info: "2026 63rd ACM/IEEE Design Automation Conference (DAC), Jul. 26, 2026"
