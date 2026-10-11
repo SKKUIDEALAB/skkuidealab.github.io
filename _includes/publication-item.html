@@ -15,7 +15,10 @@
 <div class="publication-item">
 	<div class="publication-content">
 		{%- if include.p.top_tier %}
-		<span class="top-tier-badge">Top Tier</span>
+		<span class="top-tier-badge">Top-tier</span>
+		{%- endif %}
+		{%- if include.p.2nd_tier %}
+		<span class="top-tier-badge">2nd-tier</span>
 		{%- endif %}
 		{%- if include.p.featured %}
 		<span class="featured-badge">Featured Article</span>

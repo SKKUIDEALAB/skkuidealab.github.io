@@ -17,6 +17,7 @@
 - title: "Bypass-Enabled Topology-Agnostic Multicast Router for Fault-Tolerant Network-on-Chips"
   authors: "Jun Tae Jeong and Tae Hee Han"
   info: "The 55th International Conference on Parallel Processing (ICPP), Sep. 28, 2026"
+  2nd_tier: true
   venue: "ICPP"
   areas: [noc]
   topics: ["Multicast", "Fault Tolerance"]
