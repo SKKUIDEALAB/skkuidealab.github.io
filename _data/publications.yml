@@ -21,7 +21,7 @@
   venue: "JSA"
   areas: [soc, memcentric]
   topics: ["AI", "CXL", "NDP"]
-  abstract: "abstract/BEAM.html"
+  abstract: "abstract/Anchor-NDP.html"
   link: "https://doi.org/10.1016/j.sysarc.2026.104056"
   group: recent
 
@@ -32,7 +32,7 @@
   venue: "JSA"
   areas: [memsystem]
   topics: ["Prefetching", "ML-Based"]
-  abstract: "abstract/BEAM.html"
+  abstract: "abstract/SNAP.html"
   link: "https://doi.org/10.1016/j.sysarc.2026.104052"
   group: recent
 
