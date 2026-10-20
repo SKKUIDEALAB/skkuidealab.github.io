@@ -1,0 +1,23 @@
+---
+title: "SNAP: Spiking neural network-based adaptive data prefetcher via online learning"
+authors: "Chang Ho Ryu and Tae Hee Han"
+date_text: "28 September 2026"
+image: "SNAP.png"
+---
+<h3>Abstract</h3>
+                    <div class="abstract-content">
+                        <p>
+                            Data prefetching is crucial for mitigating the widening latency gap between processors and memory. 
+                            Although machine learning (ML)-based prefetchers surpass traditional heuristics in capturing complex access patterns, 
+                            their practical deployment is hindered by significant computational overhead and storage requirements. 
+                            Moreover, most existing models rely primarily on static offline training, limiting their adaptability to dynamic program behaviors. 
+                            To address these challenges, we propose SNAP, an adaptive spiking neural network (SNN)-based data prefetcher 
+                            that leverages lightweight synaptic updates for efficient online learning. 
+                            To effectively process memory streams, we employ selective hashed encoding, 
+                            which compresses addresses and program counters into fixed-size binary inputs while preserving fine-grained locality. 
+                            SNAP adopts hierarchical rate–temporal decoding, combining rate and temporal coding to produce deterministic prefetch predictions. 
+                            We also incorporate spike-based throttling to enable variable-degree prefetching. 
+                            For weight optimization, SNAP utilizes a hybrid spike-timing-dependent plasticity (STDP) strategy: supervised STDP guided by spiking delta maps ensures rapid convergence during the initial warm-up period, followed by a seamless transition to unsupervised STDP for continuous adaptation. 
+                            Evaluated on SPEC CPU and GAP benchmarks, SNAP achieves a 43.48% improvement in instructions per cycle (IPC) over a baseline system without prefetching, outperforming Bingo and TransFetch by 6.80% and 1.33%, respectively.
+                        </p>
+                    </div>

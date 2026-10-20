@@ -1,0 +1,22 @@
+---
+title: "SNAP: Spiking neural network-based adaptive data prefetcher via online learning"
+authors: "Han Sol Kim, Woo Hyun Kim and Tae Hee Han"
+date_text: "28 September 2026"
+image: "Anchor-NDP.png"
+---
+<h3>Abstract</h3>
+                    <div class="abstract-content">
+                        <p>
+                            Modern large language model (LLM) applications utilize long contexts via prefix key–value (KV) caches to enhance output quality. 
+                            However, their massive memory footprint often exceeds GPU capacity, necessitating offloading to external storage. 
+                            Among these options, Compute Express Link (CXL) memory has been regarded as a promising scalable external memory tier with lower latency than conventional disk-based storage. 
+                            Despite these advantages, loading prefix KVs still incurs significant latency as context lengths grow. 
+                            While importance-based management mitigates load latency by selectively transferring only critical tokens, 
+                            this approach requires fetching all prefix keys for token importance computation. 
+                            In this study, we propose Anchor-NDP, a near-data processing (NDP) framework that relocates importance-based prefix KV management directly to the memory side by transferring only compact queries to CXL-based NDP units. 
+                            Additionally, Anchor-NDP exploits attention sparsity to adaptively retrieve the important tokens, 
+                            mitigating the inefficiencies associated with rigid, fixed-budget selection.
+                            To further streamline the importance computation, Anchor-NDP enables token-index sharing across attention heads within its framework by leveraging preceding-layer indices to predict attention sparsity.
+                            By eliminating redundant computations and reducing load latency, Anchor-NDP achieves up to a 2.44× reduction in TTFT and an 88%–94% decrease in data transfer volume while maintaining comparable output quality.
+                        </p>
+                    </div>

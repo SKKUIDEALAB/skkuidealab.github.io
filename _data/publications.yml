@@ -14,10 +14,32 @@
 #
 # 예) areas: [memsystem, ai]     topics: ["Cache", "ML-Based"]
 
+- title: "Anchor-NDP: An importance-based prefix KV management framework for CXL-enabled NDP"
+  authors: "Han Sol Kim, Woo Hyun Kim and Tae Hee Han"
+  info: "Journal of Systems Architecture, Vol. 181, Art. no. 104056, Dec. 2026."
+  # 2nd_tier: true
+  venue: "JSA"
+  areas: [soc, memcentric]
+  topics: ["AI", "CXL", "NDP"]
+  abstract: "abstract/BEAM.html"
+  link: "https://doi.org/10.1016/j.sysarc.2026.104056"
+  group: recent
+
+- title: "SNAP: Spiking neural network-based adaptive data prefetcher via online learning"
+  authors: "Chang Ho Ryu and Tae Hee Han"
+  info: "Journal of Systems Architecture, Vol. 181, Art. no. 104052, Dec. 2026."
+  # 2nd_tier: true
+  venue: "JSA"
+  areas: [memsystem]
+  topics: ["Prefetching", "ML-Based"]
+  abstract: "abstract/BEAM.html"
+  link: "https://doi.org/10.1016/j.sysarc.2026.104052"
+  group: recent
+
 - title: "Bypass-Enabled Topology-Agnostic Multicast Router for Fault-Tolerant Network-on-Chips"
   authors: "Jun Tae Jeong and Tae Hee Han"
   info: "The 55th International Conference on Parallel Processing (ICPP), Sep. 28, 2026"
-  2nd_tier: true
+  # 2nd_tier: true
   venue: "ICPP"
   areas: [noc]
   topics: ["Multicast", "Fault Tolerance"]
