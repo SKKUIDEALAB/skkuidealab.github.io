@@ -55,7 +55,7 @@
   areas: [memsystem]
   topics: ["GPU", "Address Translation"]
   abstract: "abstract/PhantomWalk.html"
-  link: "https://doi.org/10.1145/3770743.3804244"
+  link: "https://dl.acm.org/doi/10.1145/3770743.3804244"
   group: recent
 
 - title: "ScaleMoE: A Fast and Scalable Distributed Training Framework for Large-Scale Mixture-of-Experts Models"
